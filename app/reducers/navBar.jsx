@@ -8,15 +8,14 @@ const initState = {
 const reducer = (state=initState, action) => {
   const newState = Object.assign({}, state)
   switch (action.type) {
-    case UPDATE_NAVBAR_ACTIVE:
-      newState.navBarActive = action.bool
-      break
-    case UPDATE_CURR_SECTION:
-      newState.currentSection = action.section
-      break
-
-    default:
-      return state
+  case UPDATE_NAVBAR_ACTIVE:
+    newState.navBarActive = action.bool
+    break
+  case UPDATE_CURR_SECTION:
+    newState.currentSection = action.section
+    break
+  default:
+    return state
   }
   return newState
 }

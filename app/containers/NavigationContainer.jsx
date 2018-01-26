@@ -1,7 +1,6 @@
 import Navigation from '../components/Navigation'
 import {connect} from 'react-redux'
-import { updateNavbarActive } from '../reducers/navBar'
-import { updateCurrentSection } from '../reducers/navBar'
+import { updateNavbarActive, updateCurrentSection } from '../reducers/navBar'
 
 const mapStateToProps = (state) => {
   const navBarActive = state.navBar.navBarActive
@@ -14,13 +13,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => (
   {
-  	updateNavbarActive(bool){
+    updateNavbarActive(bool) {
       return dispatch(updateNavbarActive(bool))
-  	},
-  	handleSectionChange(section){
-  	  console.log('yo', section)
-  	  return dispatch(updateCurrentSection(section))
-  	}
+    },
+    handleSectionChange(section) {
+      return dispatch(updateCurrentSection(section))
+    }
   }
 )
 

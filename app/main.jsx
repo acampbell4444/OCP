@@ -18,15 +18,11 @@ import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
 
-const ExampleApp = connect(
+const OSApp = connect(
   ({ auth }) => ({ user: auth })
 )(
   ({ user, children }) =>
     <span>
-
-{/*      <nav>
-        {user ? <WhoAmI/> : <Login/>}
-      </nav>*/}
       {children}
     </span>
 )
@@ -34,7 +30,7 @@ const ExampleApp = connect(
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={ExampleApp}>
+      <Route path="/" component={OSApp}>
         <IndexRedirect to="/home" />
         <Route path="/home" component={HomeContainer} />
       </Route>

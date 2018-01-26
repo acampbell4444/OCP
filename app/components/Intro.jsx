@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class Intro extends Component {
   render() {
