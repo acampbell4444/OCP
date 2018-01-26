@@ -13,11 +13,10 @@ export default class Home extends Component {
     const { navBarActive, scrollToTop, scrollToBottom, scrollTo, scrollMore } = this.props
     return (
       <span>
-
         <div className='navBar' id={'navBar'+navBarActive}>
           <Navbar />
         </div>
-        <div className='introContainer'>
+        <div className='row container-fluid' id='introContainer'>
             <Intro/>
         </div>
           <Parallax1/>
@@ -37,9 +36,11 @@ export default class Home extends Component {
           </div>
         </Parallax>
 
-        <div id='anchor' className='element'>
-          test 6 (anchor)
-        </div>
+          <h1>
+           <Element name='3' className='element'>
+             test 3
+           </Element>
+         </h1>
         <a onClick={scrollToTop}>To the top!</a>
         <br/>
         <a onClick={scrollToBottom}>To the bottom!</a>

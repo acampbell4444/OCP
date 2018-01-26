@@ -4,13 +4,16 @@
 
 .navBar {
     overflow: hidden;
-    background-color: transparent;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     z-index: 5000;
     opacity: .9;
-    height: 15%;
+    height: 20%
 }
 
 #navBartrue {
@@ -33,31 +36,32 @@
   background-color: red;
 }
 
-.element {
-	margin-top: 50px;
-	height: 300px;
-}
-
-
 .icon-wrapper {
  font-size:3em;
   border-radius: 50%;
   border: solid black;
   color: black;
-  line-height: 2em;
-  width: 2em;
-  height: 2em;
+  line-height: 1.3em;
+  width: 1.2em;
+  height: 1.2em;
   text-align: center;
   display: inline-block;
     transition:0.2s;
+
 }
 
-#navBarfalse > div > .icon-wrapper {
-  opacity: .5;
+#navBarfalse > div > div > .icon-wrapper {
+  opacity: .3;
 }
 
 .icon-wrapper:hover {
   background-color: orange;
 }
+
+.center {
+  margin: .5% auto;
+  text-align: center;
+}
+
 
 
