@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import Scroll from 'react-scroll'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Scroll, Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { Parallax } from 'react-parallax'
 import Navbar from '../containers/NavigationContainer'
 import Intro from '../containers/IntroContainer'
