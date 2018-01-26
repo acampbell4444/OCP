@@ -16,7 +16,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(1) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
@@ -27,7 +27,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(2) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(3) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(1) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(2) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(3) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(2) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default class Navigation extends Component {
               onSetInactive={e => updateNavbarActive(false)}
               onClick={e => handleSectionChange(3) }
             >
-              <Icon size={40} icon={home}></Icon>
+              <Icon size={50} icon={home}></Icon>
             </Link>
           </div>
         </div>
