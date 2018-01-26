@@ -1,19 +1,13 @@
-.navComponent {
-  margin-bottom: 300px;
-}
-
-.navBar {
-    overflow: hidden;
+.navbar-light {
+    color: purple;
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 5000;
     opacity: .9;
-    height: 30%
+    text-align:center;
+    vertical-align:middle;
+    margin: 0 auto;
 }
 
 #navBartrue {
@@ -22,14 +16,6 @@
 
 #navBarfalse {
 
-}
-
-#navBartrue > div > a {
-	color: red;
-}
-
-#navBarfalse > div > a {
-	color: purple;
 }
 
 #navActivetrue {
@@ -46,12 +32,11 @@
   height: 2em;
   text-align: center;
   display: inline-block;
-    transition:0.2s;
-
+  transition:0.2s;
 }
 
-#navBarfalse > div > div > .icon-wrapper {
-  opacity: .3;
+#navBarfalse > div > div > a> .icon-wrapper {
+  opacity: .1;
 }
 
 .icon-wrapper:hover {
@@ -59,8 +44,12 @@
 }
 
 .center {
-  margin: .5% auto;
+  margin: 0 auto;
   text-align: center;
+}
+
+.navWrapper {
+  height: 80%;
 }
 
 

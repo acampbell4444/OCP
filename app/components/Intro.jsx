@@ -5,10 +5,10 @@ import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, 
 export default class Intro extends Component {
   render() {
     return (
-      <div className='container-fluid'>
+      <div className='mtop'>
         <h1>
           <Element name="1">
-            osParasailIntro
+            osParasailIntroooo
             <br/>
             bla<br/>
             bla<br/>

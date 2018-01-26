@@ -13,21 +13,27 @@ export default class Home extends Component {
     const { navBarActive, scrollToTop, scrollToBottom, scrollTo, scrollMore } = this.props
     return (
       <span>
-        <div className='navBar' id={'navBar'+navBarActive}>
-          <Navbar />
+        <div className='navbar sticky-top navbar-light bg-light'>
+          <div className='' id={'navBar'+navBarActive}>
+            <Navbar />
+          </div>
         </div>
-        <div className='row container-fluid' id='introContainer'>
+        <div id='introContainer'>
             <Intro/>
         </div>
+
           <Parallax1/>
+            <Element name='2' className='element'>
+             <h1>test 2</h1>
+           </Element>
          <Parallax bgImage={image3} blur={{min: -2, max: 3}}>
            <div style={{height: 500}}>
              <div >Dynamic Blur</div>
            </div>
          </Parallax>
          <h1>
-           <Element name='2' className='element'>
-             test 2
+           <Element name='3' className='element'>
+             <h1>test 3</h1>
            </Element>
          </h1>
         <Parallax bgImage={image2} strength={-300}>
@@ -37,9 +43,15 @@ export default class Home extends Component {
         </Parallax>
 
           <h1>
-           <Element name='3' className='element'>
-             test 3
+           <Element name='4' className='element'>
+             <h1>test 4</h1>
            </Element>
+
+               <Parallax bgImage={image2} strength={-300}>
+          <div style={{height: 500}}>
+            <div >Reverse direction</div>
+          </div>
+        </Parallax>
          </h1>
         <a onClick={scrollToTop}>To the top!</a>
         <br/>
