@@ -1,0 +1,63 @@
+.navComponent {
+  margin-bottom: 300px;
+}
+
+.navBar {
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 5000;
+    opacity: .9;
+    height: 15%;
+}
+
+#navBartrue {
+  color: black;
+}
+
+#navBarfalse {
+
+}
+
+#navBartrue > div > a {
+	color: red;
+}
+
+#navBarfalse > div > a {
+	color: purple;
+}
+
+#navActivetrue {
+  background-color: red;
+}
+
+.element {
+	margin-top: 50px;
+	height: 300px;
+}
+
+
+.icon-wrapper {
+ font-size:3em;
+  border-radius: 50%;
+  border: solid black;
+  color: black;
+  line-height: 2em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  display: inline-block;
+    transition:0.2s;
+}
+
+#navBarfalse > div > .icon-wrapper {
+  opacity: .5;
+}
+
+.icon-wrapper:hover {
+  background-color: orange;
+}
+
+
