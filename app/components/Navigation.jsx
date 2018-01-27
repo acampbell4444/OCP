@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-scroll'
 import Icon from 'react-icons-kit'
 import { home } from 'react-icons-kit/icomoon'
+import SunRise from '../components/SunRise'
+
 //  import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class Navigation extends Component {
@@ -76,7 +78,7 @@ export default class Navigation extends Component {
             </Link>
           </div>
         </div>
-      </div>
+        </div>
     )
   }
 }

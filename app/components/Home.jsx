@@ -4,6 +4,8 @@ import { Parallax } from 'react-parallax'
 import Navbar from '../containers/NavigationContainer'
 import Intro from '../containers/IntroContainer'
 import Parallax1 from '../components/Parallax1'
+import Bubbles from '../components/Bubbles'
+import SunRise from '../components/SunRise'
 
 const image2 = 'https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1'
 const image3 = 'https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001'
@@ -13,12 +15,14 @@ export default class Home extends Component {
     const { navBarActive, scrollToTop, scrollToBottom, scrollTo, scrollMore } = this.props
     return (
       <span>
-        <div className='navbar sticky-top navbar-light bg-light'>
+        <div className='navbar sticky-top navbar-light bg-med'>
           <div className='' id={'navBar'+navBarActive}>
-            <Navbar />
+            <Navbar> </Navbar>
           </div>
+          <Bubbles/>
         </div>
         <div id='introContainer'>
+          
             <Intro/>
         </div>
 
@@ -45,6 +49,7 @@ export default class Home extends Component {
           <h1>
            <Element name='4' className='element'>
              <h1>test 4</h1>
+                <SunRise/>
            </Element>
 
                <Parallax bgImage={image2} strength={-300}>
