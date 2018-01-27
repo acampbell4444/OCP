@@ -8,15 +8,13 @@ export default class SunRise extends Component {
     this.stopMove = this.stopMove.bind(this)
   }
   startMove() {
-    mouseIsDown = true
+    return startMv()
   }
   stopMove() {
-    mouseIsDown = false;
-    mouseIsDownDivision = false;
-    var sky = document.getElementById("sun");
+    return stopMv()
   }
   startDraggingDivision() {
-    mouseIsDownDivision = true;
+    return starDragDiv()
   }
   componentDidMount(){
      function updateDimensions() {
@@ -135,26 +133,49 @@ export default class SunRise extends Component {
 
 }, false);
 
+function updateDimensions() {
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  
+}
+
 function startMove() {
-  this.startMove()
-  //mouseIsDown = true;
+  mouseIsDown = true;
 }
 
 function stopMove() {
-  this.stopMove()
-  // mouseIsDown = false;
-  // mouseIsDownDivision = false;
-  // var sky = document.getElementById("sun");
+  mouseIsDown = false;
+  mouseIsDownDivision = false;
+        var sky = document.getElementById("sun");
 }
 
 function startDraggingDivision() {
-  this.startDraggingDivision()
-  // mouseIsDownDivision = true;
+
+  mouseIsDownDivision = true;
 }
 
 function windowResize() {
-  this.startDraggingDivision()
-  // mouseIsDownDivision = true;
+  updateDimensions();
+  var skyHeight = document.getElementById("horizon").clientHeight;
+
+  
+
+
+  // update to new sky height
+  skyHeight = document.getElementById("sun").clientHeight;
+  document.getElementById("waterDistance").style.height = myHeight - skyHeight;
+   document.getElementById("division").style.top = skyHeight;
 }
 
 // function windowResize() {
@@ -179,7 +200,7 @@ function windowResize() {
       <span id='sRise' style={{'width': '100%', 'height': '100%', 'margin': '0', 'padding':'0'}} onMouseUp={this.stopMove} >
 
 
-          <div id="starsContainer" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="starsContainer" onMouseDown={this.startMove}  onMouseUp={this.stopMove}>
           <div id="stars" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
           </div>
           </div>
