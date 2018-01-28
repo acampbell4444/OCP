@@ -9,6 +9,7 @@ span > #sRise {
   cursor: pointer;
   overflow: hidden;
   background-color: black;
+  display: inline-block;
 }
 
 #sun {

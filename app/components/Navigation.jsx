@@ -13,7 +13,7 @@ export default class Navigation extends Component {
       <div className='row center'>
         <div className='col-3 col-sm-2' >
           <Link activeClass="active " to="1" spy={true} smooth={true}
-            offset={-250} duration={1500} onSetActive={ e => { updateNavbarActive(true); handleSectionChange(1) } }
+            offset={-100} duration={1500} onSetActive={ e => { updateNavbarActive(true); handleSectionChange(1) } }
             onSetInactive={e => updateNavbarActive(false)}
             onClick={e => handleSectionChange(1) }
           >
@@ -24,7 +24,7 @@ export default class Navigation extends Component {
         </div>
         <div className='col-3 col-sm-2'>
           <Link activeClass="active " to="2" spy={true} smooth={true}
-            offset={-120} duration={1500} onSetActive={ e => { updateNavbarActive(true); handleSectionChange(2) } }
+            offset={-75} duration={1500} onSetActive={ e => { updateNavbarActive(true); handleSectionChange(2) } }
             onSetInactive={e => updateNavbarActive(false)}
             onClick={e => handleSectionChange(2) }
           >

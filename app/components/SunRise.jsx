@@ -17,6 +17,7 @@ export default class SunRise extends Component {
     return starDragDiv()
   }
   componentDidMount(){
+    let {updateSunRiseDimensions} =  this.props
      function updateDimensions() {
     if( typeof( window.innerWidth ) == 'number' ) {
       //Non-IE
@@ -147,6 +148,7 @@ function updateDimensions() {
     myWidth = document.body.clientWidth;
     myHeight = document.body.clientHeight;
   }
+  updateSunRiseDimensions(myHeight,myWidth)
   
 }
 
@@ -170,7 +172,8 @@ function windowResize() {
   // update to new sky height
   skyHeight = document.getElementById("sun").clientHeight;
   document.getElementById("waterDistance").style.height = myHeight - skyHeight;
-   document.getElementById("division").style.top = skyHeight;
+  document.getElementById("division").style.top = skyHeight;
+
 }
 }
   render() {

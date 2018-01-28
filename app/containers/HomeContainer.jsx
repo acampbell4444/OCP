@@ -5,9 +5,11 @@ import {connect} from 'react-redux'
 const mapStateToProps = (state) => {
   const user = state.auth
   const navBarActive = state.navBar.navBarActive
+  const sunRiseHeight = state.sunRise.sunRiseHeight
   return {
     user,
-    navBarActive
+    navBarActive,
+    sunRiseHeight
   }
 }
 

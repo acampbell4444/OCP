@@ -6,14 +6,15 @@ import Navbar from '../containers/NavigationContainer'
 import Chunk1 from '../containers/Chunk1Container'
 import Parallax1 from '../components/Parallax1'
 import Bubbles from '../components/Bubbles'
-import SunRise from '../components/SunRise'
+import SunRise from '../containers/SunRiseContainer'
 
 const image2 = 'https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1'
 const image3 = 'https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001'
 
 export default class Home extends Component {
   render() {
-    const { navBarActive, scrollToTop, scrollToBottom, scrollTo, scrollMore } = this.props
+    const { navBarActive, scrollToTop, scrollToBottom, scrollTo, scrollMore, sunRiseHeight } = this.props
+        console.log('srh', sunRiseHeight)
     return (
       <span>
         <SunRise/>
@@ -25,53 +26,58 @@ export default class Home extends Component {
           <Bubbles/>
         </div>
 
-        <div id='parallax1'>
-          <Parallax1/>
-        </div>
-        
-        <div id='chunk1Container'>
-          <Chunk1/>
-        </div>
+        <div id="belowSunContainer" style={{'marginTop': sunRiseHeight}}>
 
-         
-            <Element name='2' className='element'>
-             <h1>test 2</h1>
-           </Element>
-         <Parallax bgImage={image3} blur={{min: -2, max: 3}}>
-           <div style={{height: 500}}>
-             <div >Dynamic Blur</div>
-           </div>
-         </Parallax>
-         <h1>
-           <Element name='3' className='element'>
-             <h1>test 3</h1>
-           </Element>
-         </h1>
-        <Parallax bgImage={image2} strength={-300}>
-          <div style={{height: 500}}>
-            <div >Reverse direction</div>
-          </div>
-        </Parallax>
+                    <div id='chunk1Container'>
+                    <Chunk1/>
+                  </div>
 
-          <h1>
-           <Element name='4' className='element'>
-             <h1>test 4</h1>
+                  <div id='parallax1'>
+                    <Parallax1/>
+                  </div>
+                  
                 
-           </Element>
 
-               <Parallax bgImage={image2} strength={-300}>
-          <div style={{height: 500}}>
-            <div >Reverse direction</div>
-          </div>
-        </Parallax>
-         </h1>
-        <a onClick={scrollToTop}>To the top!</a>
-        <br/>
-        <a onClick={scrollToBottom}>To the bottom!</a>
-        <br/>
-        <a onClick={scrollTo}>Scroll to 100px from the top</a>
-        <br/>
-        <a onClick={scrollMore}>Scroll 100px more from the current position!</a>
+                   
+                      <Element name='2' className='element'>
+                       <h1>test 2</h1>
+                     </Element>
+                   <Parallax bgImage={image3} blur={{min: -2, max: 3}}>
+                     <div style={{height: 500}}>
+                       <div >Dynamic Blur</div>
+                     </div>
+                   </Parallax>
+                   <h1>
+                     <Element name='3' className='element'>
+                       <h1>test 3</h1>
+                     </Element>
+                   </h1>
+                  <Parallax bgImage={image2} strength={-300}>
+                    <div style={{height: 500}}>
+                      <div >Reverse direction</div>
+                    </div>
+                  </Parallax>
+
+                    <h1>
+                     <Element name='4' className='element'>
+                       <h1>test 4</h1>
+                          
+                     </Element>
+
+                         <Parallax bgImage={image2} strength={-300}>
+                    <div style={{height: 500}}>
+                      <div >Reverse direction</div>
+                    </div>
+                  </Parallax>
+                   </h1>
+                  <a onClick={scrollToTop}>To the top!</a>
+                  <br/>
+                  <a onClick={scrollToBottom}>To the bottom!</a>
+                  <br/>
+                  <a onClick={scrollTo}>Scroll to 100px from the top</a>
+                  <br/>
+                  <a onClick={scrollMore}>Scroll 100px more from the current position!</a>
+        </div>
       </span>
     )
   }
