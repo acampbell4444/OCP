@@ -26,7 +26,7 @@ export default class Home extends Component {
           <Bubbles/>
         </div>
 
-        <div id="belowSunContainer" style={{'marginTop': sunRiseHeight}}>
+        <div id="belowSunContainer" style={{'marginTop': window.innerHeight}}>
 
                     <div id='chunk1Container'>
                     <Chunk1/>
