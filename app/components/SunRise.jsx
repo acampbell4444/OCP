@@ -44,7 +44,7 @@ export default class SunRise extends Component {
       updateDimensions();
 
     // if(mouseIsDown) {
-       document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
+      document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
       document.getElementById("sun").style.background = '-moz-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
       document.getElementById("sun").style.background = '-ms-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
 
@@ -157,47 +157,25 @@ function startMove() {
 function stopMove() {
   mouseIsDown = false;
   mouseIsDownDivision = false;
-        var sky = document.getElementById("sun");
+  var sky = document.getElementById("sun");
 }
 
 function startDraggingDivision() {
-
   mouseIsDownDivision = true;
 }
 
 function windowResize() {
   updateDimensions();
   var skyHeight = document.getElementById("horizon").clientHeight;
-
-  
-
-
   // update to new sky height
   skyHeight = document.getElementById("sun").clientHeight;
   document.getElementById("waterDistance").style.height = myHeight - skyHeight;
    document.getElementById("division").style.top = skyHeight;
 }
-
-// function windowResize() {
-//   updateDimensions();
-//   var skyHeight = document.getElementById("horizon").clientHeight;
-
-  
-
-
-//   // update to new sky height
-//   skyHeight = document.getElementById("sun").clientHeight;
-//   document.getElementById("waterDistance").style.height = myHeight - skyHeight;
-//    document.getElementById("division").style.top = skyHeight;
-// }
-
 }
-
-  
-
   render() {
     return (
-      <span id='sRise' style={{'width': '100%', 'height': '100%', 'margin': '0', 'padding':'0'}} onMouseUp={this.stopMove} >
+      <span id='sRise' onMouseUp={this.stopMove} >
 
 
           <div id="starsContainer" onMouseDown={this.startMove}  onMouseUp={this.stopMove}>

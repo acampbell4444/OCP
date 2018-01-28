@@ -6,7 +6,6 @@
  * in `.babelrc`). As of 2017-06-04, this is primarily to support async/await.
  */
 import 'babel-polyfill'
-
 import React from 'react'
 import {Router, Route, IndexRedirect, browserHistory} from 'react-router'
 import {render} from 'react-dom'

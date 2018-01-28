@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Scroll, Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { Parallax } from 'react-parallax'
+
 import Navbar from '../containers/NavigationContainer'
-import Intro from '../containers/IntroContainer'
+import Chunk1 from '../containers/Chunk1Container'
 import Parallax1 from '../components/Parallax1'
 import Bubbles from '../components/Bubbles'
 import SunRise from '../components/SunRise'
@@ -15,18 +16,24 @@ export default class Home extends Component {
     const { navBarActive, scrollToTop, scrollToBottom, scrollTo, scrollMore } = this.props
     return (
       <span>
+        <SunRise/>
+        
         <div className='navbar sticky-top navbar-light bg-med'>
           <div className='' id={'navBar'+navBarActive}>
             <Navbar> </Navbar>
           </div>
           <Bubbles/>
         </div>
-        <div id='introContainer'>
-          
-            <Intro/>
+
+        <div id='parallax1'>
+          <Parallax1/>
+        </div>
+        
+        <div id='chunk1Container'>
+          <Chunk1/>
         </div>
 
-          <Parallax1/>
+         
             <Element name='2' className='element'>
              <h1>test 2</h1>
            </Element>
@@ -49,7 +56,7 @@ export default class Home extends Component {
           <h1>
            <Element name='4' className='element'>
              <h1>test 4</h1>
-                <SunRise/>
+                
            </Element>
 
                <Parallax bgImage={image2} strength={-300}>
