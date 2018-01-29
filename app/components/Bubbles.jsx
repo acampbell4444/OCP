@@ -23,6 +23,7 @@ export default class Bubbles extends Component {
       console.log(this.state)
     }
     this.setState({moreBubbles: false})
+    this.setState({popCount:1})
   }
 
   render() {
