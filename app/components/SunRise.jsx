@@ -179,27 +179,27 @@ function windowResize() {
 }
   render() {
     return (
-      <span id='sRise' onMouseDown={this.startMove} onMouseUp={this.stopMove} >
+      <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove} >
 
 
-          <div id="starsContainer" onMouseDown={this.startMove}  onMouseUp={this.stopMove}>
-          <div id="stars" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="starsContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}   onMouseUp={this.stopMove}>
+          <div id="stars" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
           </div>
           </div>
 
-          <div id="sun" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="sun" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
 
           </div>
 
-          <div id="sunDay" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="sunDay" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
 
           </div>
 
-          <div id="sunSet" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="sunSet" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
 
           </div>
 
-          <div id="sky" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="sky" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
 
           </div>
 
@@ -209,14 +209,14 @@ function windowResize() {
           <div className="star" style={{'right': '80px', 'top': '45px'}}></div>
           <div className="star" style={{'right': '120px', 'top': '20px'}}></div>
 
-          <div id="horizon" onMouseDown={this.startMove} onMouseUp={this.stopMove}></div>
+          <div id="horizon" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
 
-          <div id="horizonNight" onMouseDown={this.startMove} onMouseUp={this.stopMove}></div>
+          <div id="horizonNight" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
 
-          <div id="moon" onMouseDown={this.startMove} onMouseUp={this.stopMove}></div>
+          <div id="moon" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
 
           <div id="mountainRange">
-          <div id="mountain" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="mountain" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
           </div>
 
           </div>
@@ -225,15 +225,15 @@ function windowResize() {
 
           </div>
 
-          <div id="water" onMouseDown={this.startMove} onMouseUp={this.stopMove}></div>
+          <div id="water" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
 
-          <div id="waterReflectionContainer" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
-          <div id="waterReflectionMiddle" onMouseDown={this.startMove} onMouseUp={this.stopMove}>
+          <div id="waterReflectionContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
+          <div id="waterReflectionMiddle" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
 
           </div>
           </div>
-          <div id="waterDistance"  onMouseDown={this.startMove} onMouseUp={this.stopMove}></div>
-          <div id="darknessOverlaySky"  onMouseDown={this.startMove} onMouseUp={this.stopMove}></div>
+          <div id="waterDistance"  onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+          <div id="darknessOverlaySky"  onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
           <div id="darknessOverlay"></div>
           <div id="oceanRippleContainer">
           </div>
