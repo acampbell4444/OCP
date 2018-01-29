@@ -21615,10 +21615,6 @@ var _Bubbles = __webpack_require__(346);
 
 var _Bubbles2 = _interopRequireDefault(_Bubbles);
 
-var _SunRiseContainer = __webpack_require__(156);
-
-var _SunRiseContainer2 = _interopRequireDefault(_SunRiseContainer);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21627,8 +21623,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var image2 = 'https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1';
-var image3 = 'https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001';
+// import SunRise from '../containers/SunRiseContainer'
 
 var Home = function (_Component) {
   _inherits(Home, _Component);
@@ -21642,134 +21637,18 @@ var Home = function (_Component) {
   _createClass(Home, [{
     key: 'render',
     value: function render() {
-      var _props = this.props,
-          navBarActive = _props.navBarActive,
-          scrollToTop = _props.scrollToTop,
-          scrollToBottom = _props.scrollToBottom,
-          scrollTo = _props.scrollTo,
-          scrollMore = _props.scrollMore,
-          sunRiseHeight = _props.sunRiseHeight;
-
-      console.log('srh', sunRiseHeight);
       return _react2.default.createElement(
         'span',
         null,
         _react2.default.createElement(
           'div',
-          { className: 'navbar sticky-top navbar-light bg-med', style: { 'height': '200px' } },
+          { className: 'navbar sticky-top navbar-light bg-med' },
           _react2.default.createElement(
             _NavigationContainer2.default,
             null,
             ' '
-          )
-        ),
-        _react2.default.createElement(_Bubbles2.default, null),
-        _react2.default.createElement(
-          'div',
-          { id: 'chunk1Container', style: { 'marginTop': window.innerHeight - window.innerHeight * .2 } },
-          _react2.default.createElement(_Chunk1Container2.default, null)
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'parallax1' },
-          _react2.default.createElement(_Parallax2.default, null)
-        ),
-        _react2.default.createElement(
-          _reactScroll.Element,
-          { name: '2', className: 'element' },
-          _react2.default.createElement(
-            'h1',
-            null,
-            'test 2'
-          )
-        ),
-        _react2.default.createElement(
-          _reactParallax.Parallax,
-          { bgImage: image3, blur: { min: -2, max: 3 } },
-          _react2.default.createElement(
-            'div',
-            { style: { height: 500 } },
-            _react2.default.createElement(
-              'div',
-              null,
-              'Dynamic Blur'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          _react2.default.createElement(
-            _reactScroll.Element,
-            { name: '3', className: 'element' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'test 3'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          _reactParallax.Parallax,
-          { bgImage: image2, strength: -300 },
-          _react2.default.createElement(
-            'div',
-            { style: { height: 500 } },
-            _react2.default.createElement(
-              'div',
-              null,
-              'Reverse direction'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          _react2.default.createElement(
-            _reactScroll.Element,
-            { name: '4', className: 'element' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'test 4'
-            )
           ),
-          _react2.default.createElement(
-            _reactParallax.Parallax,
-            { bgImage: image2, strength: -300 },
-            _react2.default.createElement(
-              'div',
-              { style: { height: 500 } },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Reverse direction'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'a',
-          { onClick: scrollToTop },
-          'To the top!'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { onClick: scrollToBottom },
-          'To the bottom!'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { onClick: scrollTo },
-          'Scroll to 100px from the top'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { onClick: scrollMore },
-          'Scroll 100px more from the current position!'
+          _react2.default.createElement(_Bubbles2.default, null)
         )
       );
     }
@@ -22284,7 +22163,7 @@ var SunRise = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'span',
-        { id: 'sRise', onMouseUp: this.stopMove },
+        { id: 'sRise', onMouseDown: this.startMove, onMouseUp: this.stopMove },
         _react2.default.createElement(
           'div',
           { id: 'starsContainer', onMouseDown: this.startMove, onMouseUp: this.stopMove },
@@ -22544,7 +22423,7 @@ var SunRise = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'span',
-        { id: 'sRise', onMouseUp: this.stopMove },
+        { id: 'sRise', onMouseDown: this.startMove, onMouseUp: this.stopMove },
         _react2.default.createElement(
           'div',
           { id: 'starsContainer', onMouseDown: this.startMove, onMouseUp: this.stopMove },
@@ -42755,6 +42634,10 @@ var _SunRiseContainer = __webpack_require__(156);
 
 var _SunRiseContainer2 = _interopRequireDefault(_SunRiseContainer);
 
+var _Bubbles = __webpack_require__(346);
+
+var _Bubbles2 = _interopRequireDefault(_Bubbles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var OSApp = (0, _reactRedux.connect)(function (_ref) {
@@ -42768,8 +42651,9 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
     null,
     _react2.default.createElement(
       'div',
-      { style: { 'maxHeight': '200px' } },
-      _react2.default.createElement(_SunRiseContainer2.default, null)
+      null,
+      _react2.default.createElement(_SunRiseContainer2.default, null),
+      _react2.default.createElement(_Bubbles2.default, null)
     ),
     children
   );

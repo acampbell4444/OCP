@@ -17,6 +17,7 @@ import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
 import SunRise from './containers/SunRiseContainer'
+import Bubbles from './components/Bubbles'
 
 
 const OSApp = connect(
@@ -24,8 +25,9 @@ const OSApp = connect(
 )(
   ({ user, children }) =>
     <span>
-       <div style={{'maxHeight':'200px'}}>
-       <SunRise/>
+       <div>
+         <SunRise/>
+         <Bubbles/>
        </div>
       {children}
     </span>
