@@ -4,7 +4,7 @@
     vertical-align:middle;
     margin: 0 auto;
     z-index: 99999;
-    padding-top: 0px;
+    padding-top: 50px;
     color: transparent;
 }
 
@@ -23,11 +23,11 @@
 .icon-wrapper {
  font-size:3em;
   border-radius: 50%;
-  border: solid black;
-  color: black;
-  line-height: 1.7em;
-  width: 2em;
-  height: 2em;
+  border: solid white;
+  color: white;
+  line-height: 3em;
+  width: 3em;
+  height: 3em;
   text-align: center;
   display: inline-block;
   transition:0.2s;

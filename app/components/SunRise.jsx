@@ -180,6 +180,7 @@ function windowResize() {
   render() {
     return (
       <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove} onClick={this.startMove} onMouseUp={this.stopMove} >
+      sup bro
 
 
           <div id="starsContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}   onMouseUp={this.stopMove}>

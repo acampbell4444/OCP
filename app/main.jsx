@@ -16,8 +16,8 @@ import HomeContainer from './containers/HomeContainer'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
-import SunRise from './containers/SunRiseContainer'
 import Bubbles from './components/Bubbles'
+import Navbar from './containers/NavigationContainer'
 
 
 const OSApp = connect(
@@ -25,10 +25,10 @@ const OSApp = connect(
 )(
   ({ user, children }) =>
     <span>
-       <div>
-         <SunRise/>
-         <Bubbles/>
-       </div>
+      <div className='navbar sticky-top navbar-light bg-med'>
+          <Navbar> </Navbar>
+          <Bubbles/>
+      </div>
       {children}
     </span>
 )

@@ -7,16 +7,13 @@ import Chunk1 from '../containers/Chunk1Container'
 import Parallax1 from '../components/Parallax1'
 
  import Bubbles from '../components/Bubbles'
-// import SunRise from '../containers/SunRiseContainer'
+ import SunRise from '../containers/SunRiseContainer'
 
 export default class Home extends Component {
   render() {
     return (
       <span>
-        <div className='navbar sticky-top navbar-light bg-med'>
-          <Navbar> </Navbar>
-          <Bubbles/>
-        </div>
+        <div> <SunRise/> </div>
       </span>
     )
   }
