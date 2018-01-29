@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import Icon from 'react-icons-kit'
+import { facebook } from 'react-icons-kit/icomoon/facebook'
+import { instagram } from 'react-icons-kit/icomoon/instagram'
 
 export default class Bubbles extends Component {
   constructor(props) {
@@ -12,7 +15,7 @@ export default class Bubbles extends Component {
   handleButtonPop(bubName){
     this.setState({[bubName]: 'off'})
     this.setState({popCount:this.state.popCount+1})
-    if(this.state.popCount>=10){this.setState({moreBubbles:true})}
+    if(this.state.popCount>=8){this.setState({moreBubbles:true})}
   }
   blowMoreBubbles(){
     for(var i=1; i<11; i++){
@@ -27,8 +30,19 @@ export default class Bubbles extends Component {
     return (
       <div>
         <div id="background-wrap" onClick={e=> this.setState({intiateMobileMove:true})}>
-          <div className={'bubble x1 '+ 'bub'+this.state.bub1} onClick={e=> this.handleButtonPop('bub1')}></div>
-          <div className={'bubble x2 '+ 'bub'+this.state.bub2} onClick={e=> this.handleButtonPop('bub2')}></div>
+         
+          <div className={'bubble x1 '+ 'bub'+this.state.bub1} onClick={()=> window.open('https://www.facebook.com/ParasailingCatalina/', '_blank')}>
+            <div className='icon-wrapper faceBook'>
+              <Icon size={80} icon={facebook}></Icon>
+             </div>
+          </div>          
+
+          <div className={'bubble x2 '+ 'bub'+this.state.bub1} onClick={()=> window.open('https://www.instagram.com/explore/locations/238195647/parasail-catalina/', '_blank')}>
+            <div className='icon-wrapper instaGram'>
+              <Icon size={80} icon={instagram}></Icon>
+             </div>
+          </div>
+          
           <div className={'bubble x3 '+ 'bub'+this.state.bub3} onClick={e=> this.handleButtonPop('bub3')}></div>
           <div className={'bubble x4 '+ 'bub'+this.state.bub4} onClick={e=> this.handleButtonPop('bub4')}></div>
           <div className={'bubble x5 '+ 'bub'+this.state.bub5} onClick={e=> this.handleButtonPop('bub5')}></div>

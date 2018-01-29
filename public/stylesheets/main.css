@@ -93,10 +93,10 @@ body {
 	
 	left: 5%;
 	top: 5%;
-	
-	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	transform: scale(0.6);
+
+	-webkit-transform: scale(.8);
+	-moz-transform: scale(.8);
+	transform: scale(.8);
 }
 
 .x2 {
@@ -105,11 +105,11 @@ body {
 	animation: animateBubble 18s linear infinite, sideWays 4s ease-in-out infinite alternate;
 	
 	left: 5%;
-	top: 80%;
+	top: 30%;
 	
-	-webkit-transform: scale(0.7);
-	-moz-transform: scale(0.7);
-	transform: scale(0.7);
+	-webkit-transform: scale(.8);
+	-moz-transform: scale(.8);
+	transform: scale(.8);
 }
 
 .x3 {
@@ -217,8 +217,11 @@ body {
 }
 
 .x11 {
-  bottom:7%;
-  left: 4%;
+  bottom:1%;
+  left: 1%;
+  -webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
 }
 
 /* OBJECTS */
