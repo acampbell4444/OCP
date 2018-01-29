@@ -11494,7 +11494,9 @@ var Bubbles = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { id: 'background-wrap' },
+          { id: 'background-wrap', onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub1111');
+            } },
           _react2.default.createElement('div', { className: 'bubble x1 ' + 'bub' + this.state.bub1, onClick: function onClick(e) {
               return _this2.handleButtonPop('bub1');
             } }),

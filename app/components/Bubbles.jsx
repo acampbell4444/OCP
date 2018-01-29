@@ -29,7 +29,7 @@ export default class Bubbles extends Component {
   render() {
     return (
       <div>
-        <div id="background-wrap">
+        <div id="background-wrap" onClick={e=> this.handleButtonPop('bub1111')}>
           <div className={'bubble x1 '+ 'bub'+this.state.bub1} onClick={e=> this.handleButtonPop('bub1')}></div>
           <div className={'bubble x2 '+ 'bub'+this.state.bub2} onClick={e=> this.handleButtonPop('bub2')}></div>
           <div className={'bubble x3 '+ 'bub'+this.state.bub3} onClick={e=> this.handleButtonPop('bub3')}></div>
