@@ -21619,67 +21619,84 @@ var Home = function (_Component) {
       return _react2.default.createElement(
         'span',
         null,
-        _react2.default.createElement(_SunRiseContainer2.default, null),
         _react2.default.createElement(
           'div',
-          { className: 'navbar sticky-top navbar-light bg-med' },
+          { className: 'navbar sticky-top navbar-light bg-med', style: { 'height': '200px' } },
           _react2.default.createElement(
-            'div',
-            { className: '', id: 'navBar' + navBarActive },
-            _react2.default.createElement(
-              _NavigationContainer2.default,
-              null,
-              ' '
-            )
-          ),
-          _react2.default.createElement(_Bubbles2.default, null)
+            _NavigationContainer2.default,
+            null,
+            ' '
+          )
+        ),
+        _react2.default.createElement(_Bubbles2.default, null),
+        _react2.default.createElement(
+          'div',
+          { id: 'chunk1Container', style: { 'marginTop': window.innerHeight - window.innerHeight * .1 } },
+          _react2.default.createElement(_Chunk1Container2.default, null)
         ),
         _react2.default.createElement(
           'div',
-          { id: 'belowSunContainer', style: { 'marginTop': '600px' } },
-          _react2.default.createElement(
-            'div',
-            { id: 'chunk1Container' },
-            _react2.default.createElement(_Chunk1Container2.default, null)
-          ),
-          _react2.default.createElement(
-            'div',
-            { id: 'parallax1' },
-            _react2.default.createElement(_Parallax2.default, null)
-          ),
-          _react2.default.createElement(
-            _reactScroll.Element,
-            { name: '2', className: 'element' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'test 2'
-            )
-          ),
-          _react2.default.createElement(
-            _reactParallax.Parallax,
-            { bgImage: image3, blur: { min: -2, max: 3 } },
-            _react2.default.createElement(
-              'div',
-              { style: { height: 500 } },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Dynamic Blur'
-              )
-            )
-          ),
+          { id: 'parallax1' },
+          _react2.default.createElement(_Parallax2.default, null)
+        ),
+        _react2.default.createElement(
+          _reactScroll.Element,
+          { name: '2', className: 'element' },
           _react2.default.createElement(
             'h1',
             null,
+            'test 2'
+          )
+        ),
+        _react2.default.createElement(
+          _reactParallax.Parallax,
+          { bgImage: image3, blur: { min: -2, max: 3 } },
+          _react2.default.createElement(
+            'div',
+            { style: { height: 500 } },
             _react2.default.createElement(
-              _reactScroll.Element,
-              { name: '3', className: 'element' },
-              _react2.default.createElement(
-                'h1',
-                null,
-                'test 3'
-              )
+              'div',
+              null,
+              'Dynamic Blur'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'h1',
+          null,
+          _react2.default.createElement(
+            _reactScroll.Element,
+            { name: '3', className: 'element' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'test 3'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactParallax.Parallax,
+          { bgImage: image2, strength: -300 },
+          _react2.default.createElement(
+            'div',
+            { style: { height: 500 } },
+            _react2.default.createElement(
+              'div',
+              null,
+              'Reverse direction'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'h1',
+          null,
+          _react2.default.createElement(
+            _reactScroll.Element,
+            { name: '4', className: 'element' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'test 4'
             )
           ),
           _react2.default.createElement(
@@ -21694,56 +21711,30 @@ var Home = function (_Component) {
                 'Reverse direction'
               )
             )
-          ),
-          _react2.default.createElement(
-            'h1',
-            null,
-            _react2.default.createElement(
-              _reactScroll.Element,
-              { name: '4', className: 'element' },
-              _react2.default.createElement(
-                'h1',
-                null,
-                'test 4'
-              )
-            ),
-            _react2.default.createElement(
-              _reactParallax.Parallax,
-              { bgImage: image2, strength: -300 },
-              _react2.default.createElement(
-                'div',
-                { style: { height: 500 } },
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  'Reverse direction'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'a',
-            { onClick: scrollToTop },
-            'To the top!'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'a',
-            { onClick: scrollToBottom },
-            'To the bottom!'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'a',
-            { onClick: scrollTo },
-            'Scroll to 100px from the top'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'a',
-            { onClick: scrollMore },
-            'Scroll 100px more from the current position!'
           )
+        ),
+        _react2.default.createElement(
+          'a',
+          { onClick: scrollToTop },
+          'To the top!'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { onClick: scrollToBottom },
+          'To the bottom!'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { onClick: scrollTo },
+          'Scroll to 100px from the top'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          { onClick: scrollMore },
+          'Scroll 100px more from the current position!'
         )
       );
     }
@@ -22127,6 +22118,7 @@ var SunRise = function (_Component) {
         mouse.x = e.clientX || e.pageX;
         mouse.y = e.clientY || e.pageY;
         updateDimensions();
+        updateSunRiseDimensions();
 
         // if(mouseIsDown) {
         document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
@@ -22386,6 +22378,7 @@ var SunRise = function (_Component) {
         mouse.x = e.clientX || e.pageX;
         mouse.y = e.clientY || e.pageY;
         updateDimensions();
+        updateSunRiseDimensions();
 
         // if(mouseIsDown) {
         document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
@@ -42758,6 +42751,10 @@ var _NotFound = __webpack_require__(239);
 
 var _NotFound2 = _interopRequireDefault(_NotFound);
 
+var _SunRiseContainer = __webpack_require__(354);
+
+var _SunRiseContainer2 = _interopRequireDefault(_SunRiseContainer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var OSApp = (0, _reactRedux.connect)(function (_ref) {
@@ -42769,6 +42766,11 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
   return _react2.default.createElement(
     'span',
     null,
+    _react2.default.createElement(
+      'div',
+      { style: { 'maxHeight': '200px' } },
+      _react2.default.createElement(_SunRiseContainer2.default, null)
+    ),
     children
   );
 });

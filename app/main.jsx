@@ -16,12 +16,17 @@ import HomeContainer from './containers/HomeContainer'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
+import SunRise from './containers/SunRiseContainer'
+
 
 const OSApp = connect(
   ({ auth }) => ({ user: auth })
 )(
   ({ user, children }) =>
     <span>
+       <div style={{'maxHeight':'200px'}}>
+       <SunRise/>
+       </div>
       {children}
     </span>
 )

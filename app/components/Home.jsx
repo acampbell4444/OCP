@@ -17,18 +17,15 @@ export default class Home extends Component {
         console.log('srh', sunRiseHeight)
     return (
       <span>
-        <SunRise/>
-        
-        <div className='navbar sticky-top navbar-light bg-med'>
-          <div className='' id={'navBar'+navBarActive}>
+        <div className='navbar sticky-top navbar-light bg-med' style={{'height':'200px'}}>
+    
+
             <Navbar> </Navbar>
           </div>
           <Bubbles/>
-        </div>
 
-        <div id="belowSunContainer" style={{'marginTop': '600px'}}>
-
-                    <div id='chunk1Container'>
+    
+                    <div id='chunk1Container' style={{'marginTop':window.innerHeight-(window.innerHeight*.1)}}>
                     <Chunk1/>
                   </div>
 
@@ -36,8 +33,6 @@ export default class Home extends Component {
                     <Parallax1/>
                   </div>
                   
-                
-
                    
                       <Element name='2' className='element'>
                        <h1>test 2</h1>
@@ -77,7 +72,7 @@ export default class Home extends Component {
                   <a onClick={scrollTo}>Scroll to 100px from the top</a>
                   <br/>
                   <a onClick={scrollMore}>Scroll 100px more from the current position!</a>
-        </div>
+
       </span>
     )
   }
