@@ -6,6 +6,7 @@ export default class SunRise extends Component {
     this.state = { }
     this.startMove = this.startMove.bind(this)
     this.stopMove = this.stopMove.bind(this)
+    this.mm = this.mm.bind(this)
   }
   startMove() {
     return startMv()
@@ -16,35 +17,43 @@ export default class SunRise extends Component {
   startDraggingDivision() {
     return starDragDiv()
   }
-  componentDidMount(){
-    let {updateSunRiseDimensions} =  this.props
-     function updateDimensions() {
-    if( typeof( window.innerWidth ) == 'number' ) {
-      //Non-IE
-      myWidth = window.innerWidth;
-      myHeight = window.innerHeight;
-    } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-
-      myWidth = document.documentElement.clientWidth;
-      myHeight = document.documentElement.clientHeight;
-    } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-
-      myWidth = document.body.clientWidth;
-      myHeight = document.body.clientHeight;
+  mm(e) { 
+    const updateDimensions = () => {
+      if( typeof( window.innerWidth ) == 'number' ) {
+        myWidth = window.innerWidth;
+        myHeight = window.innerHeight;
+      } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+        myWidth = document.documentElement.clientWidth;
+        myHeight = document.documentElement.clientHeight;
+      } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+        myWidth = document.body.clientWidth;
+        myHeight = document.body.clientHeight;
+      }
     }
-  }
+    
+    let mouse = {x: 0, y: 0};
+    let myWidth = 0, myHeight = 0;
+    let mouseIsDown = false;
+    let mouseIsDownDivision = false;
 
-    var mouse = {x: 0, y: 0};
-    var myWidth = 0, myHeight = 0;
-    var mouseIsDown = false;
-    var mouseIsDownDivision = false;
-
-    document.addEventListener('mousemove', function(e){ 
+    const startMove = () => mouseIsDown = true
+    const stopMove = () => {
+      mouseIsDown = false;
+      mouseIsDownDivision = false;
+      var sky = document.getElementById("sun");
+    }
+    const startDraggingDivision = () => mouseIsDownDivision = true
+    const windowResize = () => {
+      updateDimensions();
+      var skyHeight = document.getElementById("horizon").clientHeight;
+      skyHeight = document.getElementById("sun").clientHeight;
+      document.getElementById("waterDistance").style.height = myHeight - skyHeight;
+      document.getElementById("division").style.top = skyHeight;
+    }
     mouse.x = e.clientX || e.pageX; 
     mouse.y = e.clientY || e.pageY 
-      updateDimensions();
-      // updateSunRiseDimensions()
-
+    updateDimensions();
+  
     // if(mouseIsDown) {
       document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
       document.getElementById("sun").style.background = '-moz-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
@@ -133,49 +142,15 @@ export default class SunRise extends Component {
     }
 
 
-}, false);
-
-function updateDimensions() {
-  if( typeof( window.innerWidth ) == 'number' ) {
-    //Non-IE
-    myWidth = window.innerWidth;
-    myHeight = window.innerHeight;
-  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-
-    myWidth = document.documentElement.clientWidth;
-    myHeight = document.documentElement.clientHeight;
-  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-
-    myWidth = document.body.clientWidth;
-    myHeight = document.body.clientHeight;
-  }
-  // updateSunRiseDimensions(myHeight,myWidth)
-  
-}
-
-function startMove() {
-  mouseIsDown = true;
-}
-
-function stopMove() {
-  mouseIsDown = false;
-  mouseIsDownDivision = false;
-  var sky = document.getElementById("sun");
-}
-
-function startDraggingDivision() {
-  mouseIsDownDivision = true;
-}
-
-function windowResize() {
-  updateDimensions();
-  var skyHeight = document.getElementById("horizon").clientHeight;
-  // update to new sky height
-  skyHeight = document.getElementById("sun").clientHeight;
-  document.getElementById("waterDistance").style.height = myHeight - skyHeight;
-  document.getElementById("division").style.top = skyHeight;
 
 }
+  componentDidMount(){
+
+     document.addEventListener('mousemove', this.mm, false);
+}
+
+componentWillUnmount(){
+  document.removeEventListener('mousemove',this.mm, false)
 }
   render() {
     return (

@@ -18,6 +18,7 @@ import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
 import Bubbles from './components/Bubbles'
 import Navbar from './containers/NavigationContainer'
+import ReservationContainer from './containers/ReservationContainer'
 
 
 const OSApp = connect(
@@ -39,6 +40,7 @@ render(
       <Route path="/" component={OSApp}>
         <IndexRedirect to="/home" />
         <Route path="/home" component={HomeContainer} />
+        <Route path="/reservations" component={ReservationContainer} />
       </Route>
       <Route path='*' component={NotFound} />
     </Router>

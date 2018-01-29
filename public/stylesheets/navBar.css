@@ -62,8 +62,11 @@ background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
   box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 
-.icon-wrapper.faceBook:hover {
-  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+
+.icon-wrapper.plus, .icon-wrapper.minus {
+  background-color:transparent;
+  border: transparent;
+  margin-top:5%;
 }
 
 .center {
