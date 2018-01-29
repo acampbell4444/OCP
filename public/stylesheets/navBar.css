@@ -17,8 +17,7 @@
 }
 
 #navActivetrue {
-  background-color: red;
-}
+background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
 
 .icon-wrapper {
  font-size:3em;
@@ -31,6 +30,7 @@
   text-align: center;
   display: inline-block;
   transition:0.2s;
+  padding-top: 10%;
 }
 
 #navBarfalse > div > div > a> .icon-wrapper {
@@ -38,7 +38,17 @@
 }
 
 .icon-wrapper:hover {
-  background-color: orange;
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+
+.icon-wrapper.two {
+  padding-left: 5%;
+  padding-top: 14%;
+}
+
+.icon-wrapper.three {
+  padding-left: 5%;
+  padding-top: 12%
 }
 
 .center {

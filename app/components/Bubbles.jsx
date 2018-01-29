@@ -13,7 +13,6 @@ export default class Bubbles extends Component {
     this.setState({[bubName]: 'off'})
     this.setState({popCount:this.state.popCount+1})
     if(this.state.popCount>=10){this.setState({moreBubbles:true})}
-      console.log('count',this.state.popCount)
   }
   blowMoreBubbles(){
     for(var i=1; i<11; i++){
@@ -22,7 +21,6 @@ export default class Bubbles extends Component {
     }
     this.setState({moreBubbles: false})
     return this.setState({popCount:1})
-    console.log('steelo',this.state)
   }
 
   render() {

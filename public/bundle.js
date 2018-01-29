@@ -11470,7 +11470,6 @@ var Bubbles = function (_Component) {
       if (this.state.popCount >= 10) {
         this.setState({ moreBubbles: true });
       }
-      console.log('count', this.state.popCount);
     }
   }, {
     key: 'blowMoreBubbles',
@@ -11481,7 +11480,6 @@ var Bubbles = function (_Component) {
       }
       this.setState({ moreBubbles: false });
       return this.setState({ popCount: 1 });
-      console.log('steelo', this.state);
     }
   }, {
     key: 'render',
@@ -21746,10 +21744,6 @@ var _reactIconsKit2 = _interopRequireDefault(_reactIconsKit);
 
 var _icomoon = __webpack_require__(494);
 
-var _SunRise = __webpack_require__(351);
-
-var _SunRise2 = _interopRequireDefault(_SunRise);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21757,8 +21751,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-//  import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 var Navigation = function (_Component) {
   _inherits(Navigation, _Component);
@@ -21785,50 +21777,11 @@ var Navigation = function (_Component) {
           'div',
           { className: 'col-3 col-sm-2' },
           _react2.default.createElement(
-            _reactScroll.Link,
-            { activeClass: 'active ', to: '1', spy: true, smooth: true,
-              offset: -100, duration: 1500, onSetActive: function onSetActive(e) {
-                updateNavbarActive(true);handleSectionChange(1);
-              },
-              onSetInactive: function onSetInactive(e) {
-                return updateNavbarActive(false);
-              },
-              onClick: function onClick(e) {
+            'div',
+            { className: 'icon-wrapper', id: 'navActive' + (currentSection === 1).toString(), onClick: function onClick(e) {
                 return handleSectionChange(1);
-              }
-            },
-            _react2.default.createElement(
-              'div',
-              { className: 'icon-wrapper', id: 'navActive' + (currentSection === 1).toString(), onClick: function onClick(e) {
-                  return handleSectionChange(1);
-                } },
-              _react2.default.createElement(_reactIconsKit2.default, { size: 50, icon: _icomoon.home })
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-3 col-sm-2' },
-          _react2.default.createElement(
-            _reactScroll.Link,
-            { activeClass: 'active ', to: '2', spy: true, smooth: true,
-              offset: -75, duration: 1500, onSetActive: function onSetActive(e) {
-                updateNavbarActive(true);handleSectionChange(2);
-              },
-              onSetInactive: function onSetInactive(e) {
-                return updateNavbarActive(false);
-              },
-              onClick: function onClick(e) {
-                return handleSectionChange(2);
-              }
-            },
-            _react2.default.createElement(
-              'div',
-              { className: 'icon-wrapper', id: 'navActive' + (currentSection === 2).toString(), onClick: function onClick(e) {
-                  return handleSectionChange(2);
-                } },
-              _react2.default.createElement(_reactIconsKit2.default, { size: 50, icon: _icomoon.home })
-            )
+              } },
+            _react2.default.createElement(_reactIconsKit2.default, { size: 80, icon: _icomoon.home })
           )
         ),
         _react2.default.createElement(
@@ -21836,24 +21789,21 @@ var Navigation = function (_Component) {
           { className: 'col-3 col-sm-2' },
           _react2.default.createElement(
             'div',
-            { className: 'icon-wrapper', id: 'navActive' + (currentSection === 3).toString(), onClick: function onClick(e) {
+            { className: 'icon-wrapper two', id: 'navActive' + (currentSection === 2).toString(), onClick: function onClick(e) {
+                return handleSectionChange(2);
+              } },
+            _react2.default.createElement(_reactIconsKit2.default, { size: 80, icon: _icomoon.calendar })
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'col-3 col-sm-2' },
+          _react2.default.createElement(
+            'div',
+            { className: 'icon-wrapper three', id: 'navActive' + (currentSection === 3).toString(), onClick: function onClick(e) {
                 return handleSectionChange(3);
               } },
-            _react2.default.createElement(
-              _reactScroll.Link,
-              { activeClass: 'active ', to: '3', spy: true, smooth: true,
-                offset: -120, duration: 1500, onSetActive: function onSetActive(e) {
-                  updateNavbarActive(true);handleSectionChange(3);
-                },
-                onSetInactive: function onSetInactive(e) {
-                  return updateNavbarActive(false);
-                },
-                onClick: function onClick(e) {
-                  return handleSectionChange(3);
-                }
-              },
-              _react2.default.createElement(_reactIconsKit2.default, { size: 50, icon: _icomoon.home })
-            )
+            _react2.default.createElement(_reactIconsKit2.default, { size: 100, icon: _icomoon.coinDollar })
           )
         ),
         _react2.default.createElement(
@@ -21864,21 +21814,7 @@ var Navigation = function (_Component) {
             { className: 'icon-wrapper', id: 'navActive' + (currentSection === 4).toString(), onClick: function onClick(e) {
                 return handleSectionChange(4);
               } },
-            _react2.default.createElement(
-              _reactScroll.Link,
-              { activeClass: 'active ', to: '4', spy: true, smooth: true,
-                offset: -120, duration: 1500, onSetActive: function onSetActive(e) {
-                  updateNavbarActive(true);handleSectionChange(4);
-                },
-                onSetInactive: function onSetInactive(e) {
-                  return updateNavbarActive(false);
-                },
-                onClick: function onClick(e) {
-                  return handleSectionChange(4);
-                }
-              },
-              _react2.default.createElement(_reactIconsKit2.default, { size: 50, icon: _icomoon.home })
-            )
+            _react2.default.createElement(_reactIconsKit2.default, { size: 50, icon: _icomoon.home })
           )
         ),
         _react2.default.createElement(
@@ -22010,267 +21946,7 @@ var Parallax1 = function (_Component) {
 exports.default = Parallax1;
 
 /***/ }),
-/* 351 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SunRise = function (_Component) {
-  _inherits(SunRise, _Component);
-
-  function SunRise(props) {
-    _classCallCheck(this, SunRise);
-
-    var _this = _possibleConstructorReturn(this, (SunRise.__proto__ || Object.getPrototypeOf(SunRise)).call(this, props));
-
-    _this.state = {};
-    _this.startMove = _this.startMove.bind(_this);
-    _this.stopMove = _this.stopMove.bind(_this);
-    return _this;
-  }
-
-  _createClass(SunRise, [{
-    key: 'startMove',
-    value: function startMove() {
-      return startMv();
-    }
-  }, {
-    key: 'stopMove',
-    value: function stopMove() {
-      return stopMv();
-    }
-  }, {
-    key: 'startDraggingDivision',
-    value: function startDraggingDivision() {
-      return starDragDiv();
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var updateSunRiseDimensions = this.props.updateSunRiseDimensions;
-
-      function updateDimensions() {
-        if (typeof window.innerWidth == 'number') {
-          //Non-IE
-          myWidth = window.innerWidth;
-          myHeight = window.innerHeight;
-        } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
-
-          myWidth = document.documentElement.clientWidth;
-          myHeight = document.documentElement.clientHeight;
-        } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
-
-          myWidth = document.body.clientWidth;
-          myHeight = document.body.clientHeight;
-        }
-      }
-
-      var mouse = { x: 0, y: 0 };
-      var myWidth = 0,
-          myHeight = 0;
-      var mouseIsDown = false;
-      var mouseIsDownDivision = false;
-
-      document.addEventListener('mousemove', function (e) {
-        mouse.x = e.clientX || e.pageX;
-        mouse.y = e.clientY || e.pageY;
-        updateDimensions();
-        // updateSunRiseDimensions()
-
-        // if(mouseIsDown) {
-        document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
-        document.getElementById("sun").style.background = '-moz-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
-        document.getElementById("sun").style.background = '-ms-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
-
-        document.getElementById("sunDay").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(252,255,251,0.9) 0%,rgba(253,250,219,0.4) 30%,rgba(226,219,197,0.01) 70%, rgba(226,219,197,0.0) 70%,rgba(201,165,132,0) 100%)';
-        document.getElementById("sunDay").style.background = '-moz-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(252,255,251,0.9) 0%,rgba(253,250,219,0.4) 30%,rgba(226,219,197,0.01) 70%, rgba(226,219,197,0.0) 70%,rgba(201,165,132,0) 100%)';
-        document.getElementById("sunDay").style.background = '-ms-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(252,255,251,0.9) 0%,rgba(253,250,219,0.4) 30%,rgba(226,219,197,0.01) 70%, rgba(226,219,197,0.0) 70%,rgba(201,165,132,0) 100%)';
-
-        document.getElementById("sunSet").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(254,255,255,0.8) 5%,rgba(236,255,0,1) 10%,rgba(253,50,41,1) 25%, rgba(243,0,0,1) 40%,rgba(93,0,0,1) 100%)';
-        document.getElementById("sunSet").style.background = '-moz-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(254,255,255,0.8) 5%,rgba(236,255,0,1) 10%,rgba(253,50,41,1) 25%, rgba(243,0,0,1) 40%,rgba(93,0,0,1) 100%)';
-        document.getElementById("sunSet").style.background = '-ms-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(254,255,255,0.8) 5%,rgba(236,255,0,1) 10%,rgba(253,50,41,1) 25%, rgba(243,0,0,1) 40%,rgba(93,0,0,1) 100%)';
-
-        document.getElementById("waterReflectionContainer").style.perspectiveOrigin = (mouse.x / myWidth * 100).toString() + "% -15%";
-        document.getElementById("waterReflectionMiddle").style.left = (mouse.x - myWidth - myWidth * .03).toString() + "px";
-
-        var bodyWidth = document.getElementsByTagName("span")[0].clientWidth;
-
-        document.getElementById("sun").style.width = bodyWidth;
-        document.getElementById("sun").style.left = "0px";
-        document.getElementById("sunDay").style.width = bodyWidth;
-        document.getElementById("sunDay").style.left = "0px";
-
-        var sky = document.getElementById("sun");
-        var water = document.getElementById("water");
-        var waterHeight = water.clientHeight;
-        var skyHeight = sky.clientHeight;
-        var skyRatio = mouse.y / skyHeight;
-        var waterRatio = waterHeight / myHeight;
-        document.getElementById("darknessOverlay").style.opacity = Math.min((mouse.y - myHeight / 2) / (myHeight / 2), 1);
-        document.getElementById("darknessOverlaySky").style.opacity = Math.min((mouse.y - myHeight * 7 / 10) / (myHeight - myHeight * 7 / 10), 1);
-        document.getElementById("moon").style.opacity = Math.min((mouse.y - myHeight * 9 / 10) / (myHeight - myHeight * 9 / 10), 0.65);
-        document.getElementById("horizonNight").style.opacity = (mouse.y - myHeight * 4 / 5) / (myHeight - myHeight * 4 / 5);
-
-        document.getElementById("starsContainer").style.opacity = mouse.y / myHeight - 0.6;
-
-        document.getElementById("waterDistance").style.opacity = mouse.y / myHeight + 0.6;
-        document.getElementById("sunDay").style.opacity = 1 - mouse.y / myHeight;
-        document.getElementById("sky").style.opacity = Math.min(1 - mouse.y / myHeight, 0.99);
-
-        document.getElementById("sunSet").style.opacity = mouse.y / myHeight - 0.2;
-
-        if (mouse.y > 0) {
-          var clouds = document.getElementsByClassName("cloud");
-          for (var i = 0; i < clouds.length; i++) {
-            clouds[i].style.left = Math.min(myWidth * (Math.pow(mouse.y, 2) / Math.pow(myHeight / 2, 2)) * -1, 0);
-          }
-          //}
-
-          var stars = document.getElementsByClassName('star');
-          for (var i = 0; i < stars.length; i++) {
-            stars[i].style.opacity = mouse.y / myHeight - 0.6;
-          }
-
-          if (mouse.y > myHeight / 2) {
-            document.getElementById("sun").style.opacity = Math.min((myHeight - mouse.y) / (myHeight / 2) + 0.2, 0.5);
-            document.getElementById("horizon").style.opacity = (myHeight - mouse.y) / (myHeight / 2) + 0.2;
-
-            document.getElementById("waterReflectionMiddle").style.opacity = (myHeight - mouse.y) / (myHeight / 2) - 0.1;
-          } else {
-            document.getElementById("horizon").style.opacity = Math.min(mouse.y / (myHeight / 2), 0.99);
-
-            document.getElementById("sun").style.opacity = Math.min(mouse.y / (myHeight / 2), 0.5);
-            document.getElementById("waterReflectionMiddle").style.opacity = mouse.y / (myHeight / 2) - 0.1;
-          }
-        } else if (mouseIsDownDivision) {
-          var sunElement = document.getElementById("sun");
-          var water = document.getElementById("water");
-          var division = document.getElementById("division");
-          sunElement.style.height = mouse.y.toString() + "px";
-          document.getElementById("sunDay").style.height = mouse.y.toString() + "px";
-          division.style.top = mouse.y.toString() + "px";
-          var waterHeight = myHeight - mouse.y;
-          water.style.height = waterHeight.toString() + "px";
-
-          document.getElementById("sun").style.height = mouse.y.toString() + "px";
-          document.getElementById("sunDay").style.height = mouse.y.toString() + "px";
-          document.getElementById("horizon").style.height = mouse.y.toString() + "px";
-          document.getElementById("waterDistance").style.height = (myHeight - mouse.y).toString() + "px";
-          document.getElementById("oceanRippleContainer").style.height = (myHeight - mouse.y).toString() + "px";
-          document.getElementById("darknessOverlay").style.height = (myHeight - mouse.y).toString() + "px";
-        }
-      }, false);
-
-      function updateDimensions() {
-        if (typeof window.innerWidth == 'number') {
-          //Non-IE
-          myWidth = window.innerWidth;
-          myHeight = window.innerHeight;
-        } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
-
-          myWidth = document.documentElement.clientWidth;
-          myHeight = document.documentElement.clientHeight;
-        } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
-
-          myWidth = document.body.clientWidth;
-          myHeight = document.body.clientHeight;
-        }
-        // updateSunRiseDimensions(myHeight,myWidth)
-      }
-
-      function startMove() {
-        mouseIsDown = true;
-      }
-
-      function stopMove() {
-        mouseIsDown = false;
-        mouseIsDownDivision = false;
-        var sky = document.getElementById("sun");
-      }
-
-      function startDraggingDivision() {
-        mouseIsDownDivision = true;
-      }
-
-      function windowResize() {
-        updateDimensions();
-        var skyHeight = document.getElementById("horizon").clientHeight;
-        // update to new sky height
-        skyHeight = document.getElementById("sun").clientHeight;
-        document.getElementById("waterDistance").style.height = myHeight - skyHeight;
-        document.getElementById("division").style.top = skyHeight;
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'span',
-        { id: 'sRise', onMouseDown: this.startMove, onTouchStart: this.startMove, onClick: this.startMove, onMouseUp: this.stopMove },
-        'sup bro',
-        _react2.default.createElement(
-          'div',
-          { id: 'starsContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
-          _react2.default.createElement('div', { id: 'stars', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
-        ),
-        _react2.default.createElement('div', { id: 'sun', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'sunDay', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'sunSet', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'sky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { className: 'star', style: { 'left': '250px', 'top': '30px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'left': '300px', 'top': '25px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'right': '40px', 'top': '40px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'right': '80px', 'top': '45px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'right': '120px', 'top': '20px' } }),
-        _react2.default.createElement('div', { id: 'horizon', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'horizonNight', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'moon', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement(
-          'div',
-          { id: 'mountainRange' },
-          _react2.default.createElement('div', { id: 'mountain', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
-        ),
-        _react2.default.createElement('div', { id: 'division', onMouseDown: this.startDraggingDivision, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'water', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement(
-          'div',
-          { id: 'waterReflectionContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
-          _react2.default.createElement('div', { id: 'waterReflectionMiddle', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
-        ),
-        _react2.default.createElement('div', { id: 'waterDistance', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'darknessOverlaySky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'darknessOverlay' }),
-        _react2.default.createElement('div', { id: 'oceanRippleContainer' }),
-        _react2.default.createElement('div', { id: 'oceanRipple' })
-      );
-    }
-  }]);
-
-  return SunRise;
-}(_react.Component);
-
-exports.default = SunRise;
-
-/***/ }),
+/* 351 */,
 /* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
