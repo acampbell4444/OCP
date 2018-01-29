@@ -11477,12 +11477,11 @@ var Bubbles = function (_Component) {
     value: function blowMoreBubbles() {
       for (var i = 1; i < 11; i++) {
         var bub = 'bub' + i.toString();
-        console.log(bub);
         this.setState(_defineProperty({}, bub, 'on'));
-        console.log(this.state);
       }
       this.setState({ moreBubbles: false });
-      this.setState({ popCount: 1 });
+      return this.setState({ popCount: 1 });
+      console.log('steelo', this.state);
     }
   }, {
     key: 'render',
@@ -11495,7 +11494,7 @@ var Bubbles = function (_Component) {
         _react2.default.createElement(
           'div',
           { id: 'background-wrap', onClick: function onClick(e) {
-              return _this2.handleButtonPop('bub1111');
+              return _this2.setState({ intiateMobileMove: true });
             } },
           _react2.default.createElement('div', { className: 'bubble x1 ' + 'bub' + this.state.bub1, onClick: function onClick(e) {
               return _this2.handleButtonPop('bub1');

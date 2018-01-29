@@ -18,18 +18,17 @@ export default class Bubbles extends Component {
   blowMoreBubbles(){
     for(var i=1; i<11; i++){
       let bub = 'bub'+i.toString()
-      console.log(bub)
       this.setState({[bub]:'on'})
-      console.log(this.state)
     }
     this.setState({moreBubbles: false})
-    this.setState({popCount:1})
+    return this.setState({popCount:1})
+    console.log('steelo',this.state)
   }
 
   render() {
     return (
       <div>
-        <div id="background-wrap" onClick={e=> this.handleButtonPop('bub1111')}>
+        <div id="background-wrap" onClick={e=> this.setState({intiateMobileMove:true})}>
           <div className={'bubble x1 '+ 'bub'+this.state.bub1} onClick={e=> this.handleButtonPop('bub1')}></div>
           <div className={'bubble x2 '+ 'bub'+this.state.bub2} onClick={e=> this.handleButtonPop('bub2')}></div>
           <div className={'bubble x3 '+ 'bub'+this.state.bub3} onClick={e=> this.handleButtonPop('bub3')}></div>
@@ -44,8 +43,6 @@ export default class Bubbles extends Component {
             <div className={'bubble x11'} onClick={this.blowMoreBubbles}></div>
             )
           }
-         
-
         </div>
       </div>
     )
