@@ -11438,6 +11438,8 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -11447,31 +11449,82 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Bubbles = function (_Component) {
   _inherits(Bubbles, _Component);
 
-  function Bubbles() {
+  function Bubbles(props) {
     _classCallCheck(this, Bubbles);
 
-    return _possibleConstructorReturn(this, (Bubbles.__proto__ || Object.getPrototypeOf(Bubbles)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Bubbles.__proto__ || Object.getPrototypeOf(Bubbles)).call(this, props));
+
+    _this.state = { bub1: 'on', bub2: 'on', bub3: 'on', bub4: 'on', bub5: 'on', bub6: 'on', bub7: 'on', bub8: 'on', bub9: 'on', bub10: 'on',
+      popCount: 1, moreBubbles: false
+    };
+    _this.handleButtonPop = _this.handleButtonPop.bind(_this);
+    _this.blowMoreBubbles = _this.blowMoreBubbles.bind(_this);
+    return _this;
   }
 
   _createClass(Bubbles, [{
-    key: "render",
+    key: 'handleButtonPop',
+    value: function handleButtonPop(bubName) {
+      this.setState(_defineProperty({}, bubName, 'off'));
+      this.setState({ popCount: this.state.popCount + 1 });
+      if (this.state.popCount >= 10) {
+        this.setState({ moreBubbles: true });
+      }
+      console.log('count', this.state.popCount);
+    }
+  }, {
+    key: 'blowMoreBubbles',
+    value: function blowMoreBubbles() {
+      for (var i = 1; i < 11; i++) {
+        var bub = 'bub' + i.toString();
+        console.log(bub);
+        this.setState(_defineProperty({}, bub, 'on'));
+        console.log(this.state);
+      }
+      this.setState({ moreBubbles: false });
+    }
+  }, {
+    key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "div",
-          { id: "background-wrap" },
-          _react2.default.createElement("div", { className: "bubble x1" }),
-          _react2.default.createElement("div", { className: "bubble x2" }),
-          _react2.default.createElement("div", { className: "bubble x3" }),
-          _react2.default.createElement("div", { className: "bubble x4" }),
-          _react2.default.createElement("div", { className: "bubble x5" }),
-          _react2.default.createElement("div", { className: "bubble x6" }),
-          _react2.default.createElement("div", { className: "bubble x7" }),
-          _react2.default.createElement("div", { className: "bubble x8" }),
-          _react2.default.createElement("div", { className: "bubble x9" }),
-          _react2.default.createElement("div", { className: "bubble x10" })
+          'div',
+          { id: 'background-wrap' },
+          _react2.default.createElement('div', { className: 'bubble x1 ' + 'bub' + this.state.bub1, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub1');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x2 ' + 'bub' + this.state.bub2, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub2');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x3 ' + 'bub' + this.state.bub3, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub3');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x4 ' + 'bub' + this.state.bub4, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub4');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x5 ' + 'bub' + this.state.bub5, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub5');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x6 ' + 'bub' + this.state.bub6, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub6');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x7 ' + 'bub' + this.state.bub7, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub7');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x8 ' + 'bub' + this.state.bub8, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub8');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x9 ' + 'bub' + this.state.bub9, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub9');
+            } }),
+          _react2.default.createElement('div', { className: 'bubble x10 ' + 'bub' + this.state.bub10, onClick: function onClick(e) {
+              return _this2.handleButtonPop('bub10');
+            } }),
+          this.state.moreBubbles && _react2.default.createElement('div', { className: 'bubble x11', onClick: this.blowMoreBubbles })
         )
       );
     }
@@ -22039,7 +22092,7 @@ var SunRise = function (_Component) {
         mouse.x = e.clientX || e.pageX;
         mouse.y = e.clientY || e.pageY;
         updateDimensions();
-        updateSunRiseDimensions();
+        // updateSunRiseDimensions()
 
         // if(mouseIsDown) {
         document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
@@ -22139,7 +22192,7 @@ var SunRise = function (_Component) {
           myWidth = document.body.clientWidth;
           myHeight = document.body.clientHeight;
         }
-        updateSunRiseDimensions(myHeight, myWidth);
+        // updateSunRiseDimensions(myHeight,myWidth)
       }
 
       function startMove() {
@@ -22300,7 +22353,7 @@ var SunRise = function (_Component) {
         mouse.x = e.clientX || e.pageX;
         mouse.y = e.clientY || e.pageY;
         updateDimensions();
-        updateSunRiseDimensions();
+        // updateSunRiseDimensions()
 
         // if(mouseIsDown) {
         document.getElementById("sun").style.background = '-webkit-radial-gradient(' + mouse.x + 'px ' + mouse.y + 'px, circle, rgba(242,248,247,1) 0%,rgba(249,249,28,1) 3%,rgba(247,214,46,1) 8%, rgba(248,200,95,1) 12%,rgba(201,165,132,1) 30%,rgba(115,130,133,1) 51%,rgba(46,97,122,1) 85%,rgba(24,75,106,1) 100%)';
@@ -22400,7 +22453,7 @@ var SunRise = function (_Component) {
           myWidth = document.body.clientWidth;
           myHeight = document.body.clientHeight;
         }
-        updateSunRiseDimensions(myHeight, myWidth);
+        // updateSunRiseDimensions(myHeight,myWidth)
       }
 
       function startMove() {

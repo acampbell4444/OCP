@@ -216,6 +216,11 @@ body {
 	transform: scale(0.3);
 }
 
+.x11 {
+  bottom:7%;
+  left: 4%;
+}
+
 /* OBJECTS */
 
 .bubble {
@@ -256,6 +261,9 @@ body {
 	width: 180px;
 }
 
+.buboff {
+	display:none;
+}
 
 
 
