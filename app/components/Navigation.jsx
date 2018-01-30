@@ -16,7 +16,7 @@ export default class Navigation extends Component {
       <div className='row center'>
         <div className='col-3 col-sm-2' >
           <div className={'icon-wrapper one'} id={'navActive'+(currentSection===1).toString()} 
-                onClick={e => handleSectionChange(1) } onMouseOver={e => handleHover(1)} 
+                onClick={e => handleSectionChange(1) } onMouseEnter={e => handleHover(1)} 
                 onMouseLeave={e =>{ handleIconLeave('1'); handleHover('off')}}
           >
             {hoverState!==1&&(<Icon size={80} icon={home}></Icon>)}
