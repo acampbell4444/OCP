@@ -52,6 +52,7 @@ module.exports = app
   .use(express.static(resolve(__dirname, '..', 'public')))
 
   .use('/bootstrap', express.static(join(__dirname, '../node_modules/bootstrap/dist')))
+  .use('/font-awesome', express.static(join(__dirname, '../node_modules/font-awesome/')))
 
   // Serve our api - ./api also requires in ../db, which syncs with our database
   .use('/api', require('./api'))

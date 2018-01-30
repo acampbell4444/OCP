@@ -17,7 +17,7 @@ export default class Bubbles extends Component {
   handleButtonPop(bubName){
     this.setState({[bubName]: 'off'})
     this.setState({popCount:this.state.popCount+1})
-    if(this.state.popCount>=4){this.setState({moreBubbles:true})}
+    if(this.state.popCount>=3){this.setState({moreBubbles:true})}
   }
   blowMoreBubbles(){
     for(var i=1; i<11; i++){
@@ -58,7 +58,7 @@ export default class Bubbles extends Component {
           <div className={'bubble x5 '+ 'bub'+this.state.bub5} onClick={e=> this.handleButtonPop('bub5')}></div>
           <div className={'bubble x6 '+ 'bub'+this.state.bub6} onClick={e=> this.handleButtonPop('bub6')}></div>*/}
           <div className={'bubble x7 '+ 'bub'+this.state.bub7} onClick={e=> this.handleButtonPop('bub7')}></div>
-          <div className={'bubble x8 '+ 'bub'+this.state.bub8} onClick={e=> this.handleButtonPop('bub8')}></div>
+{/*          <div className={'bubble x8 '+ 'bub'+this.state.bub8} onClick={e=> this.handleButtonPop('bub8')}></div>*/}
           <div className={'bubble x9 '+ 'bub'+this.state.bub9} onClick={e=> this.handleButtonPop('bub9')}></div>
           <div className={'bubble x10 '+ 'bub'+this.state.bub10} onClick={e=> this.handleButtonPop('bub10')}></div>
           <div>
