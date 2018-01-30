@@ -11774,9 +11774,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       }
     },
     handleHover: function handleHover(iconNum) {
-      return setTimeout(function () {
-        return dispatch((0, _navBar.iconNumHover)(iconNum));
-      }, 400);
+      return dispatch((0, _navBar.iconNumHover)(iconNum));
     },
     handleIconLeave: function handleIconLeave(iconNum) {
       return dispatch((0, _navBar.iconLeft)(iconNum));

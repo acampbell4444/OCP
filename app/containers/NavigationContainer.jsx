@@ -31,7 +31,7 @@ const mapDispatchToProps = dispatch => (
       if(section===6&&currentSection!==6){console.log('taco'); return dispatch(updateCurrentSection(section))}
     },
     handleHover(iconNum){
-      return setTimeout(function() { return dispatch(iconNumHover(iconNum)) }, 400);
+      return dispatch(iconNumHover(iconNum))
     },
     handleIconLeave(iconNum){
       return dispatch(iconLeft(iconNum))
