@@ -21846,6 +21846,11 @@ var Home = function (_Component) {
         _react2.default.createElement(
           'div',
           null,
+          _react2.default.createElement(_Bubbles2.default, null)
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
           ' ',
           _react2.default.createElement(_SunRiseContainer2.default, null),
           ' '
@@ -22129,15 +22134,27 @@ var Reservation = function (_Component) {
   }
 
   _createClass(Reservation, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(
-          'h1',
+          "h1",
           null,
-          'Reservation Component. Do some work.'
+          "Reservation Component. Do some work."
+        ),
+        _react2.default.createElement(
+          "iframe",
+          { id: "bookingcalendar",
+            src: "https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css",
+            style: { 'width': '100%', 'maxWidth': '800px', 'height': '1200px', 'border': '0', 'padding': '0', 'margin': '0' },
+            frameBorder: "0" },
+          _react2.default.createElement(
+            "a",
+            { href: "https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css" },
+            "Make Reservation"
+          )
         )
       );
     }
@@ -42654,10 +42671,6 @@ var _NotFound = __webpack_require__(242);
 
 var _NotFound2 = _interopRequireDefault(_NotFound);
 
-var _Bubbles = __webpack_require__(157);
-
-var _Bubbles2 = _interopRequireDefault(_Bubbles);
-
 var _NavigationContainer = __webpack_require__(158);
 
 var _NavigationContainer2 = _interopRequireDefault(_NavigationContainer);
@@ -42684,8 +42697,7 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
         _NavigationContainer2.default,
         null,
         ' '
-      ),
-      _react2.default.createElement(_Bubbles2.default, null)
+      )
     ),
     children
   );

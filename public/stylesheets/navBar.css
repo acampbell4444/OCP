@@ -61,10 +61,12 @@ background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
 .icon-wrapper.faceBook {
   margin-top: 15%;
   background-color: #4468B0;
+  margin-left:15%;
 }
 
 .icon-wrapper.instaGram {
   margin-top: 15%;
+  margin-left:15%;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
   box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
@@ -73,7 +75,8 @@ background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
 .icon-wrapper.plus, .icon-wrapper.minus {
   background-color:transparent;
   border: transparent;
-  margin-top:5%;
+  margin-top:8%;
+  margin-left:13%;
 }
 
 #iconTextHm {

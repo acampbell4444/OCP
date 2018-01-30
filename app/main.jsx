@@ -16,7 +16,7 @@ import HomeContainer from './containers/HomeContainer'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
-import Bubbles from './components/Bubbles'
+
 import Navbar from './containers/NavigationContainer'
 import ReservationContainer from './containers/ReservationContainer'
 
@@ -28,7 +28,6 @@ const OSApp = connect(
     <span>
       <div className='navbar sticky-top navbar-light bg-med'>
           <Navbar> </Navbar>
-          <Bubbles/>
       </div>
       {children}
     </span>
