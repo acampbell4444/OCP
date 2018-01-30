@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {browserHistory} from 'react-router'
 
 export default class SunRise extends Component {
   constructor(props) {
@@ -52,7 +53,6 @@ export default class SunRise extends Component {
     }
     mouse.x = e.clientX || e.pageX; 
     mouse.y = e.clientY || e.pageY
-    console.log('ratio', mouse.y/window.innerHeight)
     updateDimensions();
   
     // if(mouseIsDown) {
@@ -161,7 +161,7 @@ componentWillUnmount(){
     return (
       <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove} onClick={this.startMove} onMouseUp={this.stopMove} >
         <h1 id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
-        <div className='center'><button id='BN' onClick={()=> window.open('https://webreserv.com/', '_blank')}>BOOK NOW</button></div>
+        <div className='center'><button id='BN' onClick={()=> browserHistory.push('/reservations')}>BOOK NOW</button></div>
 
 
           <div id="starsContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}   onMouseUp={this.stopMove}>

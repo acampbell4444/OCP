@@ -5,7 +5,8 @@
     margin: 0 auto;
     z-index: 999999;
     padding-top: 50px;
-    color: transparent;
+    color: white;
+    overflow: hidden;
 }
 
 #navBartrue {
@@ -31,6 +32,7 @@ background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
   display: inline-block;
   transition:1s;
   padding-top: 10%;
+  overflow: none;
 }
 
 
