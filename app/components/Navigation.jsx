@@ -16,8 +16,7 @@ export default class Navigation extends Component {
       <div className='row center'>
         <div className='col-3 col-sm-2' >
           <div className={'icon-wrapper one'} id={'navActive'+(currentSection===1).toString()} 
-                onClick={e => handleSectionChange(1) } onMouseEnter={e => handleHover(1)} 
-                onMouseLeave={e =>{ handleIconLeave('1'); handleHover('off')}}
+                onClick={e => {handleSectionChange(1); handleHover(1)} }
           >
             {hoverState!==1&&(<Icon size={80} icon={home}></Icon>)}
             {hoverState===1&&(<h3 id='iconTextHm'>HOME</h3>)}
@@ -26,8 +25,7 @@ export default class Navigation extends Component {
         
         <div className='col-3 col-sm-2' >
           <div className={'icon-wrapper two'} id={'navActive'+(currentSection===2).toString()} 
-                onClick={e => handleSectionChange(2) } onMouseOver={e => handleHover(2)} 
-                onMouseLeave={e =>{ handleIconLeave('2'); handleHover('off')}}
+                onClick={e => {handleSectionChange(2); handleHover(2)} }
           >
             {hoverState!==2&&(<Icon size={80} icon={calendar}></Icon>)}
             {hoverState===2&&(<h3 id='iconTextCl'>BOOK NOW</h3>)}
@@ -36,8 +34,7 @@ export default class Navigation extends Component {
        
         <div className='col-3 col-sm-2' >
           <div className={'icon-wrapper three'} id={'navActive'+(currentSection===3).toString()} 
-                onClick={e => handleSectionChange(3) } onMouseOver={e => handleHover(3)} 
-                onMouseLeave={e =>{ handleIconLeave('3'); handleHover('off')}}
+               onClick={e => {handleSectionChange(3); handleHover(3)} }
           >
             {hoverState!==3&&(<Icon size={80} icon={dollar}></Icon>)}
             {hoverState===3&&(<h3 id='iconTextRt'>RATES</h3>)}

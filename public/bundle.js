@@ -62,6 +62,17 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/ 	// webpack-livereload-plugin
+/******/ 	(function() {
+/******/ 	  if (typeof window === "undefined") { return };
+/******/ 	  var id = "webpack-livereload-plugin-script";
+/******/ 	  if (document.getElementById(id)) { return; }
+/******/ 	  var el = document.createElement("script");
+/******/ 	  el.id = id;
+/******/ 	  el.async = true;
+/******/ 	  el.src = "http://localhost:35729/livereload.js";
+/******/ 	  document.getElementsByTagName("head")[0].appendChild(el);
+/******/ 	}());
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 558);
 /******/ })
@@ -21925,12 +21936,7 @@ var Navigation = function (_Component) {
             'div',
             { className: 'icon-wrapper one', id: 'navActive' + (currentSection === 1).toString(),
               onClick: function onClick(e) {
-                return handleSectionChange(1);
-              }, onMouseEnter: function onMouseEnter(e) {
-                return handleHover(1);
-              },
-              onMouseLeave: function onMouseLeave(e) {
-                handleIconLeave('1');handleHover('off');
+                handleSectionChange(1);handleHover(1);
               }
             },
             hoverState !== 1 && _react2.default.createElement(_reactIconsKit2.default, { size: 80, icon: _icomoon.home }),
@@ -21948,12 +21954,7 @@ var Navigation = function (_Component) {
             'div',
             { className: 'icon-wrapper two', id: 'navActive' + (currentSection === 2).toString(),
               onClick: function onClick(e) {
-                return handleSectionChange(2);
-              }, onMouseOver: function onMouseOver(e) {
-                return handleHover(2);
-              },
-              onMouseLeave: function onMouseLeave(e) {
-                handleIconLeave('2');handleHover('off');
+                handleSectionChange(2);handleHover(2);
               }
             },
             hoverState !== 2 && _react2.default.createElement(_reactIconsKit2.default, { size: 80, icon: _icomoon.calendar }),
@@ -21971,12 +21972,7 @@ var Navigation = function (_Component) {
             'div',
             { className: 'icon-wrapper three', id: 'navActive' + (currentSection === 3).toString(),
               onClick: function onClick(e) {
-                return handleSectionChange(3);
-              }, onMouseOver: function onMouseOver(e) {
-                return handleHover(3);
-              },
-              onMouseLeave: function onMouseLeave(e) {
-                handleIconLeave('3');handleHover('off');
+                handleSectionChange(3);handleHover(3);
               }
             },
             hoverState !== 3 && _react2.default.createElement(_reactIconsKit2.default, { size: 80, icon: _dollar.dollar }),
