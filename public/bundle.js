@@ -22360,6 +22360,17 @@ var SunRise = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
+          { className: 'center' },
+          _react2.default.createElement(
+            'button',
+            { id: 'BN', onClick: function onClick() {
+                return window.open('https://webreserv.com/', '_blank');
+              } },
+            'BOOK NOW'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
           { id: 'starsContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
           _react2.default.createElement('div', { id: 'stars', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
         ),

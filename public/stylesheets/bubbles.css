@@ -72,6 +72,7 @@
 	
 	left: 5%;
 	top: 30%;
+  z-index: 999991
 	
 	-webkit-transform: scale(.8);
 	-moz-transform: scale(.8);
