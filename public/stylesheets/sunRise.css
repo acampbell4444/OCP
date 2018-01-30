@@ -1,6 +1,6 @@
 #sunriseHeader {
   color: white;
-  margin: 3% auto 0;
+  margin: 5% auto 0;
   font-size: 80px;
   text-align: center;
   position: relative;
@@ -12,7 +12,7 @@
 #BN {
     position: relative;
     z-index: 99999;
-    margin: 3.5% auto 0;
+    margin: 5% auto 0;
     text-align: center;
     vertical-align: middle;
     padding: 12px 24px;
