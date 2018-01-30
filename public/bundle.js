@@ -22245,6 +22245,7 @@ var SunRise = function (_Component) {
       };
       mouse.x = e.clientX || e.pageX;
       mouse.y = e.clientY || e.pageY;
+      console.log('ratio', mouse.y / window.innerHeight);
       updateDimensions();
 
       // if(mouseIsDown) {
@@ -22288,6 +22289,11 @@ var SunRise = function (_Component) {
       document.getElementById("sky").style.opacity = Math.min(1 - mouse.y / myHeight, 0.99);
 
       document.getElementById("sunSet").style.opacity = mouse.y / myHeight - 0.2;
+
+      // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
+      // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
+      // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
+
 
       if (mouse.y > 0) {
         var clouds = document.getElementsByClassName("cloud");
@@ -22347,7 +22353,11 @@ var SunRise = function (_Component) {
       return _react2.default.createElement(
         'span',
         { id: 'sRise', onMouseDown: this.startMove, onTouchStart: this.startMove, onClick: this.startMove, onMouseUp: this.stopMove },
-        'sup bro',
+        _react2.default.createElement(
+          'h1',
+          { id: 'sunriseHeader' },
+          'OCEANSIDE PARASAIL'
+        ),
         _react2.default.createElement(
           'div',
           { id: 'starsContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },

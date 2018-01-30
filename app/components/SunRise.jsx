@@ -51,7 +51,8 @@ export default class SunRise extends Component {
       document.getElementById("division").style.top = skyHeight;
     }
     mouse.x = e.clientX || e.pageX; 
-    mouse.y = e.clientY || e.pageY 
+    mouse.y = e.clientY || e.pageY
+    console.log('ratio', mouse.y/window.innerHeight)
     updateDimensions();
   
     // if(mouseIsDown) {
@@ -95,6 +96,10 @@ export default class SunRise extends Component {
       document.getElementById("sky").style.opacity = Math.min((1-mouse.y/myHeight), 0.99);
 
       document.getElementById("sunSet").style.opacity = (mouse.y/myHeight-0.2);
+
+      // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
+      // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
+      // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
 
 
 
@@ -155,7 +160,7 @@ componentWillUnmount(){
   render() {
     return (
       <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove} onClick={this.startMove} onMouseUp={this.stopMove} >
-      sup bro
+        <h1 id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
 
 
           <div id="starsContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}   onMouseUp={this.stopMove}>
