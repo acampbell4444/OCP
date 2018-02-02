@@ -22318,8 +22318,6 @@ var SunRise = function (_Component) {
       // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
       // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
       // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
-
-
       if (mouse.y > 0) {
         var clouds = document.getElementsByClassName("cloud");
         for (var i = 0; i < clouds.length; i++) {
@@ -22335,11 +22333,9 @@ var SunRise = function (_Component) {
         if (mouse.y > myHeight / 2) {
           document.getElementById("sun").style.opacity = Math.min((myHeight - mouse.y) / (myHeight / 2) + 0.2, 0.5);
           document.getElementById("horizon").style.opacity = (myHeight - mouse.y) / (myHeight / 2) + 0.2;
-
           document.getElementById("waterReflectionMiddle").style.opacity = (myHeight - mouse.y) / (myHeight / 2) - 0.1;
         } else {
           document.getElementById("horizon").style.opacity = Math.min(mouse.y / (myHeight / 2), 0.99);
-
           document.getElementById("sun").style.opacity = Math.min(mouse.y / (myHeight / 2), 0.5);
           document.getElementById("waterReflectionMiddle").style.opacity = mouse.y / (myHeight / 2) - 0.1;
         }
@@ -22364,13 +22360,14 @@ var SunRise = function (_Component) {
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-
       document.addEventListener('mousemove', this.mm, false);
+      document.body.style.overflowY = 'hidden';
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       document.removeEventListener('mousemove', this.mm, false);
+      document.body.style.overflowY = 'scroll';
     }
   }, {
     key: 'render',
@@ -22379,19 +22376,23 @@ var SunRise = function (_Component) {
         'span',
         { id: 'sRise', onMouseDown: this.startMove, onTouchStart: this.startMove, onClick: this.startMove, onMouseUp: this.stopMove },
         _react2.default.createElement(
-          'h1',
-          { id: 'sunriseHeader' },
-          'OCEANSIDE PARASAIL'
-        ),
-        _react2.default.createElement(
           'div',
-          { className: 'center' },
+          { className: 'homeContentWrapper flex' },
           _react2.default.createElement(
-            'button',
-            { id: 'BN', onClick: function onClick() {
-                return _reactRouter.browserHistory.push('/reservations');
-              } },
-            'BOOK NOW'
+            'h1',
+            { className: 'flex', id: 'sunriseHeader' },
+            'OCEANSIDE PARASAIL'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'center flex' },
+            _react2.default.createElement(
+              'button',
+              { id: 'BN', onClick: function onClick() {
+                  return _reactRouter.browserHistory.push('/reservations');
+                } },
+              'BOOK NOW'
+            )
           )
         ),
         _react2.default.createElement(
@@ -22402,7 +22403,11 @@ var SunRise = function (_Component) {
         _react2.default.createElement('div', { id: 'sun', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
         _react2.default.createElement('div', { id: 'sunDay', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
         _react2.default.createElement('div', { id: 'sunSet', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'sky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+        _react2.default.createElement(
+          'div',
+          { id: 'sky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
+          ' '
+        ),
         _react2.default.createElement('div', { className: 'star', style: { 'left': '250px', 'top': '30px' } }),
         _react2.default.createElement('div', { className: 'star', style: { 'left': '300px', 'top': '25px' } }),
         _react2.default.createElement('div', { className: 'star', style: { 'right': '40px', 'top': '40px' } }),

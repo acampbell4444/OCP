@@ -100,9 +100,6 @@ export default class SunRise extends Component {
       // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
       // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
       // document.getElementById("sunriseHeader").style.marginTop = skyHeight/2+'px'
-
-
-
       if(mouse.y > 0) {
         var clouds = document.getElementsByClassName("cloud");
         for(var i=0; i<clouds.length; i++) {
@@ -115,15 +112,12 @@ export default class SunRise extends Component {
         stars[i].style.opacity = (mouse.y/myHeight-0.6);
       }
 
-
       if(mouse.y > myHeight/2) {
         document.getElementById("sun").style.opacity = Math.min((myHeight-mouse.y) / (myHeight/2) + 0.2, 0.5);
         document.getElementById("horizon").style.opacity = (myHeight-mouse.y) / (myHeight/2) + 0.2;
-
         document.getElementById("waterReflectionMiddle").style.opacity = (myHeight-mouse.y) / (myHeight/2) - 0.1;
       } else {
         document.getElementById("horizon").style.opacity = Math.min(mouse.y / (myHeight/2), 0.99);
-
         document.getElementById("sun").style.opacity = Math.min(mouse.y / (myHeight/2), 0.5);
         document.getElementById("waterReflectionMiddle").style.opacity = mouse.y / (myHeight/2) - 0.1; 
       }
@@ -149,78 +143,50 @@ export default class SunRise extends Component {
 
 
 }
-  componentDidMount(){
-
-     document.addEventListener('mousemove', this.mm, false);
+componentDidMount(){
+  document.addEventListener('mousemove', this.mm, false);
+  document.body.style.overflowY='hidden'
 }
-
 componentWillUnmount(){
   document.removeEventListener('mousemove',this.mm, false)
+  document.body.style.overflowY='scroll'
 }
   render() {
     return (
       <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove} onClick={this.startMove} onMouseUp={this.stopMove} >
-        <h1 id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
-        <div className='center'><button id='BN' onClick={()=> browserHistory.push('/reservations')}>BOOK NOW</button></div>
-
-
-          <div id="starsContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}   onMouseUp={this.stopMove}>
-          <div id="stars" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-          </div>
-          </div>
-
-          <div id="sun" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-
-          </div>
-
-          <div id="sunDay" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-
-          </div>
-
-          <div id="sunSet" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-
-          </div>
-
-          <div id="sky" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-
-          </div>
-
-          <div className="star" style={{'left': '250px','top': '30px'}}></div>
-          <div className="star" style={{'left': '300px','top': '25px'}}></div>
-          <div className="star" style={{'right': '40px','top': '40px'}}></div>
-          <div className="star" style={{'right': '80px', 'top': '45px'}}></div>
-          <div className="star" style={{'right': '120px', 'top': '20px'}}></div>
-
-          <div id="horizon" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
-
-          <div id="horizonNight" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
-
-          <div id="moon" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
-
-          <div id="mountainRange">
-          <div id="mountain" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-          </div>
-
-          </div>
-
-          <div id="division" onMouseDown={this.startDraggingDivision} onMouseUp={this.stopMove}>
-
-          </div>
-
-          <div id="water" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
-
-          <div id="waterReflectionContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-          <div id="waterReflectionMiddle" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
-
-          </div>
-          </div>
-          <div id="waterDistance"  onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
-          <div id="darknessOverlaySky"  onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
-          <div id="darknessOverlay"></div>
-          <div id="oceanRippleContainer">
-          </div>
-          <div id="oceanRipple"></div>
-</span>
+        <div className='homeContentWrapper flex'>
+        <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
+        <div className='center flex'><button id='BN' onClick={()=> browserHistory.push('/reservations')}>BOOK NOW</button></div>
+        </div>
+        <div id="starsContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}   onMouseUp={this.stopMove}>
+          <div id="stars" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        </div>
+        <div id="sun" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="sunDay" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="sunSet" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="sky" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}> </div>
+        <div className="star" style={{'left': '250px','top': '30px'}}></div>
+        <div className="star" style={{'left': '300px','top': '25px'}}></div>
+        <div className="star" style={{'right': '40px','top': '40px'}}></div>
+        <div className="star" style={{'right': '80px', 'top': '45px'}}></div>
+        <div className="star" style={{'right': '120px', 'top': '20px'}}></div>
+        <div id="horizon" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="horizonNight" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="moon" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="mountainRange">
+          <div id="mountain" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        </div>
+        <div id="division" onMouseDown={this.startDraggingDivision} onMouseUp={this.stopMove}></div>
+        <div id="water" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="waterReflectionContainer" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}>
+          <div id="waterReflectionMiddle" onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        </div>
+        <div id="waterDistance"  onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="darknessOverlaySky"  onMouseDown={this.startMove} onTouchStart={this.startMove}  onMouseUp={this.stopMove}></div>
+        <div id="darknessOverlay"></div>
+        <div id="oceanRippleContainer"></div>
+        <div id="oceanRipple"></div>
+      </span>
     )
   }
 }
