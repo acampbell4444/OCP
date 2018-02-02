@@ -8,8 +8,13 @@ import {connect, Provider} from 'react-redux'
 import store from './store'
 
 import Navbar from './containers/NavigationContainer'
-import ReservationContainer from './containers/ReservationContainer'
 import HomeContainer from './containers/HomeContainer'
+import ReservationContainer from './containers/ReservationContainer'
+import RateContainer from './containers/RateContainer'
+import LocationContainer from './containers/LocationContainer'
+import FAQContainer from './containers/FAQContainer'
+import ContactContainer from './containers/ContactContainer'
+
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
@@ -29,6 +34,10 @@ const OSApp = connect(
 )
 const onHomeEnter = () => store.dispatch(updateCurrentSection(1))
 const onReservationEnter = () => store.dispatch(updateCurrentSection(2))
+const onRateEnter = () => store.dispatch(updateCurrentSection(3))
+const onLocationEnter = () => store.dispatch(updateCurrentSection(4))
+const onFAQEnter = () => store.dispatch(updateCurrentSection(5))
+const onContactEnter = () => store.dispatch(updateCurrentSection(6))
 
 render(
   <Provider store={store}>
@@ -37,6 +46,10 @@ render(
         <IndexRedirect to="/home" />
         <Route path="/home" component={HomeContainer} onEnter={onHomeEnter} />
         <Route path="/reservations" component={ReservationContainer} onEnter={onReservationEnter} />
+        <Route path="/rates" component={RateContainer} onEnter={onRateEnter} />
+        <Route path="/location" component={LocationContainer} onEnter={onLocationEnter} />
+        <Route path="/FAQ" component={FAQContainer} onEnter={onFAQEnter} />
+        <Route path="/contact" component={ContactContainer} onEnter={onContactEnter} />
       </Route>
       <Route path='*' component={NotFound} />
     </Router>

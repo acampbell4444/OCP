@@ -16,22 +16,19 @@ export default class Navigation extends Component {
       <div className='row center'>
         <div className='flex' >
           <div className={'icon-wrapper one'} id={'navActive'+(currentSection===1).toString()} onClick={e => handleSectionChange(1) }>
-            {currentSection!==1&&(<Icon size={80} id='taco' icon={home}></Icon>)}
-            {currentSection===1&&(<h3 id='iconTextHm'>HOME</h3>)}
+            {currentSection!==1 ? (<Icon size={80} className='iconDarken' icon={home}></Icon>) : (<h3 id='iconTextHm'>HOME</h3>)}
            </div>
         </div>
         
         <div className='flex' >
           <div className={'icon-wrapper two'} id={'navActive'+(currentSection===2).toString()} onClick={e => handleSectionChange(2) }>
-            {currentSection!==2&&(<Icon size={80} icon={calendar}></Icon>)}
-            {currentSection===2&&(<h3 id='iconTextCl'>BOOK NOW</h3>)}
+            {currentSection!==2 ? (<Icon size={80} className='iconDarken' icon={calendar}></Icon>) : (<h3 id='iconTextCl'>BOOK NOW</h3>)}
            </div>
         </div>
        
         <div className='flex' >
           <div className={'icon-wrapper three'} id={'navActive'+(currentSection===3).toString()} onClick={e => handleSectionChange(3)}>
-            {currentSection!==3&&(<Icon size={80} icon={dollar}></Icon>)}
-            {currentSection===3&&(<h3 id='iconTextRt'>RATES</h3>)}
+            {currentSection!==3 ? (<Icon size={80} className='iconDarken' icon={dollar}></Icon>) : (<h3 id='iconTextRt'>RATES</h3>)}
            </div>
         </div>
           
