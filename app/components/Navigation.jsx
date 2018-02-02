@@ -11,33 +11,27 @@ import { location2 } from 'react-icons-kit/icomoon/location2'
 
 export default class Navigation extends Component {
   render() {
-    const { updateNavbarActive, navBarActive, currentSection, handleSectionChange, handleHover, hoverState, handleIconLeave, iconJustLeft } = this.props
+    const { currentSection, handleSectionChange } = this.props
     return (
       <div className='row center'>
         <div className='flex' >
-          <div className={'icon-wrapper one'} id={'navActive'+(currentSection===1).toString()} 
-                onClick={e => {handleSectionChange(1); handleHover(1)} }
-          >
-            {hoverState!==1&&(<Icon size={80} id='taco' icon={home}></Icon>)}
-            {hoverState===1&&(<h3 id='iconTextHm'>HOME</h3>)}
+          <div className={'icon-wrapper one'} id={'navActive'+(currentSection===1).toString()} onClick={e => handleSectionChange(1) }>
+            {currentSection!==1&&(<Icon size={80} id='taco' icon={home}></Icon>)}
+            {currentSection===1&&(<h3 id='iconTextHm'>HOME</h3>)}
            </div>
         </div>
         
         <div className='flex' >
-          <div className={'icon-wrapper two'} id={'navActive'+(currentSection===2).toString()} 
-                onClick={e => {handleSectionChange(2); handleHover(2)} }
-          >
-            {hoverState!==2&&(<Icon size={80} icon={calendar}></Icon>)}
-            {hoverState===2&&(<h3 id='iconTextCl'>BOOK NOW</h3>)}
+          <div className={'icon-wrapper two'} id={'navActive'+(currentSection===2).toString()} onClick={e => handleSectionChange(2) }>
+            {currentSection!==2&&(<Icon size={80} icon={calendar}></Icon>)}
+            {currentSection===2&&(<h3 id='iconTextCl'>BOOK NOW</h3>)}
            </div>
         </div>
        
         <div className='flex' >
-          <div className={'icon-wrapper three'} id={'navActive'+(currentSection===3).toString()} 
-               onClick={e => {handleSectionChange(3); handleHover(3)} }
-          >
-            {hoverState!==3&&(<Icon size={80} icon={dollar}></Icon>)}
-            {hoverState===3&&(<h3 id='iconTextRt'>RATES</h3>)}
+          <div className={'icon-wrapper three'} id={'navActive'+(currentSection===3).toString()} onClick={e => handleSectionChange(3)}>
+            {currentSection!==3&&(<Icon size={80} icon={dollar}></Icon>)}
+            {currentSection===3&&(<h3 id='iconTextRt'>RATES</h3>)}
            </div>
         </div>
           
