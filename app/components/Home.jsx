@@ -12,9 +12,9 @@ import Parallax1 from '../components/Parallax1'
 export default class Home extends Component {
   render() {
     return (
-      <span>
+      <span id='homeContainer'>
         <div><Bubbles/></div>
-        <div> <SunRise/> </div>
+        <div id='sunriseContainer'> <SunRise/> </div>
       </span>
     )
   }

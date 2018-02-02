@@ -21842,7 +21842,7 @@ var Home = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'span',
-        null,
+        { id: 'homeContainer' },
         _react2.default.createElement(
           'div',
           null,
@@ -21850,7 +21850,7 @@ var Home = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          null,
+          { id: 'sunriseContainer' },
           ' ',
           _react2.default.createElement(_SunRiseContainer2.default, null),
           ' '

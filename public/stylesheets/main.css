@@ -9,7 +9,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 }
 
 body {
-	background: #00b4ff;
+	background-color: purple;
 	color: #333;
 	font: 100% Lato, Arial, Sans Serif;
 	height: 100vh;
@@ -19,6 +19,9 @@ body {
 
 }
 
+#main {
+  background: linear-gradient(#162737, #162737, #162737);
+}
 
 
 
