@@ -21936,7 +21936,7 @@ var Navigation = function (_Component) {
         { className: 'row center' },
         _react2.default.createElement(
           'div',
-          { className: 'col-3 col-sm-2' },
+          { className: 'flex' },
           _react2.default.createElement(
             'div',
             { className: 'icon-wrapper one', id: 'navActive' + (currentSection === 1).toString(),
@@ -21944,7 +21944,7 @@ var Navigation = function (_Component) {
                 handleSectionChange(1);handleHover(1);
               }
             },
-            hoverState !== 1 && _react2.default.createElement(_reactIconsKit2.default, { size: 80, icon: _icomoon.home }),
+            hoverState !== 1 && _react2.default.createElement(_reactIconsKit2.default, { size: 80, id: 'taco', icon: _icomoon.home }),
             hoverState === 1 && _react2.default.createElement(
               'h3',
               { id: 'iconTextHm' },
@@ -21954,7 +21954,7 @@ var Navigation = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-3 col-sm-2' },
+          { className: 'flex' },
           _react2.default.createElement(
             'div',
             { className: 'icon-wrapper two', id: 'navActive' + (currentSection === 2).toString(),
@@ -21972,7 +21972,7 @@ var Navigation = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-3 col-sm-2' },
+          { className: 'flex' },
           _react2.default.createElement(
             'div',
             { className: 'icon-wrapper three', id: 'navActive' + (currentSection === 3).toString(),
@@ -21990,7 +21990,7 @@ var Navigation = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-3 col-sm-2' },
+          { className: 'flex' },
           _react2.default.createElement(
             'div',
             { className: 'icon-wrapper', id: 'navActive' + (currentSection === 4).toString(), onClick: function onClick(e) {
@@ -22001,7 +22001,7 @@ var Navigation = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-3 col-sm-2' },
+          { className: 'flex' },
           _react2.default.createElement(
             'div',
             { className: 'icon-wrapper', id: 'navActive' + (currentSection === 5).toString(), onClick: function onClick(e) {
@@ -22012,7 +22012,7 @@ var Navigation = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-3 col-sm-2' },
+          { className: 'flex' },
           _react2.default.createElement(
             'div',
             { className: 'icon-wrapper', id: 'navActive' + (currentSection === 6).toString(), onClick: function onClick(e) {
@@ -22153,7 +22153,7 @@ var Reservation = function (_Component) {
               'iframe',
               { id: 'bookingcalendar',
                 src: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css',
-                style: { 'width': '100%', 'maxWidth': '800px', 'height': '1200px', 'marginTop': '15%' },
+                style: { 'width': '100%', 'maxWidth': '1800px', 'height': '2200px', 'marginTop': '15%' },
                 frameBorder: '0' },
               _react2.default.createElement(
                 'a',

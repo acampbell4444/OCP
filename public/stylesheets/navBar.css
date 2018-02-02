@@ -33,8 +33,11 @@ background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
   transition:1s;
   padding-top: 10%;
   overflow: none;
+  margin-bottom: 7%;
 }
-
+.icon-wrapper:hover > #taco {
+  color: black;
+}
 
 /*.icon-wrapper .off .iconJustLeft1 {
   -webkit-animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
@@ -48,6 +51,7 @@ background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
   background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
   -webkit-animation: jello-horizontal 1s 0s both;
   animation: jello-horizontal 1s 0s both;
+  border-color: black;
 }
 
 .icon-wrapper.two {
@@ -85,6 +89,7 @@ background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);}
   margin-top: 27%;
   font-size: 30px;
   font-family: 'Expletus Sans', Bold;
+  color: black;
 }
 #iconTextCl {
   margin-top: 18%;
