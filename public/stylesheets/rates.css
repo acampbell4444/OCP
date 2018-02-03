@@ -24,10 +24,12 @@
 .parachute {
   margin: 400px auto;
   width: 400px;
-  animation: xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  -webkit-animation:  xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  -moz-animation:  xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 }
 .parachute__img {
-  animation: yAxis 20s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  -webkit-animation: yAxis 20s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  -moz-animation: yAxis 20s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
 .parachute__img:before {
   content: "";
@@ -35,8 +37,11 @@
   width: 60px;
   height: 60px;
   background: url("https://dl.dropboxusercontent.com/s/7xthrrako1qpxy9/parachute.svg") no-repeat;
-  animation: swing ease-in-out 1s infinite alternate;
+  -webkit-animation: swing ease-in-out 1s infinite alternate;
+  -moz-animation: swing ease-in-out 1s infinite alternate;
   transform-origin: center -20px;
+  -webkit-transform-origin: center -20px;
+  -moz-transform-origin: center -20px;
 }
 
 .plane {
@@ -49,19 +54,35 @@
   animation: right linear 30s infinite;
 }
 
-@keyframes yAxis {
+@-webkit-keyframes yAxis {
   50% {
     animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
     transform: translateY(-200px);
   }
 }
-@keyframes xAxis {
+
+@-moz-keyframes yAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    transform: translateY(-200px);
+  }
+}
+
+@-webkit-keyframes xAxis {
   50% {
     animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
     transform: translateX(200px);
   }
 }
-@keyframes swing {
+
+@-moz-keyframes xAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(200px);
+  }
+}
+
+@-webkit-keyframes swing {
   0% {
     transform: rotate(5deg);
   }
@@ -69,7 +90,26 @@
     transform: rotate(-5deg);
   }
 }
-@keyframes right {
+
+@-moz-keyframes swing {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@-webkit-keyframes right {
+  0% {
+    left: -108px;
+  }
+  100% {
+    left: calc(100% + 108px);
+  }
+}
+
+@-moz-keyframes right {
   0% {
     left: -108px;
   }
@@ -84,8 +124,8 @@
 
 
 #skyWrap {
-	z-index: -100;
-	  background-position: center center;
+  z-index: -100;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
