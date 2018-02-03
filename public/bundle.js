@@ -32673,24 +32673,35 @@ var Contact = function (_Component) {
 
   _createClass(Contact, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {
-      document.body.style.backgroundColor = 'red';
-    }
+    value: function componentDidMount() {}
   }, {
     key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      document.body.style.backgroundColor = 'white';
-    }
+    value: function componentWillUnmount() {}
   }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'jumbotron well' },
+        { id: 'skyWrap' },
         _react2.default.createElement(
-          'h2',
-          null,
-          'Contact Page Under Construction. Check Back Soon!'
+          'div',
+          { id: 'clouds' },
+          _react2.default.createElement('div', { className: 'star f' }),
+          _react2.default.createElement('div', { className: 'star g' }),
+          _react2.default.createElement('div', { className: 'star h' }),
+          _react2.default.createElement('div', { className: 'star i' }),
+          _react2.default.createElement('div', { className: 'star j' }),
+          _react2.default.createElement('div', { className: 'star k' }),
+          _react2.default.createElement('div', { className: 'star l' }),
+          _react2.default.createElement('div', { className: 'star m' }),
+          _react2.default.createElement('div', { className: 'star o' }),
+          _react2.default.createElement('div', { className: 'star p' }),
+          _react2.default.createElement('div', { className: 'star q' }),
+          _react2.default.createElement('div', { className: 'cloud A' }),
+          _react2.default.createElement('div', { className: 'cloud B' }),
+          _react2.default.createElement('div', { className: 'cloud C' }),
+          _react2.default.createElement('div', { className: 'cloud D' }),
+          _react2.default.createElement('div', { className: 'cloud E' })
         )
       );
     }
@@ -32737,24 +32748,35 @@ var FAQ = function (_Component) {
 
   _createClass(FAQ, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {
-      document.body.style.backgroundColor = 'red';
-    }
+    value: function componentDidMount() {}
   }, {
     key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      document.body.style.backgroundColor = 'white';
-    }
+    value: function componentWillUnmount() {}
   }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'jumbotron well' },
+        { id: 'skyWrap' },
         _react2.default.createElement(
-          'h2',
-          null,
-          'FAQ Page Under Construction. Check Back Soon!'
+          'div',
+          { id: 'clouds' },
+          _react2.default.createElement('div', { className: 'star f' }),
+          _react2.default.createElement('div', { className: 'star g' }),
+          _react2.default.createElement('div', { className: 'star h' }),
+          _react2.default.createElement('div', { className: 'star i' }),
+          _react2.default.createElement('div', { className: 'star j' }),
+          _react2.default.createElement('div', { className: 'star k' }),
+          _react2.default.createElement('div', { className: 'star l' }),
+          _react2.default.createElement('div', { className: 'star m' }),
+          _react2.default.createElement('div', { className: 'star o' }),
+          _react2.default.createElement('div', { className: 'star p' }),
+          _react2.default.createElement('div', { className: 'star q' }),
+          _react2.default.createElement('div', { className: 'cloud A' }),
+          _react2.default.createElement('div', { className: 'cloud B' }),
+          _react2.default.createElement('div', { className: 'cloud C' }),
+          _react2.default.createElement('div', { className: 'cloud D' }),
+          _react2.default.createElement('div', { className: 'cloud E' })
         )
       );
     }
@@ -32886,24 +32908,35 @@ var Location = function (_Component) {
 
   _createClass(Location, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {
-      document.body.style.backgroundColor = 'red';
-    }
+    value: function componentDidMount() {}
   }, {
     key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      document.body.style.backgroundColor = 'white';
-    }
+    value: function componentWillUnmount() {}
   }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'jumbotron well' },
+        { id: 'skyWrap' },
         _react2.default.createElement(
-          'h2',
-          null,
-          'Location Page Under Construction. Check Back Soon!'
+          'div',
+          { id: 'clouds' },
+          _react2.default.createElement('div', { className: 'star f' }),
+          _react2.default.createElement('div', { className: 'star g' }),
+          _react2.default.createElement('div', { className: 'star h' }),
+          _react2.default.createElement('div', { className: 'star i' }),
+          _react2.default.createElement('div', { className: 'star j' }),
+          _react2.default.createElement('div', { className: 'star k' }),
+          _react2.default.createElement('div', { className: 'star l' }),
+          _react2.default.createElement('div', { className: 'star m' }),
+          _react2.default.createElement('div', { className: 'star o' }),
+          _react2.default.createElement('div', { className: 'star p' }),
+          _react2.default.createElement('div', { className: 'star q' }),
+          _react2.default.createElement('div', { className: 'cloud A' }),
+          _react2.default.createElement('div', { className: 'cloud B' }),
+          _react2.default.createElement('div', { className: 'cloud C' }),
+          _react2.default.createElement('div', { className: 'cloud D' }),
+          _react2.default.createElement('div', { className: 'cloud E' })
         )
       );
     }
@@ -33187,24 +33220,35 @@ var Rate = function (_Component) {
 
   _createClass(Rate, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {
-      document.body.style.backgroundColor = 'red';
-    }
+    value: function componentDidMount() {}
   }, {
     key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      document.body.style.backgroundColor = 'white';
-    }
+    value: function componentWillUnmount() {}
   }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'jumbotron well' },
+        { id: 'skyWrap' },
         _react2.default.createElement(
-          'h2',
-          null,
-          'Rate Page Under Construction. Check Back Soon!'
+          'div',
+          { id: 'clouds' },
+          _react2.default.createElement('div', { className: 'star f' }),
+          _react2.default.createElement('div', { className: 'star g' }),
+          _react2.default.createElement('div', { className: 'star h' }),
+          _react2.default.createElement('div', { className: 'star i' }),
+          _react2.default.createElement('div', { className: 'star j' }),
+          _react2.default.createElement('div', { className: 'star k' }),
+          _react2.default.createElement('div', { className: 'star l' }),
+          _react2.default.createElement('div', { className: 'star m' }),
+          _react2.default.createElement('div', { className: 'star o' }),
+          _react2.default.createElement('div', { className: 'star p' }),
+          _react2.default.createElement('div', { className: 'star q' }),
+          _react2.default.createElement('div', { className: 'cloud A' }),
+          _react2.default.createElement('div', { className: 'cloud B' }),
+          _react2.default.createElement('div', { className: 'cloud C' }),
+          _react2.default.createElement('div', { className: 'cloud D' }),
+          _react2.default.createElement('div', { className: 'cloud E' })
         )
       );
     }

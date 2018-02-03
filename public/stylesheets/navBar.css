@@ -4,8 +4,8 @@
     vertical-align:middle;
     margin: 0 auto;
     z-index: 999999;
-    padding-top: 50px;
-    color: white;
+    padding-top: 15px;
+    background-color: transparent;
     overflow: hidden;
     position: relative;
 }
