@@ -56,7 +56,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size:  cover;
-  background-color: #45c2c5;
+  background-color: #2E389C;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -110,15 +110,15 @@
                0 0 0 0 transparent;
   }
   15%  {
-    box-shadow:0 0 0 0 #45c2c5,
+    box-shadow:0 0 0 0 #2E389C,
                0 0 0 0 rgba(255,255,255,0.4),
-               0 0 0 0 #45c2c5,
+               0 0 0 0 #2E389C,
                0 0 0 0 rgba(0,0,0,0.08);
   }
   100% {
-    box-shadow:0 0 40px 200px #45c2c5,
+    box-shadow:0 0 40px 200px #2E389C,
                0 0 10px 210px transparent,
-               0 0 30px 220px #45c2c5,
+               0 0 30px 220px #2E389C,
                0 0 5px 230px transparent;
   }
 }
@@ -131,15 +131,15 @@
                0 0 0 0 transparent;
   }
   15%  {
-    box-shadow:0 0 0 0 #45c2c5,
+    box-shadow:0 0 0 0 #2E389C,
                0 0 0 0 rgba(255,255,255,0.4),
-               0 0 0 0 #45c2c5,
+               0 0 0 0 #2E389C,
                0 0 0 0 rgba(0,0,0,0.08);
   }
   100% {
-    box-shadow:0 0 40px 200px #45c2c5,
+    box-shadow:0 0 40px 200px #2E389C,
                0 0 10px 210px transparent,
-               0 0 30px 220px #45c2c5,
+               0 0 30px 220px #2E389C,
                0 0 5px 230px transparent;
   }
 }
