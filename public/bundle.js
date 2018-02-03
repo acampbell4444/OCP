@@ -33229,27 +33229,13 @@ var Rate = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: 'skyWrap' },
+        { id: 'rateCanvas' },
         _react2.default.createElement(
           'div',
-          { id: 'clouds' },
-          _react2.default.createElement('div', { className: 'star f' }),
-          _react2.default.createElement('div', { className: 'star g' }),
-          _react2.default.createElement('div', { className: 'star h' }),
-          _react2.default.createElement('div', { className: 'star i' }),
-          _react2.default.createElement('div', { className: 'star j' }),
-          _react2.default.createElement('div', { className: 'star k' }),
-          _react2.default.createElement('div', { className: 'star l' }),
-          _react2.default.createElement('div', { className: 'star m' }),
-          _react2.default.createElement('div', { className: 'star o' }),
-          _react2.default.createElement('div', { className: 'star p' }),
-          _react2.default.createElement('div', { className: 'star q' }),
-          _react2.default.createElement('div', { className: 'cloud A' }),
-          _react2.default.createElement('div', { className: 'cloud B' }),
-          _react2.default.createElement('div', { className: 'cloud C' }),
-          _react2.default.createElement('div', { className: 'cloud D' }),
-          _react2.default.createElement('div', { className: 'cloud E' })
-        )
+          { className: 'parachute' },
+          _react2.default.createElement('div', { className: 'parachute__img' })
+        ),
+        _react2.default.createElement('div', { className: 'plane' })
       );
     }
   }]);

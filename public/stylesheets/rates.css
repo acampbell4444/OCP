@@ -1,3 +1,88 @@
+
+
+
+#rateCanvas {
+  background: url("https://dl.dropboxusercontent.com/s/jwtq37daebp672m/city-vector.jpg")
+    no-repeat;
+  overflow: hidden;
+  z-index: -100;
+	  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:  cover;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.parachute {
+  margin: 400px auto;
+  width: 400px;
+  animation: xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+}
+.parachute__img {
+  animation: yAxis 20s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+.parachute__img:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("https://dl.dropboxusercontent.com/s/7xthrrako1qpxy9/parachute.svg") no-repeat;
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+}
+
+.plane {
+  background: url("https://dl.dropboxusercontent.com/s/egcs4ohbyrfa39n/aeroplane.svg") no-repeat;
+  width: 108px;
+  height: 108px;
+  position: absolute;
+  top: -16px;
+  left: -108px;
+  animation: right linear 30s infinite;
+}
+
+@keyframes yAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    transform: translateY(-200px);
+  }
+}
+@keyframes xAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(200px);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes right {
+  0% {
+    left: -108px;
+  }
+  100% {
+    left: calc(100% + 108px);
+  }
+}
+
+
+
+
+
+
 #skyWrap {
 	z-index: -100;
 	  background-position: center center;
