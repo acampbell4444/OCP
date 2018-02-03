@@ -5,8 +5,10 @@ import {connect} from 'react-redux'
 let currentSection
 const mapStateToProps = (state) => {
   currentSection = state.navBar.currentSection
+  let navShow = state.navBar.navShow
   return {
     currentSection,
+    navShow
   }
 }
 

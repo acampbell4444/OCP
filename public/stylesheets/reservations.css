@@ -1,9 +1,23 @@
+.Modal-modal-0-1-3 {
+  width:12000px;
+}
+
+#bookingCalendar{
+  width: 100%;
+  height: 1000px;
+  margin: 10px 0 0 0 ;
+}
+
+#closeModalBtn {
+	position: relative;
+	float: right;
+}
 
 
-body .container1, html .container1 {
+/*body .container1, html .container1 {
   background-image: linear-gradient(#5583be, #eebaa5, #de7d8e 70%);
   z-index: 9998;
-}
+}*/
 
 
 

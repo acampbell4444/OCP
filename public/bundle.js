@@ -328,11 +328,9 @@ module.exports = __webpack_require__(61);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -389,12 +387,10 @@ module.exports = invariant;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2014-2015, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -412,45 +408,43 @@ var emptyFunction = __webpack_require__(24);
 var warning = emptyFunction;
 
 if (process.env.NODE_ENV !== 'production') {
-  (function () {
-    var printWarning = function printWarning(format) {
-      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
+  var printWarning = function printWarning(format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  warning = function warning(condition, format) {
+    if (format === undefined) {
+      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+
+    if (format.indexOf('Failed Composite propType: ') === 0) {
+      return; // Ignore CompositeComponent proptype check.
+    }
+
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
       }
 
-      var argIndex = 0;
-      var message = 'Warning: ' + format.replace(/%s/g, function () {
-        return args[argIndex++];
-      });
-      if (typeof console !== 'undefined') {
-        console.error(message);
-      }
-      try {
-        // --- Welcome to debugging React ---
-        // This error was thrown as a convenience so that you can use this stack
-        // to find the callsite that caused this warning to fire.
-        throw new Error(message);
-      } catch (x) {}
-    };
-
-    warning = function warning(condition, format) {
-      if (format === undefined) {
-        throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-      }
-
-      if (format.indexOf('Failed Composite propType: ') === 0) {
-        return; // Ignore CompositeComponent proptype check.
-      }
-
-      if (!condition) {
-        for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-          args[_key2 - 2] = arguments[_key2];
-        }
-
-        printWarning.apply(undefined, [format].concat(args));
-      }
-    };
-  })();
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
 }
 
 module.exports = warning;
@@ -837,11 +831,9 @@ $exports.store = store;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -1711,11 +1703,9 @@ module.exports = __webpack_require__(21) ? function(object, key, value){
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -5206,11 +5196,9 @@ module.exports = function(it, S){
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -8086,11 +8074,9 @@ module.exports = __webpack_require__(65).getIteratorMethod = function(it){
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  * 
@@ -11530,8 +11516,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var currentSection = void 0;
 var mapStateToProps = function mapStateToProps(state) {
   currentSection = state.navBar.currentSection;
+  var navShow = state.navBar.navShow;
   return {
-    currentSection: currentSection
+    currentSection: currentSection,
+    navShow: navShow
   };
 };
 
@@ -11575,7 +11563,7 @@ Object.defineProperty(exports, "__esModule", {
 // import axios from 'axios'
 
 var initState = {
-  navBarActive: true,
+  navShow: true,
   currentSection: null
 };
 
@@ -11585,11 +11573,12 @@ var reducer = function reducer() {
 
   var newState = Object.assign({}, state);
   switch (action.type) {
-    case UPDATE_NAVBAR_ACTIVE:
-      newState.navBarActive = action.bool;
-      break;
+
     case UPDATE_CURR_SECTION:
       newState.currentSection = action.section;
+      break;
+    case UPDATE_NAV_SHOW:
+      newState.navShow = action.bool;
       break;
     default:
       return state;
@@ -11597,14 +11586,14 @@ var reducer = function reducer() {
   return newState;
 };
 
-var UPDATE_NAVBAR_ACTIVE = 'UPDATE_NAVBAR_ACTIVE';
 var UPDATE_CURR_SECTION = 'UPDATE_CURR_SECTION';
+var UPDATE_NAV_SHOW = 'UPDATE_NAV_SHOW';
 
-var updateNavbarActive = exports.updateNavbarActive = function updateNavbarActive(bool) {
-  return { type: UPDATE_NAVBAR_ACTIVE, bool: bool };
-};
 var updateCurrentSection = exports.updateCurrentSection = function updateCurrentSection(section) {
   return { type: UPDATE_CURR_SECTION, section: section };
+};
+var navShow = exports.navShow = function navShow(bool) {
+  return { type: UPDATE_NAV_SHOW, bool: bool };
 };
 
 exports.default = reducer;
@@ -12742,17 +12731,8 @@ exports.f = __webpack_require__(11);
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -12829,11 +12809,9 @@ module.exports = EventListener;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -12863,11 +12841,9 @@ module.exports = focusNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -12880,15 +12856,19 @@ module.exports = focusNode;
  *
  * The activeElement will be null only if the document or document body is not
  * yet defined.
+ *
+ * @param {?DOMDocument} doc Defaults to current document.
+ * @return {?DOMElement}
  */
-function getActiveElement() /*?DOMElement*/{
-  if (typeof document === 'undefined') {
+function getActiveElement(doc) /*?DOMElement*/{
+  doc = doc || (typeof document !== 'undefined' ? document : undefined);
+  if (typeof doc === 'undefined') {
     return null;
   }
   try {
-    return document.activeElement || document.body;
+    return doc.activeElement || doc.body;
   } catch (e) {
-    return document.body;
+    return doc.body;
   }
 }
 
@@ -17789,6 +17769,8 @@ var _Reservation2 = _interopRequireDefault(_Reservation);
 
 var _reactRedux = __webpack_require__(19);
 
+var _navBar = __webpack_require__(158);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -17796,7 +17778,11 @@ var mapStateToProps = function mapStateToProps(state) {
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    showNav: function showNav(bool) {
+      return dispatch((0, _navBar.navShow)(bool));
+    }
+  };
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_Reservation2.default);
@@ -22021,12 +22007,13 @@ var Navigation = function (_Component) {
     value: function render() {
       var _props = this.props,
           currentSection = _props.currentSection,
-          handleSectionChange = _props.handleSectionChange;
+          handleSectionChange = _props.handleSectionChange,
+          navShow = _props.navShow;
 
       return _react2.default.createElement(
         'div',
         null,
-        false && _react2.default.createElement(
+        navShow && _react2.default.createElement(
           'div',
           { className: 'row center' },
           _react2.default.createElement(
@@ -22285,6 +22272,8 @@ var _reactResponsiveModal = __webpack_require__(910);
 
 var _reactResponsiveModal2 = _interopRequireDefault(_reactResponsiveModal);
 
+var _reactBootstrap = __webpack_require__(817);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22293,81 +22282,70 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
+var Reservation = function (_React$Component) {
+  _inherits(Reservation, _React$Component);
 
-var App = function (_React$Component) {
-  _inherits(App, _React$Component);
-
-  function App() {
+  function Reservation() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, App);
+    _classCallCheck(this, Reservation);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      open: false
-    }, _this.onOpenModal = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Reservation.__proto__ || Object.getPrototypeOf(Reservation)).call.apply(_ref, [this].concat(args))), _this), _this.state = { open: false }, _this.onOpenModal = function () {
       _this.setState({ open: true });
+      _this.props.showNav(false);
     }, _this.onCloseModal = function () {
       _this.setState({ open: false });
+      _this.props.showNav(true);
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(App, [{
-    key: "render",
+  _createClass(Reservation, [{
+    key: 'render',
     value: function render() {
       var open = this.state.open;
 
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "button",
+          'button',
           { onClick: this.onOpenModal },
-          "Show Calendar"
-        ),
-        _react2.default.createElement(
-          "h2",
-          null,
-          "react-responsive-modal"
+          'Show Calendar'
         ),
         _react2.default.createElement(
           _reactResponsiveModal2.default,
-          { id: "reservationModal", open: open, onClose: this.onCloseModal, big: true },
+          { id: 'reservationModal', open: open, onClose: this.onCloseModal, showCloseIcon: false },
           _react2.default.createElement(
-            "h2",
-            null,
-            "Simple centered modal"
+            'iframe',
+            { id: 'bookingCalendar',
+              src: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css',
+              frameBorder: '0' },
+            _react2.default.createElement(
+              'a',
+              { href: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css' },
+              'Make Reservation'
+            )
           ),
           _react2.default.createElement(
-            "iframe",
-            { id: "bookingcalendar",
-              src: "https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css",
-              style: { 'width': '100%', 'maxWidth': '1800px', 'height': '2200px', 'marginTop': '15%' },
-              frameBorder: "0" },
-            _react2.default.createElement(
-              "a",
-              { href: "https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css" },
-              "Make Reservation"
-            )
+            _reactBootstrap.Button,
+            { id: 'closeModalBtn', className: 'btn btn-danger btn-xs', onClick: this.onCloseModal },
+            'Close'
           )
         )
       );
     }
   }]);
 
-  return App;
+  return Reservation;
 }(_react2.default.Component);
 
-exports.default = App;
+exports.default = Reservation;
 
 
 {/*      <div className='resContainer'>
@@ -23506,11 +23484,9 @@ module.exports = function(name){
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -23541,11 +23517,9 @@ module.exports = camelize;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -23588,11 +23562,9 @@ module.exports = camelizeStyleName;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  */
@@ -23633,11 +23605,9 @@ module.exports = containsNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -23766,11 +23736,9 @@ module.exports = createArrayFromMixed;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -23856,11 +23824,9 @@ module.exports = createNodesFromMarkup;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  */
 
@@ -23955,11 +23921,9 @@ module.exports = getMarkupWrap;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -23978,10 +23942,10 @@ module.exports = getMarkupWrap;
  */
 
 function getUnboundedScrollPosition(scrollable) {
-  if (scrollable === window) {
+  if (scrollable.Window && scrollable instanceof scrollable.Window) {
     return {
-      x: window.pageXOffset || document.documentElement.scrollLeft,
-      y: window.pageYOffset || document.documentElement.scrollTop
+      x: scrollable.pageXOffset || scrollable.document.documentElement.scrollLeft,
+      y: scrollable.pageYOffset || scrollable.document.documentElement.scrollTop
     };
   }
   return {
@@ -24001,11 +23965,9 @@ module.exports = getUnboundedScrollPosition;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -24037,11 +23999,9 @@ module.exports = hyphenate;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -24083,11 +24043,9 @@ module.exports = hyphenateStyleName;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -24097,7 +24055,9 @@ module.exports = hyphenateStyleName;
  * @return {boolean} Whether or not the object is a DOM node.
  */
 function isNode(object) {
-  return !!(object && (typeof Node === 'function' ? object instanceof Node : typeof object === 'object' && typeof object.nodeType === 'number' && typeof object.nodeName === 'string'));
+  var doc = object ? object.ownerDocument || object : document;
+  var defaultView = doc.defaultView || window;
+  return !!(object && (typeof defaultView.Node === 'function' ? object instanceof defaultView.Node : typeof object === 'object' && typeof object.nodeType === 'number' && typeof object.nodeName === 'string'));
 }
 
 module.exports = isNode;
@@ -24111,11 +24071,9 @@ module.exports = isNode;
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -24139,11 +24097,9 @@ module.exports = isTextNode;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * 
  * @typechecks static-only
@@ -24174,11 +24130,9 @@ module.exports = memoizeStringOnly;
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -24204,11 +24158,9 @@ module.exports = performance || {};
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
  */
@@ -42726,10 +42678,6 @@ var _ContactContainer = __webpack_require__(241);
 
 var _ContactContainer2 = _interopRequireDefault(_ContactContainer);
 
-var _ReservationModalContainer = __webpack_require__(833);
-
-var _ReservationModalContainer2 = _interopRequireDefault(_ReservationModalContainer);
-
 var _Login = __webpack_require__(156);
 
 var _Login2 = _interopRequireDefault(_Login);
@@ -42801,8 +42749,7 @@ var onContactEnter = function onContactEnter() {
       _react2.default.createElement(_reactRouter.Route, { path: '/rates', component: _RateContainer2.default, onEnter: onRateEnter }),
       _react2.default.createElement(_reactRouter.Route, { path: '/location', component: _LocationContainer2.default, onEnter: onLocationEnter }),
       _react2.default.createElement(_reactRouter.Route, { path: '/FAQ', component: _FAQContainer2.default, onEnter: onFAQEnter }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _ContactContainer2.default, onEnter: onContactEnter }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/reservationModal', component: _ReservationModalContainer2.default })
+      _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _ContactContainer2.default, onEnter: onContactEnter })
     ),
     _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default })
   )
@@ -62284,264 +62231,8 @@ function isReactComponent(component) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 833 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _ReservationModal = __webpack_require__(834);
-
-var _ReservationModal2 = _interopRequireDefault(_ReservationModal);
-
-var _reactRedux = __webpack_require__(19);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {};
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {};
-};
-
-var ReservationModalContainer = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_ReservationModal2.default);
-
-exports.default = ReservationModalContainer;
-
-/***/ }),
-/* 834 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(63);
-
-var _reactBootstrap = __webpack_require__(817);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Example = function (_React$Component) {
-  _inherits(Example, _React$Component);
-
-  function Example(props, context) {
-    _classCallCheck(this, Example);
-
-    var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props, context));
-
-    _this.handleShow = _this.handleShow.bind(_this);
-    _this.handleClose = _this.handleClose.bind(_this);
-
-    _this.state = {
-      show: true
-    };
-    return _this;
-  }
-
-  _createClass(Example, [{
-    key: 'handleClose',
-    value: function handleClose() {
-      this.setState({ show: false });
-    }
-  }, {
-    key: 'handleShow',
-    value: function handleShow() {
-      this.setState({ show: true });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var popover = _react2.default.createElement(
-        _reactBootstrap.Popover,
-        { id: 'modal-popover', title: 'popover' },
-        'very popover. such engagement'
-      );
-      var tooltip = _react2.default.createElement(
-        _reactBootstrap.Tooltip,
-        { id: 'modal-tooltip' },
-        'wow.'
-      );
-
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'p',
-          null,
-          'Click to get the full Modal experience!'
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Button,
-          { bsStyle: 'primary', bsSize: 'large', onClick: this.handleShow },
-          'Launch demo modal'
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Modal,
-          { show: this.state.show, onHide: this.handleClose },
-          _react2.default.createElement(
-            _reactBootstrap.Modal.Header,
-            { closeButton: true },
-            _react2.default.createElement(
-              _reactBootstrap.Modal.Title,
-              null,
-              'Modal heading'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Modal.Body,
-            null,
-            _react2.default.createElement(
-              'h4',
-              null,
-              'Text in a modal'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Duis mollis, est non commodo luctus, nisi erat porttitor ligula.'
-            ),
-            _react2.default.createElement(
-              'h4',
-              null,
-              'Popover in a modal'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'there is a',
-              ' ',
-              _react2.default.createElement(
-                _reactBootstrap.OverlayTrigger,
-                { overlay: popover },
-                _react2.default.createElement(
-                  'a',
-                  { href: '#popover' },
-                  'popover'
-                )
-              ),
-              ' ',
-              'here'
-            ),
-            _react2.default.createElement(
-              'h4',
-              null,
-              'Tooltips in a modal'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'there is a',
-              ' ',
-              _react2.default.createElement(
-                _reactBootstrap.OverlayTrigger,
-                { overlay: tooltip },
-                _react2.default.createElement(
-                  'a',
-                  { href: '#tooltip' },
-                  'tooltip'
-                )
-              ),
-              ' ',
-              'here'
-            ),
-            _react2.default.createElement('hr', null),
-            _react2.default.createElement(
-              'h4',
-              null,
-              'Overflowing text to show scroll behavior'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Modal.Footer,
-            null,
-            _react2.default.createElement(
-              _reactBootstrap.Button,
-              { onClick: this.handleClose },
-              'Close'
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Example;
-}(_react2.default.Component);
-
-exports.default = Example;
-
-/***/ }),
+/* 833 */,
+/* 834 */,
 /* 835 */
 /***/ (function(module, exports, __webpack_require__) {
 

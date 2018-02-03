@@ -11,9 +11,9 @@ import { location2 } from 'react-icons-kit/icomoon/location2'
 
 export default class Navigation extends Component {
   render() {
-    const { currentSection, handleSectionChange } = this.props
+    const { currentSection, handleSectionChange, navShow } = this.props
     return (
-      <div>{false&&(
+      <div>{navShow&&(
       <div className='row center'>
         
         <div className='flex' >

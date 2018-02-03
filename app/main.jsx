@@ -14,7 +14,7 @@ import RateContainer from './containers/RateContainer'
 import LocationContainer from './containers/LocationContainer'
 import FAQContainer from './containers/FAQContainer'
 import ContactContainer from './containers/ContactContainer'
-import ReservationModalContainer from './containers/ReservationModalContainer'
+
 
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
@@ -51,7 +51,6 @@ render(
         <Route path="/location" component={LocationContainer} onEnter={onLocationEnter} />
         <Route path="/FAQ" component={FAQContainer} onEnter={onFAQEnter} />
         <Route path="/contact" component={ContactContainer} onEnter={onContactEnter} />
-        <Route path="/reservationModal" component={ReservationModalContainer} />
       </Route>
       <Route path='*' component={NotFound} />
     </Router>
