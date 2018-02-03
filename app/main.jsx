@@ -37,7 +37,7 @@ const OSApp = connect(
 const onHomeEnter = () => store.dispatch(updateCurrentSection(1))
 const onReservationEnter = () => {
   store.dispatch(updateCurrentSection(2))
-  store.dispatch(navShow(false))
+  store.dispatch(navShow(true))
 }
 const onRateEnter = () => store.dispatch(updateCurrentSection(3))
 const onLocationEnter = () => store.dispatch(updateCurrentSection(4))

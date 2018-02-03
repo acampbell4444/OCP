@@ -22012,7 +22012,7 @@ var Navigation = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'center' },
         navShow && _react2.default.createElement(
           'div',
           { className: 'row center' },
@@ -22274,6 +22274,12 @@ var _reactResponsiveModal2 = _interopRequireDefault(_reactResponsiveModal);
 
 var _reactBootstrap = __webpack_require__(817);
 
+var _reactIconsKit = __webpack_require__(217);
+
+var _reactIconsKit2 = _interopRequireDefault(_reactIconsKit);
+
+var _icomoon = __webpack_require__(507);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22296,7 +22302,7 @@ var Reservation = function (_React$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Reservation.__proto__ || Object.getPrototypeOf(Reservation)).call.apply(_ref, [this].concat(args))), _this), _this.state = { open: true }, _this.onOpenModal = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Reservation.__proto__ || Object.getPrototypeOf(Reservation)).call.apply(_ref, [this].concat(args))), _this), _this.state = { open: false }, _this.onOpenModal = function () {
       _this.setState({ open: true });
       _this.props.showNav(false);
     }, _this.onCloseModal = function () {
@@ -22312,30 +22318,52 @@ var Reservation = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'reserveBody' },
         _react2.default.createElement(
-          'button',
-          { onClick: this.onOpenModal },
-          'Show Calendar'
+          'div',
+          { className: 'row' },
+          !open && _react2.default.createElement(
+            'div',
+            { className: 'center' },
+            _react2.default.createElement(
+              'h1',
+              { id: 'reserveTitle' },
+              'Reserve Your Spot Now!'
+            ),
+            _react2.default.createElement(
+              'button',
+              { id: 'showCalendar', onClick: this.onOpenModal },
+              _react2.default.createElement(_reactIconsKit2.default, { id: 'bigCalendar', size: 200, icon: _icomoon.calendar })
+            )
+          )
         ),
         _react2.default.createElement(
-          _reactResponsiveModal2.default,
-          { id: 'reservationModal', open: open, onClose: this.onCloseModal, showCloseIcon: false },
+          'div',
+          { id: 'reserveCanvas' },
           _react2.default.createElement(
-            'iframe',
-            { id: 'bookingCalendar',
-              src: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css',
-              frameBorder: '0' },
+            'span',
+            { id: 'rip' },
             _react2.default.createElement(
-              'a',
-              { href: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css' },
-              'Make Reservation'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Button,
-            { id: 'closeModalBtn', className: 'btn btn-danger btn-xs', onClick: this.onCloseModal },
-            'Close'
+              _reactResponsiveModal2.default,
+              { id: 'reservationModal', open: open, onClose: this.onCloseModal, showCloseIcon: false },
+              _react2.default.createElement(
+                'iframe',
+                { id: 'bookingCalendar',
+                  src: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css',
+                  frameBorder: '0' },
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css' },
+                  'Make Reservation'
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Button,
+                { id: 'closeModalBtn', className: 'btn btn-danger btn-xs', onClick: this.onCloseModal },
+                'Close'
+              )
+            ),
+            _react2.default.createElement('span', { className: 'ripple' })
           )
         )
       );
@@ -42720,7 +42748,7 @@ var onHomeEnter = function onHomeEnter() {
 };
 var onReservationEnter = function onReservationEnter() {
   _store2.default.dispatch((0, _navBar.updateCurrentSection)(2));
-  _store2.default.dispatch((0, _navBar.navShow)(false));
+  _store2.default.dispatch((0, _navBar.navShow)(true));
 };
 var onRateEnter = function onRateEnter() {
   return _store2.default.dispatch((0, _navBar.updateCurrentSection)(3));
