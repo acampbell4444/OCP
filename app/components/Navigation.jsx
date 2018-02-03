@@ -13,6 +13,7 @@ export default class Navigation extends Component {
   render() {
     const { currentSection, handleSectionChange } = this.props
     return (
+      <div>{false&&(
       <div className='row center'>
         
         <div className='flex' >
@@ -51,6 +52,7 @@ export default class Navigation extends Component {
         </div>
       </div>
     </div>
+    )}</div>
     )
   }
 }
