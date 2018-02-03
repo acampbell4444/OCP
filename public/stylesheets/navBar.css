@@ -17,7 +17,7 @@
 .icon-wrapper {
  font-size:3em;
   border-radius: 50%;
-  border: solid white;
+  border: 5px solid white;
   color: white;
   line-height: 3em;
   width: 3em;
@@ -77,19 +77,47 @@
 
 #iconTextHm {
   margin-top: 27%;
-  font-size: 30px;
+  font-size: 34px;
+  font-weight: 900;
   font-family: 'Expletus Sans', Bold;
   color: black;
 }
 #iconTextCl {
-  margin-top: 18%;
-  font-size: 30px;
+  margin-top: 10%;
+  font-size: 34px;
+  font-weight: 900;
   font-family: 'Expletus Sans', Bold;
   color: black;
 }
 #iconTextRt {
-  margin-top: 22%;
-  font-size: 30px;
+  margin-top: 18%;
+  font-size: 34px;
+  font-weight: 900;
+  font-family: 'Expletus Sans', Bold;
+  color: black;
+}
+
+#iconTextLoc {
+  margin-top: 27%;
+  font-size: 26px;
+  font-weight: 900;
+  font-family: 'Expletus Sans', Bold;
+  color: black;
+
+}
+
+#iconTextFAQ {
+  margin-top: 21%;
+  font-size: 34px;
+  font-weight: 900;
+  font-family: 'Expletus Sans', Bold;
+  color: black;
+}
+
+#iconTextContact {
+  margin-top: 27%;
+  font-size: 28px;
+  font-weight: 900;
   font-family: 'Expletus Sans', Bold;
   color: black;
 }

@@ -14,8 +14,9 @@ export default class Navigation extends Component {
     const { currentSection, handleSectionChange } = this.props
     return (
       <div className='row center'>
+        
         <div className='flex' >
-          <div className={'icon-wrapper one'} id={'navActive'+(currentSection===1).toString()} onClick={e => handleSectionChange(1) }>
+          <div className={'flex icon-wrapper one'} id={'navActive'+(currentSection===1).toString()} onClick={e => handleSectionChange(1) }>
             {currentSection!==1 ? (<Icon size={80} className='iconDarken' icon={home}></Icon>) : (<h3 id='iconTextHm'>HOME</h3>)}
            </div>
         </div>
@@ -34,23 +35,22 @@ export default class Navigation extends Component {
           
         <div className='flex'>
           <div className='icon-wrapper' id={'navActive'+(currentSection===4).toString()} onClick={e => handleSectionChange(4) }>
-            <Icon size={80} icon={location2}></Icon>
+             {currentSection!==4 ? (<Icon size={80} className='iconDarken' icon={location2}></Icon>) : (<h3 id='iconTextLoc'>LOCATION</h3>)}
           </div>
         </div>
         
         <div className='flex'>
           <div className={'icon-wrapper'} id={'navActive'+(currentSection===5).toString()} onClick={e => handleSectionChange(5) }>
-            <Icon size={100} icon={question}></Icon>
+            {currentSection!==5 ? (<Icon size={100} className='iconDarken' icon={question}></Icon>) :  (<h3 id='iconTextFAQ'>FAQ</h3>)}
           </div>
         </div>
         
         <div className='flex'>
           <div className={'icon-wrapper'} id={'navActive'+(currentSection===6).toString()} onClick={e => handleSectionChange(6) }>
-            <Icon size={80} icon={phone}></Icon>
-          </div>
+            {currentSection!==6 ? (<Icon size={80} className='iconDarken' icon={phone}></Icon>) : (<h3 id='iconTextContact'>CONTACT</h3>)}
         </div>
-        
       </div>
+    </div>
     )
   }
 }

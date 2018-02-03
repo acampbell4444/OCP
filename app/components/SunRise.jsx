@@ -139,9 +139,6 @@ export default class SunRise extends Component {
       document.getElementById("oceanRippleContainer").style.height = (myHeight-mouse.y).toString() + "px";
       document.getElementById("darknessOverlay").style.height = (myHeight-mouse.y).toString() + "px";
     }
-
-
-
 }
 componentDidMount(){
   document.addEventListener('mousemove', this.mm, false);
