@@ -2,12 +2,20 @@ import React from 'react'
 import { render } from 'react-dom'
 import Modal from 'react-responsive-modal'
 import { Button } from 'react-bootstrap'
+import $ from 'jquery'
 import Icon from 'react-icons-kit'
 import { calendar} from 'react-icons-kit/icomoon'
 
 export default class Reservation extends React.Component {
   state = {open: false}
-  
+
+  componentDidMount() {
+
+  }
+
+  componentWillMount() {
+
+  }
   onOpenModal = () => {
     this.setState({ open: true })
     this.props.showNav(false)
@@ -24,7 +32,7 @@ export default class Reservation extends React.Component {
         <div className='row'>
           {!open&&(
             <div className='center'>
-              <h1 id='reserveTitle'>Reserve Your Spot Now!</h1>
+              <h1 id='reserveTitle' onClick={this.onOpenModal}>Reserve Your Spot Now!</h1>
               <button id='showCalendar' onClick={this.onOpenModal}><Icon id='bigCalendar' size={200} icon={calendar}></Icon></button>
             </div>
            )}
@@ -33,8 +41,9 @@ export default class Reservation extends React.Component {
           <span id='rip'>
             <Modal id='reservationModal' open={open} onClose={this.onCloseModal} showCloseIcon={false}>
               <iframe id="bookingCalendar" 
-                      src="https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css" 
-                      frameBorder="0">
+                      src="https://secure.webreserv.com/services/bookingcalendar.do?search=0&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css&businessid=ocparasail&avgrid=y&page=addtocart&back=productlist&ptid=216898" 
+                      frameBorder="0"
+              >
                 <a href="https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css">Make Reservation</a>
               </iframe>
               <Button id='closeModalBtn' className='btn btn-danger btn-xs' onClick={this.onCloseModal}>Close</Button>
