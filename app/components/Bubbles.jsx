@@ -39,7 +39,7 @@ export default class Bubbles extends Component {
   render() {
     return (
       <div>
-        <div id="background-wrap" onClick={e => true}>
+        <div id="background-wrap" onClick={e => true} onDragOver={e => true}>
          
           <div className={'bubble x1 '+ 'bub'+this.state.bub1} onClick={()=> window.open('https://www.facebook.com/ParasailingCatalina/', '_blank')}>
             <div className='icon-wrapper faceBook'>
