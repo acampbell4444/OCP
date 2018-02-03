@@ -22296,7 +22296,7 @@ var Reservation = function (_React$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Reservation.__proto__ || Object.getPrototypeOf(Reservation)).call.apply(_ref, [this].concat(args))), _this), _this.state = { open: false }, _this.onOpenModal = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Reservation.__proto__ || Object.getPrototypeOf(Reservation)).call.apply(_ref, [this].concat(args))), _this), _this.state = { open: true }, _this.onOpenModal = function () {
       _this.setState({ open: true });
       _this.props.showNav(false);
     }, _this.onCloseModal = function () {

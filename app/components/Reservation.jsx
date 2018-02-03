@@ -4,7 +4,7 @@ import Modal from 'react-responsive-modal'
 import { Button } from 'react-bootstrap'
 
 export default class Reservation extends React.Component {
-  state = {open: false}
+  state = {open: true}
   
   onOpenModal = () => {
     this.setState({ open: true })
