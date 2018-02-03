@@ -21,6 +21,7 @@ import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
 
 import { updateCurrentSection } from './reducers/navBar'
+import { navShow } from './reducers/navBar'
 
 const OSApp = connect(
   ({ auth }) => ({ user: auth })
@@ -34,7 +35,10 @@ const OSApp = connect(
     </span>
 )
 const onHomeEnter = () => store.dispatch(updateCurrentSection(1))
-const onReservationEnter = () => store.dispatch(updateCurrentSection(2))
+const onReservationEnter = () => {
+  store.dispatch(updateCurrentSection(2))
+  store.dispatch(navShow(false))
+}
 const onRateEnter = () => store.dispatch(updateCurrentSection(3))
 const onLocationEnter = () => store.dispatch(updateCurrentSection(4))
 const onFAQEnter = () => store.dispatch(updateCurrentSection(5))

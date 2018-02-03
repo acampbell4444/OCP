@@ -42719,7 +42719,8 @@ var onHomeEnter = function onHomeEnter() {
   return _store2.default.dispatch((0, _navBar.updateCurrentSection)(1));
 };
 var onReservationEnter = function onReservationEnter() {
-  return _store2.default.dispatch((0, _navBar.updateCurrentSection)(2));
+  _store2.default.dispatch((0, _navBar.updateCurrentSection)(2));
+  _store2.default.dispatch((0, _navBar.navShow)(false));
 };
 var onRateEnter = function onRateEnter() {
   return _store2.default.dispatch((0, _navBar.updateCurrentSection)(3));
