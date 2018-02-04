@@ -27,7 +27,7 @@ body {
     color: white;
     font-family: 'Expletus Sans', Bold;
     font-size: 50px;
-    z-index: 99999;
+    z-index: 999999;
 }
 
 #BN:hover {
