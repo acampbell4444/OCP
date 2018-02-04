@@ -2,14 +2,13 @@
 
 
 #rateCanvas {
-  overflow: hidden;
-  z-index: -100;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size:  cover;
   background-size:  cover;
   position: absolute;
   z-index: -1;
@@ -49,7 +48,7 @@
   width: 108px;
   height: 108px;
   position: absolute;
-  top: -16px;
+  top: 18%;
   left: -108px;
   animation: right linear 30s infinite;
   z-index: 20;

@@ -33239,11 +33239,7 @@ var Rate = function (_Component) {
             '    '
           )
         ),
-        _react2.default.createElement(
-          'div',
-          { className: 'plane', style: { 'background': "url('/images/aeroplane.svg') no-repeat" } },
-          '>'
-        )
+        _react2.default.createElement('div', { className: 'plane', style: { 'background': "url('/images/aeroplane.svg') no-repeat" } })
       );
     }
   }]);
