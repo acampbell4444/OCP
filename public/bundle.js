@@ -79333,6 +79333,10 @@ var _NotFound = __webpack_require__(382);
 
 var _NotFound2 = _interopRequireDefault(_NotFound);
 
+var _Footer = __webpack_require__(914);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 var _navBar = __webpack_require__(153);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -79349,21 +79353,9 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
     _react2.default.createElement(
       'div',
       { className: 'navbar sticky-top navbar-light bg-med' },
-      _react2.default.createElement(
-        _NavigationContainer2.default,
-        null,
-        ' '
-      ),
-      _react2.default.createElement(
-        'footer',
-        null,
-        _react2.default.createElement(
-          'div',
-          { id: 'testy' },
-          'taco sauce'
-        )
-      )
+      _react2.default.createElement(_NavigationContainer2.default, null)
     ),
+    _react2.default.createElement(_Footer2.default, null),
     children
   );
 });
@@ -79407,6 +79399,73 @@ var onContactEnter = function onContactEnter() {
     _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default })
   )
 ), document.getElementById('main'));
+
+/***/ }),
+/* 914 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Navigation = function (_Component) {
+  _inherits(Navigation, _Component);
+
+  function Navigation() {
+    _classCallCheck(this, Navigation);
+
+    return _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).apply(this, arguments));
+  }
+
+  _createClass(Navigation, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          currentSection = _props.currentSection,
+          handleSectionChange = _props.handleSectionChange,
+          navShow = _props.navShow;
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'footer',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            _react2.default.createElement(
+              'span',
+              { className: 'animatedText' },
+              'OCEANSIDE PARASAIL'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Navigation;
+}(_react.Component);
+
+exports.default = Navigation;
 
 /***/ })
 /******/ ]);

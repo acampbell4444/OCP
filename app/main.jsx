@@ -19,6 +19,7 @@ import ContactContainer from './containers/ContactContainer'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
+import Footer from './components/Footer'
 
 import { updateCurrentSection } from './reducers/navBar'
 import { navShow } from './reducers/navBar'
@@ -29,9 +30,9 @@ const OSApp = connect(
   ({ user, children }) =>
     <span>
       <div className='navbar sticky-top navbar-light bg-med'>
-          <Navbar> </Navbar>
-          <footer><div id='testy' >taco sauce</div></footer>
+          <Navbar/>
       </div>
+      <Footer/>
       {children}
     </span>
 )
