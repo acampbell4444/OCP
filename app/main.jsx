@@ -30,6 +30,7 @@ const OSApp = connect(
     <span>
       <div className='navbar sticky-top navbar-light bg-med'>
           <Navbar> </Navbar>
+          <footer><div id='testy' >taco sauce</div></footer>
       </div>
       {children}
     </span>

@@ -33562,13 +33562,13 @@ var SunRise = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       document.addEventListener('mousemove', this.mm, false);
-      document.body.style.overflowY = 'hidden';
+      document.body.style.backgroundColor = 'black';
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       document.removeEventListener('mousemove', this.mm, false);
-      document.body.style.overflowY = 'scroll';
+      document.body.style.backgroundColor = '#2F3C99';
     }
   }, {
     key: 'render',
@@ -79353,6 +79353,15 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
         _NavigationContainer2.default,
         null,
         ' '
+      ),
+      _react2.default.createElement(
+        'footer',
+        null,
+        _react2.default.createElement(
+          'div',
+          { id: 'testy' },
+          'taco sauce'
+        )
       )
     ),
     children

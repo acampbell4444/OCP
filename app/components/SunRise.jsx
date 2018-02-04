@@ -118,11 +118,11 @@ export default class SunRise extends Component {
   }
   componentDidMount() {
     document.addEventListener('mousemove', this.mm, false)
-    document.body.style.overflowY='hidden'
+    document.body.style.backgroundColor='black'
   }
   componentWillUnmount() {
     document.removeEventListener('mousemove', this.mm, false)
-    document.body.style.overflowY='scroll'
+    document.body.style.backgroundColor='#2F3C99'
   }
   render() {
     return (

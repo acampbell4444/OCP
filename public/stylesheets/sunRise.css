@@ -5,7 +5,7 @@ body {
 
 #sunriseHeader {
   color: white;
-  margin: 4% auto 0;
+  margin: 2% auto 0;
   font-size: 100px;
   text-align: center;
   position: relative;
@@ -27,7 +27,7 @@ body {
     color: white;
     font-family: 'Expletus Sans', Bold;
     font-size: 50px;
-    z-index: 999999;
+    z-index: 99999;
 }
 
 #BN:hover {
