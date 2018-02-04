@@ -33229,7 +33229,7 @@ var Rate = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: 'rateCanvas', style: { 'background': "url('/images/city-vector.jpg')" } },
+        { id: 'rateCanvas', style: { 'background': "url('/images/city-vector.jpg') no-repeat" } },
         _react2.default.createElement(
           'div',
           { className: 'parachute' },
