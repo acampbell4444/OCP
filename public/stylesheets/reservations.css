@@ -15,7 +15,7 @@
 
 #reserveTitle {
 	color: #FF3399;
-	margin: 10% auto 4% auto;
+	margin: 4% auto 0 auto;
 	font-weight: 900;
 	font-size: 80px;
   -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -34,7 +34,7 @@
 #showCalendar {
   color: #FF3399;
 	position: relative;
-	margin: 3% auto;
+	margin: 1% auto;
 	background-color: transparent;
 	border: none;
 	-webkit-animation: vibrate-1 .5s linear infinite both;
