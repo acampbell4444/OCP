@@ -33229,13 +33229,21 @@ var Rate = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: 'rateCanvas' },
+        { id: 'rateCanvas', style: { 'background': "url('/images/city-vector.jpg')" } },
         _react2.default.createElement(
           'div',
           { className: 'parachute' },
-          _react2.default.createElement('div', { className: 'parachute__img' })
+          _react2.default.createElement(
+            'div',
+            { className: 'parachute__img img-responsive', style: { 'background': "url('/images/parasailer.svg') no-repeat" } },
+            '    '
+          )
         ),
-        _react2.default.createElement('div', { className: 'plane' })
+        _react2.default.createElement(
+          'div',
+          { className: 'plane', style: { 'background': "url('/images/aeroplane.svg') no-repeat" } },
+          '>'
+        )
       );
     }
   }]);

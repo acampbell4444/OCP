@@ -2,11 +2,9 @@
 
 
 #rateCanvas {
-  background: url("https://dl.dropboxusercontent.com/s/jwtq37daebp672m/city-vector.jpg")
-    no-repeat;
   overflow: hidden;
   z-index: -100;
-	  background-position: center center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -26,32 +24,35 @@
   width: 400px;
   -webkit-animation:  xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
   -moz-animation:  xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  z-index: 20;
 }
 .parachute__img {
   -webkit-animation: yAxis 20s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
   -moz-animation: yAxis 20s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+   z-index: 20;
 }
 .parachute__img:before {
   content: "";
   display: block;
-  width: 60px;
-  height: 60px;
-  background: url("https://dl.dropboxusercontent.com/s/7xthrrako1qpxy9/parachute.svg") no-repeat;
+  width: 400px;
+  height:400px;
+  scale: .5;
   -webkit-animation: swing ease-in-out 1s infinite alternate;
   -moz-animation: swing ease-in-out 1s infinite alternate;
   transform-origin: center -20px;
   -webkit-transform-origin: center -20px;
   -moz-transform-origin: center -20px;
+   z-index: 20;
 }
 
 .plane {
-  background: url("https://dl.dropboxusercontent.com/s/egcs4ohbyrfa39n/aeroplane.svg") no-repeat;
   width: 108px;
   height: 108px;
   position: absolute;
   top: -16px;
   left: -108px;
   animation: right linear 30s infinite;
+  z-index: 20;
 }
 
 @-webkit-keyframes yAxis {
