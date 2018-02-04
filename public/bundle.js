@@ -79364,23 +79364,28 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
   );
 });
 var onHomeEnter = function onHomeEnter() {
-  return _store2.default.dispatch((0, _navBar.updateCurrentSection)(1));
+  _store2.default.dispatch((0, _navBar.updateCurrentSection)(1));
+  _store2.default.dispatch((0, _navBar.navShow)(true));
 };
 var onReservationEnter = function onReservationEnter() {
   _store2.default.dispatch((0, _navBar.updateCurrentSection)(2));
   _store2.default.dispatch((0, _navBar.navShow)(true));
 };
 var onRateEnter = function onRateEnter() {
-  return _store2.default.dispatch((0, _navBar.updateCurrentSection)(3));
+  _store2.default.dispatch((0, _navBar.updateCurrentSection)(3));
+  _store2.default.dispatch((0, _navBar.navShow)(true));
 };
 var onLocationEnter = function onLocationEnter() {
-  return _store2.default.dispatch((0, _navBar.updateCurrentSection)(4));
+  _store2.default.dispatch((0, _navBar.updateCurrentSection)(4));
+  _store2.default.dispatch((0, _navBar.navShow)(true));
 };
 var onFAQEnter = function onFAQEnter() {
-  return _store2.default.dispatch((0, _navBar.updateCurrentSection)(5));
+  _store2.default.dispatch((0, _navBar.updateCurrentSection)(5));
+  _store2.default.dispatch((0, _navBar.navShow)(true));
 };
 var onContactEnter = function onContactEnter() {
-  return _store2.default.dispatch((0, _navBar.updateCurrentSection)(6));
+  _store2.default.dispatch((0, _navBar.updateCurrentSection)(6));
+  _store2.default.dispatch((0, _navBar.navShow)(true));
 };
 
 (0, _reactDom.render)(_react2.default.createElement(

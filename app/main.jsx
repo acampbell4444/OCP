@@ -36,15 +36,30 @@ const OSApp = connect(
       {children}
     </span>
 )
-const onHomeEnter = () => store.dispatch(updateCurrentSection(1))
+const onHomeEnter = () => {
+  store.dispatch(updateCurrentSection(1))
+  store.dispatch(navShow(true))
+}
 const onReservationEnter = () => {
   store.dispatch(updateCurrentSection(2))
   store.dispatch(navShow(true))
 }
-const onRateEnter = () => store.dispatch(updateCurrentSection(3))
-const onLocationEnter = () => store.dispatch(updateCurrentSection(4))
-const onFAQEnter = () => store.dispatch(updateCurrentSection(5))
-const onContactEnter = () => store.dispatch(updateCurrentSection(6))
+const onRateEnter = () => {
+  store.dispatch(updateCurrentSection(3))
+  store.dispatch(navShow(true))
+}
+const onLocationEnter = () => {
+  store.dispatch(updateCurrentSection(4))
+  store.dispatch(navShow(true))
+}
+const onFAQEnter = () => {
+  store.dispatch(updateCurrentSection(5))
+  store.dispatch(navShow(true))
+}
+const onContactEnter = () => {
+  store.dispatch(updateCurrentSection(6))
+  store.dispatch(navShow(true))
+}
 
 render(
   <Provider store={store}>
