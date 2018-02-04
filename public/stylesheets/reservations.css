@@ -2,6 +2,9 @@
   width:1200px;
 }
 
+#reserveBody {
+
+}
 #bookingCalendar {
 
 }
@@ -11,7 +14,7 @@
 }
 
 #reserveTitle {
-	color: white;
+	color: #FF3399;
 	margin: 10% auto 4% auto;
 	font-weight: 900;
 	font-size: 80px;
@@ -20,7 +23,7 @@
 }
 
 #reserveTitle:hover {
-  color: #FF3399;
+  filter: brightness(75%);
 }
 
 #bookingCalendar{
@@ -29,9 +32,9 @@
 }
 
 #showCalendar {
+  color: #FF3399;
 	position: relative;
 	margin: 3% auto;
-	color: white;
 	background-color: transparent;
 	border: none;
 	-webkit-animation: vibrate-1 .5s linear infinite both;
@@ -39,14 +42,15 @@
 }
 
 #showCalendar:hover {
-	color: #FF3399;
 	-webkit-animation: rotate-center 0.6s ease-in-out both;
 	        animation: rotate-center 0.6s ease-in-out both;
+  filter: brightness(75%);
 }
 
 #closeModalBtn {
 	float: right;
 }
+
 
 #reserveCanvas {
   background-position: center center;
@@ -256,7 +260,7 @@
             transform: translateY(-50px);
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 0 black, 0 2px 0 black, 0 3px 0 black, 0 4px 0 black, 0 5px 0 black, 0 6px 0 black, 0 7px 0 black, 0 8px 0 black, 0 9px 0 black, 0 50px 30px rgba(0, 0, 0, 0.3);
   }
 }
 @keyframes text-pop-up-top {
@@ -272,7 +276,7 @@
             transform: translateY(-50px);
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 0 black, 0 2px 0 black, 0 3px 0 black, 0 4px 0 black, 0 5px 0 black, 0 6px 0 black, 0 7px 0 black, 0 8px 0 black, 0 9px 0 black, 0 50px 30px rgba(0, 0, 0, 0.3);
   }
 }
 

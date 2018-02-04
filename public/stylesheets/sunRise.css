@@ -1,7 +1,12 @@
+
+body {
+  background-color: #2F3C99
+}
+
 #sunriseHeader {
   color: white;
-  margin: 5% auto 0;
-  font-size: 80px;
+  margin: 4% auto 0;
+  font-size: 100px;
   text-align: center;
   position: relative;
   z-index: 99999;

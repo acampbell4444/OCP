@@ -51,7 +51,7 @@
   top: 18%;
   left: -108px;
   animation: right linear 30s infinite;
-  z-index: 20;
+  z-index: -2;
 }
 
 @-webkit-keyframes yAxis {
