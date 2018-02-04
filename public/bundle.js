@@ -33220,10 +33220,14 @@ var Rate = function (_Component) {
 
   _createClass(Rate, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      document.body.style.backgroundColor = 'black';
+    }
   }, {
     key: 'componentWillUnmount',
-    value: function componentWillUnmount() {}
+    value: function componentWillUnmount() {
+      document.body.style.backgroundColor = '#2F3C99';
+    }
   }, {
     key: 'render',
     value: function render() {

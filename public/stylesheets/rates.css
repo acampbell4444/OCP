@@ -2,6 +2,7 @@
 
 
 #rateCanvas {
+  z-index: -100;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -9,8 +10,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size:  cover;
-  background-size:  cover;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   top: 0;
   left: 0;
