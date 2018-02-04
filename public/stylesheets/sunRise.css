@@ -1,6 +1,5 @@
-
-body {
-  background-color: #2F3C99
+#homeContainer {
+  margin-bottom: 20%;
 }
 
 #sunriseHeader {
@@ -28,6 +27,7 @@ body {
     font-family: 'Expletus Sans', Bold;
     font-size: 50px;
     z-index: 999999;
+    margin-bottom: 5%;
 }
 
 #BN:hover {

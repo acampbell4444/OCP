@@ -28416,6 +28416,12 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactIconsKit = __webpack_require__(225);
+
+var _reactIconsKit2 = _interopRequireDefault(_reactIconsKit);
+
+var _icomoon = __webpack_require__(348);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28448,12 +28454,83 @@ var Navigation = function (_Component) {
           'footer',
           null,
           _react2.default.createElement(
-            'p',
-            null,
+            'div',
+            { className: 'container footContain' },
             _react2.default.createElement(
-              'span',
-              { className: 'animatedText' },
-              'OCEANSIDE PARASAIL'
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-sm' },
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'animatedText' },
+                    'OCEANSIDE PARASAIL'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-sm' },
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'animatedText' },
+                    _react2.default.createElement(
+                      'a',
+                      { href: 'tel:555-555-5555' },
+                      '1-555-555-5555'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-sm' },
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'animatedText' },
+                    _react2.default.createElement(
+                      'a',
+                      { href: 'https://goo.gl/maps/DmgW1W2qGgR2', target: '_blank' },
+                      '1395 1/2 North Harbor Drive ',
+                      _react2.default.createElement('br', null),
+                      ' Oceanside, CA 92054'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-sm' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row footIcons' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-sm' },
+                    _react2.default.createElement(_reactIconsKit2.default, { size: 20, icon: _icomoon.home })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-sm' },
+                    _react2.default.createElement(_reactIconsKit2.default, { size: 20, icon: _icomoon.home })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-sm' },
+                    _react2.default.createElement(_reactIconsKit2.default, { size: 20, icon: _icomoon.home })
+                  )
+                )
+              )
             )
           )
         )
@@ -33300,16 +33377,16 @@ var Rate = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'span',
-        { id: 'turkey' },
+        { id: 'turkey', style: { 'background': "url('/images/city-vector.jpg') no-repeat" } },
         _react2.default.createElement(
           'div',
-          { id: 'rateCanvas', style: { 'background': "url('/images/city-vector.jpg') no-repeat" } },
+          { id: 'rateCanvas' },
           _react2.default.createElement(
             'div',
             { className: 'parachute' },
             _react2.default.createElement(
               'div',
-              { className: 'parachute__img img-responsive', style: { 'background': "url('/images/parasailer.svg') no-repeat" } },
+              { className: 'parachute__img', style: { 'background': "url('/images/longRope.svg') no-repeat" } },
               '    '
             )
           ),
