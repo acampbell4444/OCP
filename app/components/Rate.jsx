@@ -9,7 +9,7 @@ export default class Rate extends Component {
   }
   render() {
     return (
-
+<span id='turkey'>
 <div id='rateCanvas' style={{'background': "url('/images/city-vector.jpg') no-repeat"}}>
   <div className="parachute">
     <div className="parachute__img img-responsive" style={{'background': "url('/images/parasailer.svg') no-repeat"}}>    </div>
@@ -18,6 +18,7 @@ export default class Rate extends Component {
   <div className="plane" style={{'background': "url('/images/aeroplane.svg') no-repeat"}}></div>
 
 </div>
+</span>
 
     )
   }

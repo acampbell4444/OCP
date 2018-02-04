@@ -62,6 +62,17 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/ 	// webpack-livereload-plugin
+/******/ 	(function() {
+/******/ 	  if (typeof window === "undefined") { return };
+/******/ 	  var id = "webpack-livereload-plugin-script";
+/******/ 	  if (document.getElementById(id)) { return; }
+/******/ 	  var el = document.createElement("script");
+/******/ 	  el.id = id;
+/******/ 	  el.async = true;
+/******/ 	  el.src = "http://localhost:35729/livereload.js";
+/******/ 	  document.getElementsByTagName("head")[0].appendChild(el);
+/******/ 	}());
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 914);
 /******/ })
@@ -33288,18 +33299,22 @@ var Rate = function (_Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { id: 'rateCanvas', style: { 'background': "url('/images/city-vector.jpg') no-repeat" } },
+        'span',
+        { id: 'turkey' },
         _react2.default.createElement(
           'div',
-          { className: 'parachute' },
+          { id: 'rateCanvas', style: { 'background': "url('/images/city-vector.jpg') no-repeat" } },
           _react2.default.createElement(
             'div',
-            { className: 'parachute__img img-responsive', style: { 'background': "url('/images/parasailer.svg') no-repeat" } },
-            '    '
-          )
-        ),
-        _react2.default.createElement('div', { className: 'plane', style: { 'background': "url('/images/aeroplane.svg') no-repeat" } })
+            { className: 'parachute' },
+            _react2.default.createElement(
+              'div',
+              { className: 'parachute__img img-responsive', style: { 'background': "url('/images/parasailer.svg') no-repeat" } },
+              '    '
+            )
+          ),
+          _react2.default.createElement('div', { className: 'plane', style: { 'background': "url('/images/aeroplane.svg') no-repeat" } })
+        )
       );
     }
   }]);
