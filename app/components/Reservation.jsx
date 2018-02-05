@@ -19,10 +19,12 @@ export default class Reservation extends React.Component {
   onOpenModal = () => {
     this.setState({ open: true })
     this.props.showNav(false)
+    this.props.showFoot(false)
   }
   onCloseModal = () => {
     this.setState({ open: false })
     this.props.showNav(true)
+    this.props.showFoot(true)
   }
 
   render() {

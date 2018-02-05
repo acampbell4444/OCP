@@ -19,7 +19,7 @@ import GalleryContainer from './containers/GalleryContainer'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
-import Footer from './components/Footer'
+import Footer from './containers/FooterContainer'
 
 import { updateCurrentSection } from './reducers/navBar'
 import { navShow } from './reducers/navBar'

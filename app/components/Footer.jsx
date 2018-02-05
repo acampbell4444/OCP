@@ -5,9 +5,10 @@ import { browserHistory } from 'react-router'
 
 export default class Navigation extends Component {
   render() {
-    const { currentSection, handleSectionChange, navShow } = this.props
+    const { currentSection, handleSectionChange, navShow, footShow } = this.props
     return (
       <div>
+       {footShow&&(
         <footer>
           <div className='container footContain'>
             <div className='row'>
@@ -32,6 +33,7 @@ export default class Navigation extends Component {
             </div>
           </div>
         </footer>
+      )}
       </div>
     )
   }

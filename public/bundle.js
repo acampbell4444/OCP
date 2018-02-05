@@ -12344,7 +12344,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var initState = {
   navShow: true,
-  currentSection: null
+  currentSection: null,
+  footShow: true
 };
 
 var reducer = function reducer() {
@@ -12360,6 +12361,9 @@ var reducer = function reducer() {
     case UPDATE_NAV_SHOW:
       newState.navShow = action.bool;
       break;
+    case UPDATE_FOOT_SHOW:
+      newState.footShow = action.bool;
+      break;
     default:
       return state;
   }
@@ -12368,12 +12372,16 @@ var reducer = function reducer() {
 
 var UPDATE_CURR_SECTION = 'UPDATE_CURR_SECTION';
 var UPDATE_NAV_SHOW = 'UPDATE_NAV_SHOW';
+var UPDATE_FOOT_SHOW = 'UPDATE_FOOT_SHOW';
 
 var updateCurrentSection = exports.updateCurrentSection = function updateCurrentSection(section) {
   return { type: UPDATE_CURR_SECTION, section: section };
 };
 var navShow = exports.navShow = function navShow(bool) {
   return { type: UPDATE_NAV_SHOW, bool: bool };
+};
+var footShow = exports.footShow = function footShow(bool) {
+  return { type: UPDATE_FOOT_SHOW, bool: bool };
 };
 
 exports.default = reducer;
@@ -18322,6 +18330,8 @@ var Gall = function (_React$Component) {
                 var _this = _possibleConstructorReturn(this, (Gall.__proto__ || Object.getPrototypeOf(Gall)).call(this, props));
 
                 _this.state = {};
+                // this.handleClose=this.handleClose.bind(this)
+                // this.handleOpen=this.handleOpen.bind(this)
                 return _this;
         }
 
@@ -18334,21 +18344,31 @@ var Gall = function (_React$Component) {
                 key: 'componentWillUnmount',
                 value: function componentWillUnmount() {}
         }, {
+                key: 'handleClose',
+                value: function handleClose() {
+                        console.log('nacho', this.props);
+                }
+        }, {
                 key: 'render',
                 value: function render() {
-                        var showNav = this.props.showNav;
+                        var _props = this.props,
+                            showNav = _props.showNav,
+                            footShow = _props.footShow;
 
                         return _react2.default.createElement(
                                 'div',
                                 { className: 'container' },
                                 _react2.default.createElement(_reactGridGallery2.default, { images: IMAGES,
                                         lightboxWillClose: function lightboxWillClose(e) {
-                                                return showNav(true);
+                                                footShow(true);showNav(true);
                                         },
                                         lightboxWillOpen: function lightboxWillOpen(e) {
-                                                return showNav(false);
-                                        }
-                                })
+                                                footShow(false);showNav(false);
+                                        },
+                                        showNav: showNav,
+                                        footShow: footShow
+                                }),
+                                _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
                         );
                 }
         }]);
@@ -31581,7 +31601,38 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_FAQ2.default);
 
 /***/ }),
-/* 404 */,
+/* 404 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Footer = __webpack_require__(1000);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _reactRedux = __webpack_require__(35);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapStateToProps = function mapStateToProps(state) {
+  var footShow = state.navBar.footShow;
+  return {
+    footShow: footShow
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {};
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_Footer2.default);
+
+/***/ }),
 /* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31708,6 +31759,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     showNav: function showNav(bool) {
       return dispatch((0, _navBar.navShow)(bool));
+    },
+    showFoot: function showFoot(bool) {
+      return dispatch((0, _navBar.footShow)(bool));
     }
   };
 };
@@ -36753,9 +36807,11 @@ var Reservation = function (_React$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Reservation.__proto__ || Object.getPrototypeOf(Reservation)).call.apply(_ref, [this].concat(args))), _this), _this.state = { open: false }, _this.onOpenModal = function () {
       _this.setState({ open: true });
       _this.props.showNav(false);
+      _this.props.showFoot(false);
     }, _this.onCloseModal = function () {
       _this.setState({ open: false });
       _this.props.showNav(true);
+      _this.props.showFoot(true);
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -37039,7 +37095,23 @@ var SunRise = function (_Component) {
                   } },
                 'BOOK NOW'
               )
-            )
+            ),
+            _react2.default.createElement(
+              'h1',
+              { className: 'flex', id: 'sunriseHeader' },
+              'OCEANSIDE PARASAIL'
+            ),
+            _react2.default.createElement(
+              'h1',
+              { className: 'flex', id: 'sunriseHeader' },
+              'OCEANSIDE PARASAIL'
+            ),
+            _react2.default.createElement(
+              'h1',
+              { className: 'flex', id: 'sunriseHeader' },
+              'OCEANSIDE PARASAIL'
+            ),
+            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
           ),
           _react2.default.createElement(
             'div',
@@ -90458,9 +90530,9 @@ var _NotFound = __webpack_require__(401);
 
 var _NotFound2 = _interopRequireDefault(_NotFound);
 
-var _Footer = __webpack_require__(1000);
+var _FooterContainer = __webpack_require__(404);
 
-var _Footer2 = _interopRequireDefault(_Footer);
+var _FooterContainer2 = _interopRequireDefault(_FooterContainer);
 
 var _navBar = __webpack_require__(161);
 
@@ -90480,7 +90552,7 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
       { className: 'navbar sticky-top navbar-light bg-med' },
       _react2.default.createElement(_NavigationContainer2.default, null)
     ),
-    _react2.default.createElement(_Footer2.default, null),
+    _react2.default.createElement(_FooterContainer2.default, null),
     children
   );
 });
@@ -90578,12 +90650,13 @@ var Navigation = function (_Component) {
       var _props = this.props,
           currentSection = _props.currentSection,
           handleSectionChange = _props.handleSectionChange,
-          navShow = _props.navShow;
+          navShow = _props.navShow,
+          footShow = _props.footShow;
 
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
+        footShow && _react2.default.createElement(
           'footer',
           null,
           _react2.default.createElement(
@@ -90681,6 +90754,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     showNav: function showNav(bool) {
       return dispatch((0, _navBar.navShow)(bool));
+    },
+    footShow: function footShow(bool) {
+      return dispatch((0, _navBar.footShow)(bool));
     }
   };
 };

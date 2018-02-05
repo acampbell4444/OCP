@@ -1,15 +1,14 @@
-import Footer from '../components/Gallery'
+import Footer from '../components/Footer'
 import {connect} from 'react-redux'
 
 const mapStateToProps = (state) => {
-  const footerShow = state.navBar.footerShow
+  const footShow = state.navBar.footShow
   return {
-    footerShow
+    footShow
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Footer)

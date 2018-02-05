@@ -7,20 +7,28 @@ export default class Gall extends React.Component {
     constructor(props){
         super(props);
         this.state = {}
+        // this.handleClose=this.handleClose.bind(this)
+        // this.handleOpen=this.handleOpen.bind(this)
     }
     componentDidMount() {
       document.body.style.backgroundColor='#2F3C99'
     }
     componentWillUnmount() {
     }
+    handleClose() {
+        console.log('nacho', this.props)
+    }
     render () {
-      const {showNav} = this.props
+      const {showNav, footShow} = this.props
       return (
         <div className='container' >
           <Gallery images={IMAGES}
-                   lightboxWillClose={e => showNav(true)}
-                   lightboxWillOpen={e => showNav(false)}
+                   lightboxWillClose={e => {footShow(true); showNav(true)}}
+                   lightboxWillOpen={e => {footShow(false); showNav(false)}}
+                   showNav={showNav}
+                   footShow={footShow}
           />
+           <h1 className='clear' id='sunriseHeader'></h1>
         </div>
       )
     }

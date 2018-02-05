@@ -35,6 +35,11 @@ footer {
    overflow-y: scroll;
 }
 
+.clear {
+   clear: both;
+   height: 130px;
+}
+
 .orangeText {
   font-size: 29px;
   padding: 1% 0;

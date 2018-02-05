@@ -1,6 +1,6 @@
-import Gallery from '../components/Gallery'
+import Gall from '../components/Gallery'
 import {connect} from 'react-redux'
-import { navShow } from '../reducers/navBar'
+import { navShow, footShow } from '../reducers/navBar'
 
 const mapStateToProps = (state) => {
   const user = state.auth
@@ -12,7 +12,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
   showNav(bool) {
   	return dispatch(navShow(bool))
+  },
+  footShow(bool) {
+  	return dispatch(footShow(bool))
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Gallery)
+export default connect(mapStateToProps, mapDispatchToProps)(Gall)

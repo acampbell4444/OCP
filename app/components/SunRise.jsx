@@ -131,6 +131,10 @@ export default class SunRise extends Component {
         <div className='homeContentWrapper flex'>
           <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
           <div className='center flex'><button id='BN' onClick={() => browserHistory.push('/reservations')}>BOOK NOW</button></div>
+          <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
+          <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
+          <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
         </div>
         <div id='starsContainer' onMouseDown={this.startMove} onTouchStart={this.startMove} onMouseUp={this.stopMove}>
           <div id='stars' onMouseDown={this.startMove} onTouchStart={this.startMove} onMouseUp={this.stopMove}></div>
