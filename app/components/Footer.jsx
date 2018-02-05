@@ -25,7 +25,7 @@ export default class Navigation extends Component {
               </div>
 
               <div className='col-sm-3'>
-                <p><span className='animatedText'><a href="tel:555-555-5555">1-555-555-5555</a></span></p>
+                <p><span className='animatedText'><a href="tel:555-555-5555">555-555-5555</a></span></p>
               </div>
 
 

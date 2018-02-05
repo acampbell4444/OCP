@@ -28507,7 +28507,7 @@ var Navigation = function (_Component) {
                     _react2.default.createElement(
                       'a',
                       { href: 'tel:555-555-5555' },
-                      '1-555-555-5555'
+                      '555-555-5555'
                     )
                   )
                 )

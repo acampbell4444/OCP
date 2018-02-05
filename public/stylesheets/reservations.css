@@ -3,7 +3,21 @@
 }
 
 #reserveBody {
-
+    background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:  cover;
+  background-color: #2E389C;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 100px;
 }
 
 .topmenu > h1 {
@@ -12,7 +26,7 @@
 
 #reserveTitle {
 	color: #ED5E2A;
-	margin: 4% auto 0 auto;
+	margin: 20% auto 0 auto;
 	font-weight: 900;
 	font-size: 80px;
   -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -58,21 +72,8 @@
 
 
 #reserveCanvas {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size:  cover;
-  background-color: #2E389C;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  padding: 100px;
+  position: relative;
+  overflow-y: scroll;
 }
 
 #rip {
