@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 export default class FAQ extends Component {
-  componentDidMount(){
-  }
+    componentDidMount() {
+      document.body.style.backgroundColor='#2F3C99'
+    }
   componentWillUnmount(){
   }
   render() {

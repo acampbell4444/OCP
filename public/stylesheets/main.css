@@ -36,13 +36,14 @@ footer {
 }
 
 .orangeText {
-  font-size: 23px;
+  font-size: 29px;
   padding: 1% 0;
   font-family: "Lucida Console";
   letter-spacing: 0;
   display: block;
   margin: .5% auto;
   color: #ED5E2A;
+  font-weight: 900px;
 }
 
 #hmClick:hover {

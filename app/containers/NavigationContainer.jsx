@@ -20,7 +20,7 @@ const mapDispatchToProps = dispatch => (
       if (section===3&&currentSection!==3) { browserHistory.push('/rates') }
       if (section===4&&currentSection!==4) { browserHistory.push('/location') }
       if (section===5&&currentSection!==5) { browserHistory.push('/FAQ') }
-      if (section===6&&currentSection!==6) { browserHistory.push('/contact') }
+      if (section===6&&currentSection!==6) { browserHistory.push('/gallery') }
     }
   }
 )

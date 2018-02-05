@@ -13,7 +13,7 @@ export default class Navigation extends Component {
             <div className='row'>
               
               <div onClick={e => browserHistory.push('/home')} className='col-sm-3'>
-                <p id='hmClick' className='orangeText'>OCEANSIDE PARASAIL</p>
+                <p id='hmClick' className='orangeText'>Oceanside Parasail</p>
               </div>
 
               <div className='col-sm-6'>
@@ -29,23 +29,6 @@ export default class Navigation extends Component {
               <div className='col-sm-3'>
                 <p><a href="tel:555-555-5555" className='orangeText'>555-555-5555</a></p>
               </div>
-
-
-{/*
-              <div className='col-sm'>
-                <div className='row footIcons'>
-                    <div className='col-sm'>
-                      <Icon size={20} icon={home}></Icon>
-                    </div>
-                    <div className='col-sm'>
-                      <Icon size={20} icon={home}></Icon>
-                    </div>
-                    <div className='col-sm'>
-                      <Icon size={20} icon={home}></Icon>
-                    </div>
-                </div>
-              </div>*/}
-
             </div>
           </div>
         </footer>

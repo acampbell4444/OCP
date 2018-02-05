@@ -21,6 +21,12 @@ export default class Navigation extends Component {
             {currentSection!==1 ? (<Icon size={80} className='iconDarken' icon={home}></Icon>) : (<h3 id='iconTextHm'>HOME</h3>)}
            </div>
         </div>
+
+        <div className='flex'>
+          <div className={'icon-wrapper'} id={'navActive'+(currentSection===6).toString()} onClick={e => handleSectionChange(6) }>
+            {currentSection!==6 ? (<Icon size={80} className='iconDarken' icon={camera}></Icon>) : (<h3 id='iconTextContact'>GALLERY</h3>)}
+          </div>
+        </div>
         
         <div className='flex' >
           <div className={'icon-wrapper two'} id={'navActive'+(currentSection===2).toString()} onClick={e => handleSectionChange(2) }>
@@ -46,11 +52,7 @@ export default class Navigation extends Component {
           </div>
         </div>
         
-        <div className='flex'>
-          <div className={'icon-wrapper'} id={'navActive'+(currentSection===6).toString()} onClick={e => handleSectionChange(6) }>
-            {currentSection!==6 ? (<Icon size={80} className='iconDarken' icon={phone}></Icon>) : (<h3 id='iconTextContact'>CONTACT</h3>)}
-        </div>
-      </div>
+
     </div>
     )}</div>
     )

@@ -13,7 +13,7 @@ import ReservationContainer from './containers/ReservationContainer'
 import RateContainer from './containers/RateContainer'
 import LocationContainer from './containers/LocationContainer'
 import FAQContainer from './containers/FAQContainer'
-import ContactContainer from './containers/ContactContainer'
+import GalleryContainer from './containers/GalleryContainer'
 
 
 import Login from './components/Login'
@@ -56,7 +56,7 @@ const onFAQEnter = () => {
   store.dispatch(updateCurrentSection(5))
   store.dispatch(navShow(true))
 }
-const onContactEnter = () => {
+const onGalleryEnter = () => {
   store.dispatch(updateCurrentSection(6))
   store.dispatch(navShow(true))
 }
@@ -71,7 +71,7 @@ render(
         <Route path="/rates" component={RateContainer} onEnter={onRateEnter} />
         <Route path="/location" component={LocationContainer} onEnter={onLocationEnter} />
         <Route path="/FAQ" component={FAQContainer} onEnter={onFAQEnter} />
-        <Route path="/contact" component={ContactContainer} onEnter={onContactEnter} />
+        <Route path="/gallery" component={GalleryContainer} onEnter={onGalleryEnter} />
       </Route>
       <Route path='*' component={NotFound} />
     </Router>
