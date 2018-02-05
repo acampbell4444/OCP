@@ -5,16 +5,13 @@
 #reserveBody {
 
 }
-#bookingCalendar {
-
-}
 
 .topmenu > h1 {
 	font-size: 400px;
 }
 
 #reserveTitle {
-	color: #FF3399;
+	color: #ED5E2A;
 	margin: 4% auto 0 auto;
 	font-weight: 900;
 	font-size: 80px;
@@ -34,7 +31,7 @@
 }
 
 #showCalendar {
-  color: #FF3399;
+  color: #ED5E2A;
 	position: relative;
 	margin: 1% auto;
 	background-color: transparent;
