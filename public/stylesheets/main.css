@@ -30,7 +30,7 @@ footer {
    height: 100px;
    overflow: hidden;
    z-index: 99999999;
-   padding-top: 1%;
+   padding-top: .5%;
    padding-bottom: 1%;
    overflow-y: scroll;
 }
@@ -40,7 +40,7 @@ p > .animatedText {
   font-style: "Oswald", sans-serif;
   letter-spacing: 0;
   display: block;
-  margin: 1% auto;
+  margin: .5% auto;
   text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
   background: url(../images/animated_text_fill.png) repeat-y;
   -webkit-background-clip: text;

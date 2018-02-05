@@ -33346,7 +33346,7 @@ var Rate = function (_Component) {
   _createClass(Rate, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      document.body.style.backgroundColor = 'black';
+      document.body.style.backgroundColor = '#2181DD';
     }
   }, {
     key: 'componentWillUnmount',
@@ -33450,10 +33450,12 @@ var Reservation = function (_React$Component) {
 
   _createClass(Reservation, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      document.body.style.backgroundColor = '#2E389C';
+    }
   }, {
-    key: 'componentWillMount',
-    value: function componentWillMount() {}
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {}
   }, {
     key: 'render',
     value: function render() {
@@ -33464,10 +33466,10 @@ var Reservation = function (_React$Component) {
         { id: 'reserveBody' },
         _react2.default.createElement(
           'div',
-          { className: 'row' },
+          { id: 'reserveCanvas' },
           !open && _react2.default.createElement(
             'div',
-            { className: 'center' },
+            { className: 'row center abs' },
             _react2.default.createElement(
               'h1',
               { id: 'reserveTitle', onClick: this.onOpenModal },
@@ -33478,35 +33480,31 @@ var Reservation = function (_React$Component) {
               { id: 'showCalendar', onClick: this.onOpenModal },
               _react2.default.createElement(_reactIconsKit2.default, { id: 'bigCalendar', size: 200, icon: _icomoon.calendar })
             )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'reserveCanvas' },
+          ),
           _react2.default.createElement(
-            'span',
-            { id: 'rip' },
+            _reactResponsiveModal2.default,
+            { id: 'reservationModal', open: open, onClose: this.onCloseModal, showCloseIcon: false },
             _react2.default.createElement(
-              _reactResponsiveModal2.default,
-              { id: 'reservationModal', open: open, onClose: this.onCloseModal, showCloseIcon: false },
+              'iframe',
+              { id: 'bookingCalendar',
+                src: 'https://secure.webreserv.com/services/bookingcalendar.do?search=0&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css&businessid=ocparasail&avgrid=y&page=addtocart&back=productlist&ptid=216898',
+                frameBorder: '0'
+              },
               _react2.default.createElement(
-                'iframe',
-                { id: 'bookingCalendar',
-                  src: 'https://secure.webreserv.com/services/bookingcalendar.do?search=0&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css&businessid=ocparasail&avgrid=y&page=addtocart&back=productlist&ptid=216898',
-                  frameBorder: '0'
-                },
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css' },
-                  'Make Reservation'
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.Button,
-                { id: 'closeModalBtn', className: 'btn btn-danger btn-xs', onClick: this.onCloseModal },
-                'Close'
+                'a',
+                { href: 'https://secure.webreserv.com/services/bookingcalendar.do?businessid=ocparasail&embedded=y&search=0&avgrid=y&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css' },
+                'Make Reservation'
               )
             ),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { id: 'closeModalBtn', className: 'btn btn-danger btn-xs', onClick: this.onCloseModal },
+              'Close'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
             _react2.default.createElement('span', { className: 'ripple' })
           )
         )

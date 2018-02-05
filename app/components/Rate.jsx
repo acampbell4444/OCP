@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Rate extends Component {
   componentDidMount() {
-    document.body.style.backgroundColor='black'
+    document.body.style.backgroundColor='#2181DD'
   }
   componentWillUnmount() {
     document.body.style.backgroundColor='#2F3C99'

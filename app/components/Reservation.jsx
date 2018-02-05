@@ -10,10 +10,10 @@ export default class Reservation extends React.Component {
   state = {open: false}
 
   componentDidMount() {
-
+    document.body.style.backgroundColor='#2E389C'
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
 
   }
   onOpenModal = () => {
@@ -29,16 +29,15 @@ export default class Reservation extends React.Component {
     const { open } = this.state
     return (
       <div id='reserveBody'>
-        <div className='row'>
+        <div id='reserveCanvas'>
+    
+
           {!open&&(
-            <div className='center'>
+            <div className='row center abs'>
               <h1 id='reserveTitle' onClick={this.onOpenModal}>Reserve Your Spot Now!</h1>
               <button id='showCalendar' onClick={this.onOpenModal}><Icon id='bigCalendar' size={200} icon={calendar}></Icon></button>
             </div>
            )}
-        </div>
-        <div id='reserveCanvas'>
-          <span id='rip'>
             <Modal id='reservationModal' open={open} onClose={this.onCloseModal} showCloseIcon={false}>
               <iframe id="bookingCalendar" 
                       src="https://secure.webreserv.com/services/bookingcalendar.do?search=0&css=/assets/css/bookingcalendar-2.0/theme-white-blue.css&businessid=ocparasail&avgrid=y&page=addtocart&back=productlist&ptid=216898" 
@@ -48,8 +47,9 @@ export default class Reservation extends React.Component {
               </iframe>
               <Button id='closeModalBtn' className='btn btn-danger btn-xs' onClick={this.onCloseModal}>Close</Button>
             </Modal>
-            <span className="ripple"></span>
-          </span>
+            <div className='row'>
+              <span className="ripple"></span>
+            </div>
         </div>
       </div>
     )
