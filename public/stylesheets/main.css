@@ -46,11 +46,11 @@ p > .animatedText {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: aitf 80s linear infinite;
+  -webkit-animation: aitf 320s linear infinite;
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   font-size: 25px;
-  padding: 1%;
+  padding: 1% 0;
 }
 
 .footIcons {
