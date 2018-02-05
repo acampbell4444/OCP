@@ -28465,7 +28465,7 @@ var Navigation = function (_Component) {
                 'div',
                 { onClick: function onClick(e) {
                     return _reactRouter.browserHistory.push('/home');
-                  }, className: 'col-sm' },
+                  }, className: 'col-sm-3' },
                 _react2.default.createElement(
                   'p',
                   null,
@@ -28478,7 +28478,7 @@ var Navigation = function (_Component) {
               ),
               _react2.default.createElement(
                 'div',
-                { className: 'col-sm' },
+                { className: 'col-sm-6' },
                 _react2.default.createElement(
                   'p',
                   null,
@@ -28488,14 +28488,16 @@ var Navigation = function (_Component) {
                     _react2.default.createElement(
                       'a',
                       { href: 'https://goo.gl/maps/DmgW1W2qGgR2', target: '_blank' },
-                      '1395 1/2 N. Harbor Dr.'
+                      '1395 1/2 N. Harbor Dr.',
+                      _react2.default.createElement('br', null),
+                      'Oceanside, CA'
                     )
                   )
                 )
               ),
               _react2.default.createElement(
                 'div',
-                { className: 'col-sm' },
+                { className: 'col-sm-3' },
                 _react2.default.createElement(
                   'p',
                   null,
@@ -33705,66 +33707,70 @@ var SunRise = function (_Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'span',
-        { id: 'sRise', onMouseDown: this.startMove, onTouchStart: this.startMove, onClick: this.startMove, onMouseUp: this.stopMove },
+        'div',
+        { id: 'sRiseOuter' },
         _react2.default.createElement(
-          'div',
-          { className: 'homeContentWrapper flex' },
+          'span',
+          { id: 'sRise', onMouseDown: this.startMove, onTouchStart: this.startMove, onClick: this.startMove, onMouseUp: this.stopMove },
           _react2.default.createElement(
-            'h1',
-            { className: 'flex', id: 'sunriseHeader' },
-            'OCEANSIDE PARASAIL'
+            'div',
+            { className: 'homeContentWrapper flex' },
+            _react2.default.createElement(
+              'h1',
+              { className: 'flex', id: 'sunriseHeader' },
+              'OCEANSIDE PARASAIL'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'center flex' },
+              _react2.default.createElement(
+                'button',
+                { id: 'BN', onClick: function onClick() {
+                    return _reactRouter.browserHistory.push('/reservations');
+                  } },
+                'BOOK NOW'
+              )
+            )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'center flex' },
-            _react2.default.createElement(
-              'button',
-              { id: 'BN', onClick: function onClick() {
-                  return _reactRouter.browserHistory.push('/reservations');
-                } },
-              'BOOK NOW'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'starsContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
-          _react2.default.createElement('div', { id: 'stars', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
-        ),
-        _react2.default.createElement('div', { id: 'sun', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'sunDay', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'sunSet', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement(
-          'div',
-          { id: 'sky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
-          ' '
-        ),
-        _react2.default.createElement('div', { className: 'star', style: { 'left': '250px', 'top': '30px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'left': '300px', 'top': '25px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'right': '40px', 'top': '40px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'right': '80px', 'top': '45px' } }),
-        _react2.default.createElement('div', { className: 'star', style: { 'right': '120px', 'top': '20px' } }),
-        _react2.default.createElement('div', { id: 'horizon', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'horizonNight', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'moon', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement(
-          'div',
-          { id: 'mountainRange' },
-          _react2.default.createElement('div', { id: 'mountain', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
-        ),
-        _react2.default.createElement('div', { id: 'division', onMouseDown: this.startDraggingDivision, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'water', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement(
-          'div',
-          { id: 'waterReflectionContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
-          _react2.default.createElement('div', { id: 'waterReflectionMiddle', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
-        ),
-        _react2.default.createElement('div', { id: 'waterDistance', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'darknessOverlaySky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
-        _react2.default.createElement('div', { id: 'darknessOverlay' }),
-        _react2.default.createElement('div', { id: 'oceanRippleContainer' }),
-        _react2.default.createElement('div', { id: 'oceanRipple' })
+            { id: 'starsContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
+            _react2.default.createElement('div', { id: 'stars', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
+          ),
+          _react2.default.createElement('div', { id: 'sun', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement('div', { id: 'sunDay', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement('div', { id: 'sunSet', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement(
+            'div',
+            { id: 'sky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
+            ' '
+          ),
+          _react2.default.createElement('div', { className: 'star', style: { 'left': '250px', 'top': '30px' } }),
+          _react2.default.createElement('div', { className: 'star', style: { 'left': '300px', 'top': '25px' } }),
+          _react2.default.createElement('div', { className: 'star', style: { 'right': '40px', 'top': '40px' } }),
+          _react2.default.createElement('div', { className: 'star', style: { 'right': '80px', 'top': '45px' } }),
+          _react2.default.createElement('div', { className: 'star', style: { 'right': '120px', 'top': '20px' } }),
+          _react2.default.createElement('div', { id: 'horizon', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement('div', { id: 'horizonNight', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement('div', { id: 'moon', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement(
+            'div',
+            { id: 'mountainRange' },
+            _react2.default.createElement('div', { id: 'mountain', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
+          ),
+          _react2.default.createElement('div', { id: 'division', onMouseDown: this.startDraggingDivision, onMouseUp: this.stopMove }),
+          _react2.default.createElement('div', { id: 'water', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement(
+            'div',
+            { id: 'waterReflectionContainer', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove },
+            _react2.default.createElement('div', { id: 'waterReflectionMiddle', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove })
+          ),
+          _react2.default.createElement('div', { id: 'waterDistance', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement('div', { id: 'darknessOverlaySky', onMouseDown: this.startMove, onTouchStart: this.startMove, onMouseUp: this.stopMove }),
+          _react2.default.createElement('div', { id: 'darknessOverlay' }),
+          _react2.default.createElement('div', { id: 'oceanRippleContainer' }),
+          _react2.default.createElement('div', { id: 'oceanRipple' })
+        )
       );
     }
   }]);

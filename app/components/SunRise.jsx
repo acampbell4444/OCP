@@ -126,6 +126,7 @@ export default class SunRise extends Component {
   }
   render() {
     return (
+      <div id='sRiseOuter'>
       <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove} onClick={this.startMove} onMouseUp={this.stopMove} >
         <div className='homeContentWrapper flex'>
           <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
@@ -160,6 +161,7 @@ export default class SunRise extends Component {
         <div id='oceanRippleContainer'></div>
         <div id='oceanRipple'></div>
       </span>
+      </div>
     )
   }
 }
