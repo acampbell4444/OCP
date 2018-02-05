@@ -28468,12 +28468,8 @@ var Navigation = function (_Component) {
                   }, className: 'col-sm-3' },
                 _react2.default.createElement(
                   'p',
-                  null,
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'animatedText' },
-                    'OCEANSIDE PARASAIL'
-                  )
+                  { id: 'hmClick', className: 'orangeText' },
+                  'OCEANSIDE PARASAIL'
                 )
               ),
               _react2.default.createElement(
@@ -28484,10 +28480,12 @@ var Navigation = function (_Component) {
                   null,
                   _react2.default.createElement(
                     'span',
-                    { className: 'animatedText' },
+                    null,
                     _react2.default.createElement(
                       'a',
-                      { href: 'https://goo.gl/maps/DmgW1W2qGgR2', target: '_blank' },
+                      { href: 'https://goo.gl/maps/DmgW1W2qGgR2',
+                        className: 'orangeText',
+                        target: '_blank' },
                       '1395 1/2 N. Harbor Dr.',
                       _react2.default.createElement('br', null),
                       'Oceanside, CA'
@@ -28502,13 +28500,9 @@ var Navigation = function (_Component) {
                   'p',
                   null,
                   _react2.default.createElement(
-                    'span',
-                    { className: 'animatedText' },
-                    _react2.default.createElement(
-                      'a',
-                      { href: 'tel:555-555-5555' },
-                      '555-555-5555'
-                    )
+                    'a',
+                    { href: 'tel:555-555-5555', className: 'orangeText' },
+                    '555-555-5555'
                   )
                 )
               )

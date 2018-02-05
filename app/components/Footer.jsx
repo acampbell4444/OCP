@@ -13,19 +13,21 @@ export default class Navigation extends Component {
             <div className='row'>
               
               <div onClick={e => browserHistory.push('/home')} className='col-sm-3'>
-                <p ><span className=''>OCEANSIDE PARASAIL</span></p>
+                <p id='hmClick' className='orangeText'>OCEANSIDE PARASAIL</p>
               </div>
 
               <div className='col-sm-6'>
                 <p>
-                  <span className=''>
-                    <a href="https://goo.gl/maps/DmgW1W2qGgR2" target="_blank">1395 1/2 N. Harbor Dr.<br/>Oceanside, CA</a>
+                  <span>
+                    <a href="https://goo.gl/maps/DmgW1W2qGgR2" 
+                       className='orangeText'
+                       target="_blank">1395 1/2 N. Harbor Dr.<br/>Oceanside, CA</a>
                   </span>
                 </p>
               </div>
 
               <div className='col-sm-3'>
-                <p><span className=''><a href="tel:555-555-5555">555-555-5555</a></span></p>
+                <p><a href="tel:555-555-5555" className='orangeText'>555-555-5555</a></p>
               </div>
 
 
