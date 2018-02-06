@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Parallax } from 'react-parallax';
 
-const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center',
-};
-const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
-const image1 = "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
-const image2 = "https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1";
-const image3 = "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
-
 export default class Par1 extends Component {
   componentDidMount() {
   }
@@ -18,29 +9,52 @@ export default class Par1 extends Component {
   }
   render() {
     return (
-      <div style={styles}>
-    <Parallax bgImage={image1}
-      strength={500}>
-      <div style={{height: 500}}>
-        <div style={insideStyles}>HTML inside the parallax</div>
+      <div className='whiteText'>
+        
+        <Parallax bgImage={'/images/p1p1.jpg'}
+                  bgHeight={'800px'}
+                  strength={200}
+        >
+          <div className='img img-responsive' style={{'height': '900px','paddingBottom':'200px'}}>
+            <div className='insideP1'>Fun for the whole family!</div>
+          </div>
+        </Parallax>
+        
+        <div id='under1'>
+          <h3>Experience the thrill of floating through the air with California's premier parasail operator. We specialize in providing the safest, easiest and most exciting watersports activity- PARASAILING! Breathtaking panoramic views of Oceanside await as you are gently lifted to your chosen altitude.</h3>
+        </div>
+        
+        <Parallax bgImage={'https://i.ytimg.com/vi/2HVPsdcgKRs/maxresdefault.jpg'} 
+                  blur={{min: 10,max:-10}}
+        
+        >
+          <div style={{height: 800}}>
+            <div id='insideP2'>Way up there!</div>
+          </div>
+        </Parallax>
+        
+        <div id='under1'>
+          <h3>Choose from 600 or 800 foot flights. Share in the fun. Bring your friends and family. Flights accommodate two or three at a time. Oceanside Parasail is dedicated to safety, all captains are USCG licensed.</h3>
+        </div>
+        
+        <Parallax bgImage={'/images/p1p1.jpg'} 
+                  bgHeight={'800px'}
+                  strength={-200}>
+          <div style={{height: 500}}>
+            <div>   
+              In here                
+           </div>
+          </div>
+        </Parallax>
+
+        <div id='under1'>
+          <h3>Our goal is to provide the safest and most memorable parasail experience for our customers. Our experienced, friendly, and professional staff are driven to make your parasailing experience at Oceanside Parasail the highlight of your stay.</h3>
+        </div>
+        <div>
+
+        </div>
+        <h2>{'\u2728'}</h2>
       </div>
-    </Parallax>
-    <h1>| | |</h1>
-    <Parallax bgImage={image3} blur={{min: -1,max:3}}>
-      <div style={{height: 500}}>
-        <div style={insideStyles}>Dynamic Blur</div>
-      </div>
-    </Parallax>
-    <h1>| | |</h1>
-    <Parallax bgImage={image2} strength={-100}>
-      <div style={{height: 500}}>
-        <div style={insideStyles}>Reverse direction</div>
-      </div>
-    </Parallax>
-    <div style={{height: 500}}>
-      </div>
-    <h2>{'\u2728'}</h2>
-  </div>
     )
   }
 }

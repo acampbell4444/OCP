@@ -12370,15 +12370,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center'
-};
-var insideStyles = { background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' };
-var image1 = "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
-var image2 = "https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1";
-var image3 = "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
-
 var Par1 = function (_Component) {
   _inherits(Par1, _Component);
 
@@ -12399,58 +12390,82 @@ var Par1 = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { style: styles },
+        { className: 'whiteText' },
         _react2.default.createElement(
           _reactParallax.Parallax,
-          { bgImage: image1,
-            strength: 500 },
+          { bgImage: '/images/p1p1.jpg',
+            bgHeight: '800px',
+            strength: 200
+          },
+          _react2.default.createElement(
+            'div',
+            { className: 'img img-responsive', style: { 'height': '900px', 'paddingBottom': '200px' } },
+            _react2.default.createElement(
+              'div',
+              { className: 'insideP1' },
+              'Fun for the whole family!'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'under1' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Experience the thrill of floating through the air with California\'s premier parasail operator. We specialize in providing the safest, easiest and most exciting watersports activity- PARASAILING! Breathtaking panoramic views of Oceanside await as you are gently lifted to your chosen altitude.'
+          )
+        ),
+        _react2.default.createElement(
+          _reactParallax.Parallax,
+          { bgImage: 'https://i.ytimg.com/vi/2HVPsdcgKRs/maxresdefault.jpg',
+            blur: { min: 10, max: -10 }
+
+          },
+          _react2.default.createElement(
+            'div',
+            { style: { height: 800 } },
+            _react2.default.createElement(
+              'div',
+              { id: 'insideP2' },
+              'Way up there!'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'under1' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Choose from 600 or 800 foot flights. Share in the fun. Bring your friends and family. Flights accommodate two or three at a time. Oceanside Parasail is dedicated to safety, all captains are USCG licensed.'
+          )
+        ),
+        _react2.default.createElement(
+          _reactParallax.Parallax,
+          { bgImage: '/images/p1p1.jpg',
+            bgHeight: '800px',
+            strength: -200 },
           _react2.default.createElement(
             'div',
             { style: { height: 500 } },
             _react2.default.createElement(
               'div',
-              { style: insideStyles },
-              'HTML inside the parallax'
+              null,
+              'In here'
             )
           )
         ),
         _react2.default.createElement(
-          'h1',
-          null,
-          '| | |'
-        ),
-        _react2.default.createElement(
-          _reactParallax.Parallax,
-          { bgImage: image3, blur: { min: -1, max: 3 } },
+          'div',
+          { id: 'under1' },
           _react2.default.createElement(
-            'div',
-            { style: { height: 500 } },
-            _react2.default.createElement(
-              'div',
-              { style: insideStyles },
-              'Dynamic Blur'
-            )
+            'h3',
+            null,
+            'Our goal is to provide the safest and most memorable parasail experience for our customers. Our experienced, friendly, and professional staff are driven to make your parasailing experience at Oceanside Parasail the highlight of your stay.'
           )
         ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          '| | |'
-        ),
-        _react2.default.createElement(
-          _reactParallax.Parallax,
-          { bgImage: image2, strength: -100 },
-          _react2.default.createElement(
-            'div',
-            { style: { height: 500 } },
-            _react2.default.createElement(
-              'div',
-              { style: insideStyles },
-              'Reverse direction'
-            )
-          )
-        ),
-        _react2.default.createElement('div', { style: { height: 500 } }),
+        _react2.default.createElement('div', null),
         _react2.default.createElement(
           'h2',
           null,
@@ -36773,6 +36788,8 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = __webpack_require__(99);
+
 var _reactScroll = __webpack_require__(244);
 
 var _reactParallax = __webpack_require__(372);
@@ -36833,9 +36850,26 @@ var Home = function (_Component) {
           ' '
         ),
         _react2.default.createElement(
-          'h1',
-          { style: { 'color': 'white' } },
-          'taco'
+          'div',
+          null,
+          _react2.default.createElement(
+            'div',
+            { className: 'center flex underP1button' },
+            _react2.default.createElement(
+              'button',
+              { id: 'dubBub1', className: 'dubBub', onClick: function onClick() {
+                  return _reactRouter.browserHistory.push('/reservations');
+                } },
+              'BOOK NOW'
+            ),
+            _react2.default.createElement(
+              'button',
+              { id: 'dubBub2', className: 'dubBub', onClick: function onClick() {
+                  return window.scrollTo(0, 0);
+                } },
+              'BACK TO TOP'
+            )
+          )
         )
       );
     }
@@ -37506,7 +37540,6 @@ var SunRise = function (_Component) {
               { className: 'flex', id: 'sunriseHeader' },
               'OCEANSIDE PARASAIL'
             ),
-            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
             _react2.default.createElement(
               'div',
               { className: 'center flex' },
@@ -37518,9 +37551,6 @@ var SunRise = function (_Component) {
                 'BOOK NOW'
               )
             ),
-            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
-            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
-            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
             _react2.default.createElement(
               'h2',
               { className: 'onTop', id: 'homeTagline' },
