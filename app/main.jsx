@@ -6,6 +6,7 @@ import {Router, Route, IndexRedirect, browserHistory} from 'react-router'
 import {render} from 'react-dom'
 import {connect, Provider} from 'react-redux'
 import store from './store'
+import Favicon from 'react-favicon';
 
 import Navbar from './containers/NavigationContainer'
 import HomeContainer from './containers/HomeContainer'
@@ -29,6 +30,7 @@ const OSApp = connect(
 )(
   ({ user, children }) =>
     <span>
+      <Favicon url="http://http://www.designfloat.com/favicon.ico" />
       <div className='navbar sticky-top navbar-light bg-med'>
           <Navbar/>
       </div>
