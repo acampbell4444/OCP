@@ -38,9 +38,17 @@
 }
 
 #under1 {
-	margin: 5%;
+	height: 600px;
+	padding: 5%;
+}
+
+#under2 {
 	height: 400px;
-	padding: 10%
+	padding: 5%;
+}
+
+.biggerText {
+	font-size: 44px;
 }
 
 /*#under1a {
@@ -76,6 +84,10 @@
 .dubBub:hover {
   color: #FF3399;
   border-color: #FF3399;
+}
+
+#bubbies {
+	margin-bottom: 250
 }
 
 

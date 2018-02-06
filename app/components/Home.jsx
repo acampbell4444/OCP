@@ -17,7 +17,7 @@ export default class Home extends Component {
         <div><Bubbles/></div>
         <div id='sunriseContainer'> <SunRise/> </div>
         <div>
-          <div className='center flex underP1button'>
+          <div className='center flex underP1button' id='bubbies'>
             <button id='dubBub1' className='dubBub' onClick={() => browserHistory.push('/reservations')}>BOOK NOW</button>
             <button id='dubBub2' className='dubBub' onClick={() => window.scrollTo(0,0)}>BACK TO TOP</button>
          </div>

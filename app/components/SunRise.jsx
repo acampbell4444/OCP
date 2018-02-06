@@ -135,6 +135,9 @@ export default class SunRise extends Component {
           <h2 className='onTop' id='homeTagline'>If you can sit, you can FLY!</h2>
           <h1 className='clear' id='sunriseHeader'></h1>
           <h1 className='clear' id='sunriseHeader'></h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
           
       
           <h1 className='clear' id='sunriseHeader'></h1>

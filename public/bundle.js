@@ -12412,7 +12412,7 @@ var Par1 = function (_Component) {
           { id: 'under1' },
           _react2.default.createElement(
             'h2',
-            null,
+            { className: 'biggerText' },
             'Experience the thrill of floating through the air with California\'s premier parasail operator. We specialize in providing the safest, easiest and most exciting watersports activity- PARASAILING! Breathtaking panoramic views of Oceanside await as you are gently lifted to your chosen altitude.'
           )
         ),
@@ -12434,10 +12434,10 @@ var Par1 = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { id: 'under1' },
+          { id: 'under2' },
           _react2.default.createElement(
             'h2',
-            null,
+            { className: 'biggerText' },
             'Choose from 600 or 800 foot flights. Share in the fun. Bring your friends and family. Flights accommodate two or three at a time. Oceanside Parasail is dedicated to safety, all captains are USCG licensed.'
           )
         ),
@@ -12461,7 +12461,7 @@ var Par1 = function (_Component) {
           { id: 'under1' },
           _react2.default.createElement(
             'h2',
-            null,
+            { className: 'biggerText' },
             'Our goal is to provide the safest and most memorable parasail experience for our customers. Our experienced, friendly, and professional staff are driven to make your parasailing experience at Oceanside Parasail the highlight of your stay.'
           )
         ),
@@ -36854,7 +36854,7 @@ var Home = function (_Component) {
           null,
           _react2.default.createElement(
             'div',
-            { className: 'center flex underP1button' },
+            { className: 'center flex underP1button', id: 'bubbies' },
             _react2.default.createElement(
               'button',
               { id: 'dubBub1', className: 'dubBub', onClick: function onClick() {
@@ -37556,6 +37556,9 @@ var SunRise = function (_Component) {
               { className: 'onTop', id: 'homeTagline' },
               'If you can sit, you can FLY!'
             ),
+            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
+            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
+            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
             _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
             _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
             _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
