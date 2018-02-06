@@ -13,6 +13,19 @@
   font-weight: 900;
 }
 
+#homeTagline {
+  margin-top:4000px;
+  color: white;
+  margin: 1% auto 0 auto;
+  font-size: 60px;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  z-index: 99999;
+  font-family: 'Expletus Sans', Bold;
+  font-weight: 900;
+}
+
 #BN {
     position: relative;
     z-index: 99999;

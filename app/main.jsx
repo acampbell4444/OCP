@@ -8,6 +8,9 @@ import {connect, Provider} from 'react-redux'
 import store from './store'
 import Favicon from 'react-favicon';
 
+import Parallax1 from './components/Parallax1'
+
+
 import Navbar from './containers/NavigationContainer'
 import HomeContainer from './containers/HomeContainer'
 import ReservationContainer from './containers/ReservationContainer'
@@ -30,7 +33,7 @@ const OSApp = connect(
 )(
   ({ user, children }) =>
     <span>
-      <Favicon url="http://http://www.designfloat.com/favicon.ico" />
+{/*      <Favicon url="http://http://www.designfloat.com/favicon.ico" />*/}
       <div className='navbar sticky-top navbar-light bg-med'>
           <Navbar/>
       </div>
@@ -74,6 +77,7 @@ render(
         <Route path="/location" component={LocationContainer} onEnter={onLocationEnter} />
         <Route path="/FAQ" component={FAQContainer} onEnter={onFAQEnter} />
         <Route path="/gallery" component={GalleryContainer} onEnter={onGalleryEnter} />
+        <Route path="/par1" component={Parallax1} />
       </Route>
       <Route path='*' component={NotFound} />
     </Router>

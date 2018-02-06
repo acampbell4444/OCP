@@ -1,13 +1,9 @@
-#parallax1 {
- 
-}
+  .onTop{
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  z-index: 99999;
+  font-weight: 900;
+  }
 
-#inPar1 {
-  height: 500px;
-  margin-top: 0px;
-}
 
-/*body {
-	background-image: linear-gradient(to top, #092439 0%, #092439 100%);
-}
-*/

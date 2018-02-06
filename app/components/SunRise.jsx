@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {browserHistory} from 'react-router'
+import Par1 from './Parallax1'
 
 export default class SunRise extends Component {
   constructor(props) {
@@ -130,10 +131,15 @@ export default class SunRise extends Component {
       <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove} onClick={this.startMove} onMouseUp={this.stopMove} >
         <div className='homeContentWrapper flex'>
           <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
           <div className='center flex'><button id='BN' onClick={() => browserHistory.push('/reservations')}>BOOK NOW</button></div>
-          <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
-          <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
-          <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
+          <h1 className='clear' id='sunriseHeader'></h1>
+          <h2 className='onTop' id='homeTagline'>If you can sit, you can FLY!</h2>
+      
           <h1 className='clear' id='sunriseHeader'></h1>
         </div>
         <div id='starsContainer' onMouseDown={this.startMove} onTouchStart={this.startMove} onMouseUp={this.stopMove}>
@@ -165,6 +171,7 @@ export default class SunRise extends Component {
         <div id='oceanRippleContainer'></div>
         <div id='oceanRipple'></div>
       </span>
+        <h2 className='flex onTop'><Par1/></h2>
       </div>
     )
   }

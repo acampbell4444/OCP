@@ -15,6 +15,7 @@ export default class Home extends Component {
       <span id='homeContainer'>
         <div><Bubbles/></div>
         <div id='sunriseContainer'> <SunRise/> </div>
+        <h1 style={{'color':'white'}}>taco</h1>
       </span>
     )
   }
