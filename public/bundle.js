@@ -36869,7 +36869,8 @@ var Home = function (_Component) {
                 } },
               'BACK TO TOP'
             )
-          )
+          ),
+          _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
         )
       );
     }

@@ -21,6 +21,7 @@ export default class Home extends Component {
             <button id='dubBub1' className='dubBub' onClick={() => browserHistory.push('/reservations')}>BOOK NOW</button>
             <button id='dubBub2' className='dubBub' onClick={() => window.scrollTo(0,0)}>BACK TO TOP</button>
          </div>
+          <h1 className='clear' id='sunriseHeader'></h1>
         </div>
       </span>
     )
