@@ -17,11 +17,13 @@
 
 #reserveTitle {
   width: 100%;
-	color: #ED5E2A;
+	/*color: #ED5E2A;*/
+  color: white;
 	font-weight: 900;
 	font-size: 80px;
   -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
           animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  margin-top: 5%;
 }
 
 #reserveTitle:hover {
@@ -36,7 +38,8 @@
 }
 
 #showCalendar {
-  color: #ED5E2A;
+  /*color: #ED5E2A;*/
+  color: white;
 	background-color: transparent;
 	border: none;
 	-webkit-animation: vibrate-1 .5s linear infinite both;
