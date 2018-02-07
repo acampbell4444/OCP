@@ -58,6 +58,8 @@ export default class Gall extends React.Component {
                    backdropClosesModal={true}
           />
            <h1 className='clear' id='sunriseHeader'></h1>
+           <h1 className='clear' id='sunriseHeader'></h1>
+           <h1 className='clear' id='sunriseHeader'></h1>
         </div>
         </div>
       )

@@ -41,7 +41,7 @@
 	border: none;
 	-webkit-animation: vibrate-1 .5s linear infinite both;
 	        animation: vibrate-1 .5s linear infinite both;
-  margin: 0 auto;
+  margin: 5% auto 10% auto;
 }
 
 #showCalendar:hover {
