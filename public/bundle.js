@@ -12443,31 +12443,31 @@ var Par1 = function (_Component) {
         ),
         _react2.default.createElement(
           _reactParallax.Parallax,
-          { bgImage: '/images/p1p1.jpg',
-            bgHeight: '800px',
-            strength: -200 },
+          { bgImage: '/images/sailboatinback.jpg',
+            bgHeight: '900px',
+            bgWidth: '100%',
+            strength: -400 },
           _react2.default.createElement(
             'div',
-            { style: { height: 500 } },
+            { style: { height: 900 } },
             _react2.default.createElement(
               'div',
-              null,
-              'In here'
+              { id: 'insideP3' },
+              'Let the Good Times Roll!'
             )
           )
         ),
         _react2.default.createElement(
           'div',
-          { id: 'under1' },
+          { id: 'under3' },
           _react2.default.createElement(
             'h2',
             { className: 'biggerText' },
             'Our goal is to provide the safest and most memorable parasail experience for our customers. Our experienced, friendly, and professional staff are driven to make your parasailing experience at Oceanside Parasail the highlight of your stay.'
           )
         ),
-        _react2.default.createElement('div', null),
         _react2.default.createElement(
-          'h2',
+          'span',
           null,
           '\u2728'
         )
@@ -36652,7 +36652,7 @@ exports.default = Navigation;
 
 
 Object.defineProperty(exports, "__esModule", {
-        value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -36676,99 +36676,135 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Gall = function (_React$Component) {
-        _inherits(Gall, _React$Component);
+  _inherits(Gall, _React$Component);
 
-        function Gall(props) {
-                _classCallCheck(this, Gall);
+  function Gall(props) {
+    _classCallCheck(this, Gall);
 
-                var _this = _possibleConstructorReturn(this, (Gall.__proto__ || Object.getPrototypeOf(Gall)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Gall.__proto__ || Object.getPrototypeOf(Gall)).call(this, props));
 
-                _this.state = {};
-                return _this;
-        }
+    _this.state = { showHeader: true };
+    return _this;
+  }
 
-        _createClass(Gall, [{
-                key: 'componentDidMount',
-                value: function componentDidMount() {
-                        document.body.style.backgroundColor = '#2F3C99';
-                }
-        }, {
-                key: 'componentWillUnmount',
-                value: function componentWillUnmount() {}
-        }, {
-                key: 'handleClose',
-                value: function handleClose() {
-                        console.log('nacho', this.props);
-                }
-        }, {
-                key: 'render',
-                value: function render() {
-                        var _props = this.props,
-                            showNav = _props.showNav,
-                            footShow = _props.footShow;
+  _createClass(Gall, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      document.body.style.backgroundColor = 'white';
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      document.body.style.backgroundColor = '#2F3C99';
+    }
+  }, {
+    key: 'handleClose',
+    value: function handleClose() {}
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
 
-                        return _react2.default.createElement(
-                                'div',
-                                { className: 'container' },
-                                _react2.default.createElement(_reactGridGallery2.default, { images: IMAGES,
-                                        lightboxWillClose: function lightboxWillClose(e) {
-                                                footShow(true);showNav(true);
-                                        },
-                                        lightboxWillOpen: function lightboxWillOpen(e) {
-                                                footShow(false);showNav(false);
-                                        },
-                                        showNav: showNav,
-                                        footShow: footShow
-                                }),
-                                _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
-                        );
-                }
-        }]);
+      var _props = this.props,
+          showNav = _props.showNav,
+          footShow = _props.footShow;
 
-        return Gall;
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { id: 'skyWrap' },
+          _react2.default.createElement(
+            'div',
+            { id: 'clouds' },
+            _react2.default.createElement('div', { className: 'star f' }),
+            _react2.default.createElement('div', { className: 'star g' }),
+            _react2.default.createElement('div', { className: 'star h' }),
+            _react2.default.createElement('div', { className: 'star i' }),
+            _react2.default.createElement('div', { className: 'star j' }),
+            _react2.default.createElement('div', { className: 'star k' }),
+            _react2.default.createElement('div', { className: 'star l' }),
+            _react2.default.createElement('div', { className: 'star m' }),
+            _react2.default.createElement('div', { className: 'star o' }),
+            _react2.default.createElement('div', { className: 'star p' }),
+            _react2.default.createElement('div', { className: 'star q' }),
+            _react2.default.createElement('div', { className: 'cloud A' }),
+            _react2.default.createElement('div', { className: 'cloud B' }),
+            _react2.default.createElement('div', { className: 'cloud C' }),
+            _react2.default.createElement('div', { className: 'cloud D' }),
+            _react2.default.createElement('div', { className: 'cloud E' })
+          )
+        ),
+        this.state.showHeader && _react2.default.createElement(
+          'h1',
+          { className: 'flex exMarg' },
+          'Gallery'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          _react2.default.createElement(_reactGridGallery2.default, { images: IMAGES,
+            lightboxWillClose: function lightboxWillClose(e) {
+              footShow(true);showNav(true);_this2.setState({ showHeader: true });
+            },
+            lightboxWillOpen: function lightboxWillOpen(e) {
+              footShow(false);showNav(false);;_this2.setState({ showHeader: false });
+            },
+            showNav: showNav,
+            footShow: footShow,
+            backdropClosesModal: true
+          }),
+          _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
+        )
+      );
+    }
+  }]);
+
+  return Gall;
 }(_react2.default.Component);
 
 exports.default = Gall;
 
 
 var IMAGES = [{
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        isSelected: true,
-        caption: "After Rain (Jeshu John - designerspics.com)"
+  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+  thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+  thumbnailWidth: 320,
+  thumbnailHeight: 174,
+  isSelected: true,
+  caption: "After Rain (Jeshu John - designerspics.com)"
 }, {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
-        caption: "Boats (Jeshu John - designerspics.com)"
+  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+  thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+  thumbnailWidth: 320,
+  thumbnailHeight: 212,
+  tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
+  caption: "Boats (Jeshu John - designerspics.com)"
 }, {
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
+  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+  thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+  thumbnailWidth: 320,
+  thumbnailHeight: 212
 }, {
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        isSelected: true,
-        caption: "After Rain (Jeshu John - designerspics.com)"
+  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+  thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+  thumbnailWidth: 320,
+  thumbnailHeight: 174,
+  isSelected: true,
+  caption: "After Rain (Jeshu John - designerspics.com)"
 }, {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
-        caption: "Boats (Jeshu John - designerspics.com)"
+  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+  thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+  thumbnailWidth: 320,
+  thumbnailHeight: 212,
+  tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
+  caption: "Boats (Jeshu John - designerspics.com)"
 }, {
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
+  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+  thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+  thumbnailWidth: 320,
+  thumbnailHeight: 212
 }];
 
 /***/ }),
@@ -37377,6 +37413,12 @@ var _Parallax = __webpack_require__(162);
 
 var _Parallax2 = _interopRequireDefault(_Parallax);
 
+var _reactIconsKit = __webpack_require__(156);
+
+var _reactIconsKit2 = _interopRequireDefault(_reactIconsKit);
+
+var _circleDown = __webpack_require__(1003);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37549,7 +37591,11 @@ var SunRise = function (_Component) {
                 { id: 'BN', onClick: function onClick() {
                     return _reactRouter.browserHistory.push('/reservations');
                   } },
-                'BOOK NOW'
+                _react2.default.createElement(
+                  'span',
+                  { id: 'bkTxt' },
+                  ' BOOK NOW'
+                )
               )
             ),
             _react2.default.createElement(
@@ -37557,7 +37603,7 @@ var SunRise = function (_Component) {
               { className: 'onTop', id: 'homeTagline' },
               'If you can sit, you can FLY!'
             ),
-            _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
+            _react2.default.createElement(_reactIconsKit2.default, { className: 'onTop arrow bounce', size: 140, icon: _circleDown.circleDown }),
             _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
             _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
             _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
@@ -91013,7 +91059,7 @@ var OSApp = (0, _reactRedux.connect)(function (_ref) {
     null,
     _react2.default.createElement(
       'div',
-      { className: 'navbar sticky-top navbar-light bg-med' },
+      { className: 'row navbar sticky-top navbar-light bg-med' },
       _react2.default.createElement(_NavigationContainer2.default, null)
     ),
     _react2.default.createElement(_FooterContainer2.default, null),
@@ -91066,6 +91112,18 @@ var onGalleryEnter = function onGalleryEnter() {
     _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default })
   )
 ), document.getElementById('main'));
+
+/***/ }),
+/* 1003 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var circleDown = exports.circleDown = { "viewBox": "0 0 16 16", "children": [{ "name": "path", "attribs": { "fill": "#000000", "d": "M16 8c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zM1.5 8c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5z" } }, { "name": "path", "attribs": { "fill": "#000000", "d": "M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z" } }] };
 
 /***/ })
 /******/ ]);

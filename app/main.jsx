@@ -34,7 +34,7 @@ const OSApp = connect(
   ({ user, children }) =>
     <span>
 {/*      <Favicon url="http://http://www.designfloat.com/favicon.ico" />*/}
-      <div className='navbar sticky-top navbar-light bg-med'>
+      <div className='row navbar sticky-top navbar-light bg-med'>
           <Navbar/>
       </div>
       <Footer/>

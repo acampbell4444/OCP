@@ -1,0 +1,10 @@
+.exMarg {
+  color: white;
+  font-size: 90px;
+  text-align: center;
+  position: relative;
+  z-index: 99999;
+  font-family: 'Expletus Sans', Bold;
+  font-weight: 900;
+  margin: 5% auto;
+}

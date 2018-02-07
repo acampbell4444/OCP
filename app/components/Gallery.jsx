@@ -6,27 +6,59 @@ import Gallery from 'react-grid-gallery';
 export default class Gall extends React.Component {
     constructor(props){
         super(props);
-        this.state = {}
+        this.state = {showHeader: true}
     }
     componentDidMount() {
-      document.body.style.backgroundColor='#2F3C99'
+      document.body.style.backgroundColor='white'
     }
     componentWillUnmount() {
+      document.body.style.backgroundColor='#2F3C99'
     }
     handleClose() {
-        console.log('nacho', this.props)
+
     }
     render () {
       const {showNav, footShow} = this.props
       return (
+        <div>
+        
+      <div id='skyWrap'>
+        <div id="clouds">
+          <div className="star f"></div>
+          <div className="star g"></div>
+          <div className="star h"></div>
+          <div className="star i"></div>
+          <div className="star j"></div>
+          <div className="star k"></div>
+          <div className="star l"></div>
+          <div className="star m"></div>
+          <div className="star o"></div>
+          <div className="star p"></div>
+          <div className="star q"></div>
+          <div className="cloud A"></div>
+          <div className="cloud B"></div>
+          <div className="cloud C"></div>
+          <div className="cloud D"></div>
+          <div className="cloud E"></div>
+      </div>
+    </div>
+
+
+
+         {this.state.showHeader&&(
+            <h1 className='flex exMarg'>Gallery</h1>)
+         }
+
         <div className='container' >
           <Gallery images={IMAGES}
-                   lightboxWillClose={e => {footShow(true); showNav(true)}}
-                   lightboxWillOpen={e => {footShow(false); showNav(false)}}
+                   lightboxWillClose={e => {footShow(true); showNav(true); this.setState({showHeader:true})}}
+                   lightboxWillOpen={e => {footShow(false); showNav(false); ; this.setState({showHeader:false})}}
                    showNav={showNav}
                    footShow={footShow}
+                   backdropClosesModal={true}
           />
            <h1 className='clear' id='sunriseHeader'></h1>
+        </div>
         </div>
       )
     }

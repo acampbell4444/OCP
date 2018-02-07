@@ -21,9 +21,22 @@
 
 #insideP2 {
    background: transparent;
+  padding: 20;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    font-size:40px;
+}
+
+#insideP3 {
+   background: transparent;
 	padding: 20;
 	position: absolute;
-	top: 35%;
+	top: 10%;
 	left: 50%;
 	transform: translate(-50%,-50%);
     font-weight: 900;
@@ -40,11 +53,18 @@
 #under1 {
 	height: 600px;
 	padding: 5%;
+  padding-top: 8%;
 }
 
 #under2 {
+  height: 400px;
+  padding: 5%;
+}
+
+#under3 {
 	height: 400px;
 	padding: 5%;
+  margin-top: -25%;
 }
 
 .biggerText {

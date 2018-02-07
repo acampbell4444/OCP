@@ -37,23 +37,21 @@ export default class Par1 extends Component {
           <h2 className='biggerText'>Choose from 600 or 800 foot flights. Share in the fun. Bring your friends and family. Flights accommodate two or three at a time. Oceanside Parasail is dedicated to safety, all captains are USCG licensed.</h2>
         </div>
         
-        <Parallax bgImage={'/images/p1p1.jpg'} 
-                  bgHeight={'800px'}
-                  strength={-200}>
-          <div style={{height: 500}}>
-            <div>   
-              In here                
+        <Parallax bgImage={'/images/sailboatinback.jpg'} 
+                  bgHeight={'900px'}
+                  bgWidth='100%'
+                  strength={-400}>
+          <div style={{height: 900}}>
+            <div id='insideP3'>   
+              Let the Good Times Roll!               
            </div>
           </div>
         </Parallax>
 
-        <div id='under1'>
+        <div id='under3'>
           <h2 className='biggerText'>Our goal is to provide the safest and most memorable parasail experience for our customers. Our experienced, friendly, and professional staff are driven to make your parasailing experience at Oceanside Parasail the highlight of your stay.</h2>
         </div>
-        <div>
-
-        </div>
-        <h2>{'\u2728'}</h2>
+        <span>{'\u2728'}</span>
       </div>
     )
   }

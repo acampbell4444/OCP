@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {browserHistory} from 'react-router'
 import Par1 from './Parallax1'
+import Icon from 'react-icons-kit';
+import { circleDown } from 'react-icons-kit/icomoon/circleDown';
 
 export default class SunRise extends Component {
   constructor(props) {
@@ -131,9 +133,14 @@ export default class SunRise extends Component {
       <span id='sRise' onMouseDown={this.startMove} onTouchStart={this.startMove} onClick={this.startMove} onMouseUp={this.stopMove} >
         <div className='homeContentWrapper flex'>
           <h1 className='flex' id='sunriseHeader'>OCEANSIDE PARASAIL</h1>
-          <div className='center flex'><button id='BN' onClick={() => browserHistory.push('/reservations')}>BOOK NOW</button></div>
+          <div className='center flex'>
+            <button id='BN' onClick={() => browserHistory.push('/reservations')}>
+              <span id='bkTxt'> BOOK NOW</span>
+            </button>
+          </div>
           <h2 className='onTop' id='homeTagline'>If you can sit, you can FLY!</h2>
-          <h1 className='clear' id='sunriseHeader'></h1>
+          <Icon className="onTop arrow bounce" size={140} icon={circleDown}></Icon>
+
           <h1 className='clear' id='sunriseHeader'></h1>
           <h1 className='clear' id='sunriseHeader'></h1>
           <h1 className='clear' id='sunriseHeader'></h1>
