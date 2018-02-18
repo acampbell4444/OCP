@@ -67,14 +67,14 @@ export default class Gall extends React.Component {
 }
 
 const IMAGES =
-// [{
-//         src: "../public/images/coolShot.jpg",
-//         thumbnail: "../public/images/coolShot.jpg",
-//         thumbnailWidth: 240,
-//         thumbnailHeight: 174,
-//         tags: [{value: "Cruisin"}],
-//         caption: "Picture yourself Cruisin' on the Open Water."
-// },
+[{
+        src: "../public/images/coolShot.jpg",
+        thumbnail: "../public/images/coolShot.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 174,
+        tags: [{value: "Cruisin"}],
+        caption: "Picture yourself Cruisin' on the Open Water."
+},
 {
         src: "../public/images/takeOff2.jpg",
         thumbnail: "../public/images/takeOff2.jpg",
