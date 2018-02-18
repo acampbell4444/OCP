@@ -1,5 +1,62 @@
+.onTop2 {
+ position: absolute;
+ top: 420px;
+ margin: 5% 5%;
+ z-index: 9999999999 
+}
+
+.card{
+	margin: 3% auto;
+	background-color: white;
+	opacity: 50%;
+	border: black solid 3px;
+	font-size: 30px;
+	text-align: center
+}
+
+.card-title {
+	font-size: 40px
+}
+
+.cardBook {
+	margin: 0 auto;
+}
+#call {
+	width: 200px;
+	padding-top: 22px;
+	margin-bottom: 0px;
+}
+#phoneText {
+	color: white;
+}
 
 
+.card-title {
+	text-align: center
+}
+
+.smTit {
+	font-size: 33px;
+}
+
+#rateHeader {
+  color: white;
+  margin: 19% auto 0 auto;
+  font-size: 90px;
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  font-family: 'Expletus Sans', Bold;
+  font-weight: 900;
+}
+
+#mkLonger {
+	padding-bottom: 45px;
+}
+
+#litLong {
+	padding-bottom: 4px;
+}
 #turkey {
   background-size: cover;
   overflow: hidden;
@@ -18,7 +75,7 @@
 }
 
 .parachute {
-  margin: 400px 0;
+  margin: 100px 0;
   width: 100%;
   -webkit-animation:  xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
   -moz-animation:  xAxis 20s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
@@ -49,7 +106,7 @@
   width: 108px;
   height: 108px;
   position: absolute;
-  top: 18%;
+  top: 11%;
   left: -108px;
   animation: right linear 30s infinite;
   z-index: -2;
