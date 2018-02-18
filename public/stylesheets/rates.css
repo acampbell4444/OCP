@@ -2,7 +2,7 @@
  position: absolute;
  top: 420px;
  margin: 5% 5%;
- z-index: 9999999999 
+ z-index: 9999999
 }
 
 .card{
@@ -11,7 +11,8 @@
 	opacity: 50%;
 	border: black solid 3px;
 	font-size: 30px;
-	text-align: center
+	text-align: center;
+	z-index: 99999
 }
 
 .card-title {
@@ -35,6 +36,14 @@
 	text-align: center
 }
 
+#litLong {
+	padding-bottom: 44px
+}
+
+#lotLong {
+	padding-bottom: 135px
+}
+
 .smTit {
 	font-size: 33px;
 }
@@ -50,20 +59,6 @@
   font-weight: 900;
 }
 
-#padLong {
-	padding-bottom: 38px
-}
-.btn-primary {
-	width: 100%;
-}
-
-#mkLonger {
-	padding-bottom: 45px;
-}
-
-#litLong {
-	padding-bottom: 4px;
-}
 #turkey {
   background-size: cover;
   overflow: hidden;
