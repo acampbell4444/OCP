@@ -40,15 +40,14 @@ export default class Rate extends Component {
                 </div>
                 <div className="col-sm-6 ">
                   <div className="card">
-                    <div className="card-body">
+                    <div id='padLong' className="card-body">
                       <h5 className="card-title">Non-Flying Passenger <br/><span className='smTit'> $25 per person</span></h5>
                       <p className="card-text">Don't want to fly- but still want to catch all the fun? No problem. If you decide to upgrade
                       during the trip, great! Seats available on standby basis unless reserved by phone.</p>
-                      <a id='phoneText' href="tel:555-555-5555">
-                        <button id='call' className="btn btn-primary">Call to Book
+                      <a id='phoneText' className="btn btn-primary" href="tel:555-555-5555">
+                        Call to Book
                         <br/>
                          <p>555-555-5555</p>
-                       </button>
                       </a>
                     </div>
                   </div>
@@ -72,10 +71,11 @@ export default class Rate extends Component {
                       <h5 className="card-title">Birthday Special <br/><span className='smTit'> FREE flight</span></h5>
                       <p className="card-text">Free flight for the birthday person with one paid 800ft flight.  Offer can NOT be combined with any other discounts and can NOT be applied on the 600ft. Must reserve for two people on the 800ft flight, and show a valid ID for proof of birthday at check in. Must fly tandem.
                         Reservations recommended. Flight must be on your actual birthday.</p>
-                        <button id='call' className="btn btn-primary">Call to Book
+                        <a id='phoneText' className="btn btn-primary" href="tel:555-555-5555">
+                         Call to Book
                         <br/>
                          <p>555-555-5555</p>
-                       </button>
+                        </a>
                       </div>
                   </div>
                 </div>
@@ -86,10 +86,11 @@ export default class Rate extends Component {
                       <p id='mkLonger' className="card-text">Have a group of 4 people or more? We will offer a discount proportional to the number of total passengers
                       and our current availabilities. Have a large group? Family reunion? Corporate event? Want to rent the boat out
                       for an entire day? Give us a call, we'd love to talk!</p>
-                    <button id='call' className="btn btn-primary">Call to Book
-                        <br/>
+                    <a id='phoneText' className="btn btn-primary" href="tel:555-555-5555">
+                      Call to Book
+                      <br/>
                          <p>555-555-5555</p>
-                       </button>
+                       </a>
                     </div>
                   </div>
                 </div>

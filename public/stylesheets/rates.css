@@ -50,6 +50,13 @@
   font-weight: 900;
 }
 
+#padLong {
+	padding-bottom: 38px
+}
+.btn-primary {
+	width: 100%;
+}
+
 #mkLonger {
 	padding-bottom: 45px;
 }

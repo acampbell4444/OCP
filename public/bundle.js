@@ -37348,7 +37348,7 @@ var Rate = function (_Component) {
                   { className: 'card' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'card-body' },
+                    { id: 'padLong', className: 'card-body' },
                     _react2.default.createElement(
                       'h5',
                       { className: 'card-title' },
@@ -37367,17 +37367,13 @@ var Rate = function (_Component) {
                     ),
                     _react2.default.createElement(
                       'a',
-                      { id: 'phoneText', href: 'tel:555-555-5555' },
+                      { id: 'phoneText', className: 'btn btn-primary', href: 'tel:555-555-5555' },
+                      'Call to Book',
+                      _react2.default.createElement('br', null),
                       _react2.default.createElement(
-                        'button',
-                        { id: 'call', className: 'btn btn-primary' },
-                        'Call to Book',
-                        _react2.default.createElement('br', null),
-                        _react2.default.createElement(
-                          'p',
-                          null,
-                          '555-555-5555'
-                        )
+                        'p',
+                        null,
+                        '555-555-5555'
                       )
                     )
                   )
@@ -37446,8 +37442,8 @@ var Rate = function (_Component) {
                       'Free flight for the birthday person with one paid 800ft flight.  Offer can NOT be combined with any other discounts and can NOT be applied on the 600ft. Must reserve for two people on the 800ft flight, and show a valid ID for proof of birthday at check in. Must fly tandem. Reservations recommended. Flight must be on your actual birthday.'
                     ),
                     _react2.default.createElement(
-                      'button',
-                      { id: 'call', className: 'btn btn-primary' },
+                      'a',
+                      { id: 'phoneText', className: 'btn btn-primary', href: 'tel:555-555-5555' },
                       'Call to Book',
                       _react2.default.createElement('br', null),
                       _react2.default.createElement(
@@ -37485,8 +37481,8 @@ var Rate = function (_Component) {
                       'Have a group of 4 people or more? We will offer a discount proportional to the number of total passengers and our current availabilities. Have a large group? Family reunion? Corporate event? Want to rent the boat out for an entire day? Give us a call, we\'d love to talk!'
                     ),
                     _react2.default.createElement(
-                      'button',
-                      { id: 'call', className: 'btn btn-primary' },
+                      'a',
+                      { id: 'phoneText', className: 'btn btn-primary', href: 'tel:555-555-5555' },
                       'Call to Book',
                       _react2.default.createElement('br', null),
                       _react2.default.createElement(
