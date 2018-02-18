@@ -40,14 +40,14 @@ footer {
    height: 130px;
 }
 
-.orangeText {
+.blueText {
   font-size: 29px;
   padding: 1% 0;
   font-family: "Lucida Console";
   letter-spacing: 0;
   display: block;
   margin: .5% auto;
-  color: #ED5E2A;
+  color: #2EA9E4;
   font-weight: 900px;
 }
 

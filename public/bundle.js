@@ -36594,7 +36594,7 @@ var Navigation = function (_Component) {
                   }, className: 'col-sm-3' },
                 _react2.default.createElement(
                   'p',
-                  { id: 'hmClick', className: 'orangeText' },
+                  { id: 'hmClick', className: 'blueText' },
                   'Oceanside Parasail'
                 )
               ),
@@ -36610,11 +36610,9 @@ var Navigation = function (_Component) {
                     _react2.default.createElement(
                       'a',
                       { href: 'https://goo.gl/maps/DmgW1W2qGgR2',
-                        className: 'orangeText',
+                        className: 'blueText',
                         target: '_blank' },
-                      '1395 1/2 N. Harbor Dr.',
-                      _react2.default.createElement('br', null),
-                      'Oceanside, CA'
+                      '1395 1/2 N. Harbor Drive'
                     )
                   )
                 )
@@ -36627,7 +36625,7 @@ var Navigation = function (_Component) {
                   null,
                   _react2.default.createElement(
                     'a',
-                    { href: 'tel:555-555-5555', className: 'orangeText' },
+                    { href: 'tel:555-555-5555', className: 'blueText' },
                     '555-555-5555'
                   )
                 )
