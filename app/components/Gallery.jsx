@@ -68,45 +68,69 @@ export default class Gall extends React.Component {
 
 const IMAGES =
 [{
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
+        src: "../public/images/coolShot.jpg",
+        thumbnail: "../public/images/coolShot.jpg",
+        thumbnailWidth: 240,
         thumbnailHeight: 174,
-        isSelected: true,
-        caption: "After Rain (Jeshu John - designerspics.com)"
+        tags: [{value: "Cruisin"}],
+        caption: "Picture yourself Cruisin' on the Open Water."
 },
 {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+        src: "../public/images/takeOff2.jpg",
+        thumbnail: "../public/images/takeOff2.jpg",
+        thumbnailWidth: 200,
+        thumbnailHeight: 174,
+        tags: [{value: "Smooth"}],
+        caption: "With our state of the art equipment, take offs and landings are a breeze."
+},
+{
+        src: '../public/images/dolphinJump.jpg',
+        thumbnail: '../public/images/dolphinJump.jpg',
+        thumbnailWidth: 270,
+        thumbnailHeight: 212,
+        tags: [{value: "Dolphin"}],
+        caption: "It is not uncommon to see dolphin pods, seals, whales, and more."
+},
+{
+        src: '../public/images/longLine.jpg',
+        thumbnail: '../public/images/longLine.jpg',
+        thumbnailWidth: 220,
+        thumbnailHeight: 280,
+        tags: [{value: "Elevate"}],
+        caption: "Ascending to your chosen altitude is smooth. Like a Hot Air Balloon ride. Trust us, it's smooth."
+},
+{
+        src: '../public/images/highFeet.jpg',
+        thumbnail: '../public/images/highFeet.jpg',
+        thumbnailWidth: 220,
+        thumbnailHeight: 212,
+        tags: [{value: "Perspective"}],
+        caption: "Change your perspective. That little green speck is our boat."
+},
+{
+        src: '../public/images/tripleLilKev.jpg',
+        thumbnail: '../public/images/tripleLilKev.jpg',
         thumbnailWidth: 320,
         thumbnailHeight: 212,
-        tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-        caption: "Boats (Jeshu John - designerspics.com)"
-},
-
-{
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
+        tags: [{value: "Triple"}],
+        caption: "Fly up to 2 or 3 at a time. Smiles all round."
 },
 {
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        isSelected: true,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-},
-{
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
+        src: '../public/images/coupleDip.jpg',
+        thumbnail: '../public/images/coupleDip.jpg',
+        thumbnailWidth: 230,
         thumbnailHeight: 212,
-        tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-        caption: "Boats (Jeshu John - designerspics.com)"
+        tags: [{value: "Dip"}],
+        caption: "Take a dip. Just your toes- or up to your nose! Skip the dip if you want. Your call."
 },
-
+{
+        src: '../public/images/takeOff.jpg',
+        thumbnail: '../public/images/takeOff.jpg',
+        thumbnailWidth: 200,
+        thumbnailHeight: 212,
+        tags: [{value: "Safe"}],
+        caption: "We use the best equipment. Our staff is highly trained. 100% safety record."
+},
 {
         src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
         thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",

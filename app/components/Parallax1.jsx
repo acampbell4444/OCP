@@ -10,20 +10,20 @@ export default class Par1 extends Component {
   render() {
     return (
       <div className='whiteText'>
-        
-        <Parallax bgImage={'/images/p1p1.jpg'}
+
+      <Parallax bgImage={'/images/balboaPier.jpg'}
                   bgHeight={'800px'}
                   strength={200}
         >
           <div className='img img-responsive' style={{'height': '900px','paddingBottom':'200px'}}>
-            <div className='insideP1'>Fun for the whole family!</div>
+            <div className='insideP1'>Change your Altitude!</div>
           </div>
         </Parallax>
-        
+
         <div id='under1'>
           <h2 className='biggerText'>Experience the thrill of floating through the air with California's premier parasail operator. We specialize in providing the safest, easiest and most exciting watersports activity- PARASAILING! Breathtaking panoramic views of Oceanside await as you are gently lifted to your chosen altitude.</h2>
         </div>
-        
+
         <Parallax bgImage={'https://i.ytimg.com/vi/2HVPsdcgKRs/maxresdefault.jpg'} 
                   blur={{min: 10,max:-10}}
         
@@ -31,16 +31,19 @@ export default class Par1 extends Component {
           <div style={{height: 800}}>
             <div id='insideP2'>Way up there!</div>
           </div>
-        </Parallax>
+        </Parallax>        
+
         
         <div id='under2'>
           <h2 className='biggerText'>Choose from 600 or 800 foot flights. Share in the fun. Bring your friends and family. Flights accommodate two or three at a time. Oceanside Parasail is dedicated to safety, all captains are USCG licensed.</h2>
         </div>
         
-        <Parallax bgImage={'/images/sailboatinback.jpg'} 
+
+        
+        <Parallax bgImage={'/images/coupleDip.jpg'} 
                   bgHeight={'900px'}
                   bgWidth='100%'
-                  strength={-400}>
+                  strength={-300}>
           <div style={{height: 900}}>
             <div id='insideP3'>   
               Let the Good Times Roll!               

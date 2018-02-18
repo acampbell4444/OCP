@@ -12393,7 +12393,7 @@ var Par1 = function (_Component) {
         { className: 'whiteText' },
         _react2.default.createElement(
           _reactParallax.Parallax,
-          { bgImage: '/images/p1p1.jpg',
+          { bgImage: '/images/balboaPier.jpg',
             bgHeight: '800px',
             strength: 200
           },
@@ -12403,7 +12403,7 @@ var Par1 = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'insideP1' },
-              'Fun for the whole family!'
+              'Change your Altitude!'
             )
           )
         ),
@@ -12443,10 +12443,10 @@ var Par1 = function (_Component) {
         ),
         _react2.default.createElement(
           _reactParallax.Parallax,
-          { bgImage: '/images/sailboatinback.jpg',
+          { bgImage: '/images/coupleDip.jpg',
             bgHeight: '900px',
             bgWidth: '100%',
-            strength: -400 },
+            strength: -300 },
           _react2.default.createElement(
             'div',
             { style: { height: 900 } },
@@ -36652,7 +36652,7 @@ exports.default = Navigation;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+        value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -36676,137 +36676,160 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Gall = function (_React$Component) {
-  _inherits(Gall, _React$Component);
+        _inherits(Gall, _React$Component);
 
-  function Gall(props) {
-    _classCallCheck(this, Gall);
+        function Gall(props) {
+                _classCallCheck(this, Gall);
 
-    var _this = _possibleConstructorReturn(this, (Gall.__proto__ || Object.getPrototypeOf(Gall)).call(this, props));
+                var _this = _possibleConstructorReturn(this, (Gall.__proto__ || Object.getPrototypeOf(Gall)).call(this, props));
 
-    _this.state = { showHeader: true };
-    return _this;
-  }
+                _this.state = { showHeader: true };
+                return _this;
+        }
 
-  _createClass(Gall, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      document.body.style.backgroundColor = 'white';
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      document.body.style.backgroundColor = '#2F3C99';
-    }
-  }, {
-    key: 'handleClose',
-    value: function handleClose() {}
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
+        _createClass(Gall, [{
+                key: 'componentDidMount',
+                value: function componentDidMount() {
+                        document.body.style.backgroundColor = 'white';
+                }
+        }, {
+                key: 'componentWillUnmount',
+                value: function componentWillUnmount() {
+                        document.body.style.backgroundColor = '#2F3C99';
+                }
+        }, {
+                key: 'handleClose',
+                value: function handleClose() {}
+        }, {
+                key: 'render',
+                value: function render() {
+                        var _this2 = this;
 
-      var _props = this.props,
-          showNav = _props.showNav,
-          footShow = _props.footShow;
+                        var _props = this.props,
+                            showNav = _props.showNav,
+                            footShow = _props.footShow;
 
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'div',
-          { id: 'skyWrap' },
-          _react2.default.createElement(
-            'div',
-            { id: 'clouds' },
-            _react2.default.createElement('div', { className: 'star f' }),
-            _react2.default.createElement('div', { className: 'star g' }),
-            _react2.default.createElement('div', { className: 'star h' }),
-            _react2.default.createElement('div', { className: 'star i' }),
-            _react2.default.createElement('div', { className: 'star j' }),
-            _react2.default.createElement('div', { className: 'star k' }),
-            _react2.default.createElement('div', { className: 'star l' }),
-            _react2.default.createElement('div', { className: 'star m' }),
-            _react2.default.createElement('div', { className: 'star o' }),
-            _react2.default.createElement('div', { className: 'star p' }),
-            _react2.default.createElement('div', { className: 'star q' }),
-            _react2.default.createElement('div', { className: 'cloud A' }),
-            _react2.default.createElement('div', { className: 'cloud B' }),
-            _react2.default.createElement('div', { className: 'cloud C' }),
-            _react2.default.createElement('div', { className: 'cloud D' }),
-            _react2.default.createElement('div', { className: 'cloud E' })
-          )
-        ),
-        this.state.showHeader && _react2.default.createElement(
-          'h1',
-          { className: 'flex exMarg' },
-          'Gallery'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'container' },
-          _react2.default.createElement(_reactGridGallery2.default, { images: IMAGES,
-            lightboxWillClose: function lightboxWillClose(e) {
-              footShow(true);showNav(true);_this2.setState({ showHeader: true });
-            },
-            lightboxWillOpen: function lightboxWillOpen(e) {
-              footShow(false);showNav(false);;_this2.setState({ showHeader: false });
-            },
-            showNav: showNav,
-            footShow: footShow,
-            backdropClosesModal: true
-          }),
-          _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
-          _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
-          _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
-        )
-      );
-    }
-  }]);
+                        return _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement(
+                                        'div',
+                                        { id: 'skyWrap' },
+                                        _react2.default.createElement(
+                                                'div',
+                                                { id: 'clouds' },
+                                                _react2.default.createElement('div', { className: 'star f' }),
+                                                _react2.default.createElement('div', { className: 'star g' }),
+                                                _react2.default.createElement('div', { className: 'star h' }),
+                                                _react2.default.createElement('div', { className: 'star i' }),
+                                                _react2.default.createElement('div', { className: 'star j' }),
+                                                _react2.default.createElement('div', { className: 'star k' }),
+                                                _react2.default.createElement('div', { className: 'star l' }),
+                                                _react2.default.createElement('div', { className: 'star m' }),
+                                                _react2.default.createElement('div', { className: 'star o' }),
+                                                _react2.default.createElement('div', { className: 'star p' }),
+                                                _react2.default.createElement('div', { className: 'star q' }),
+                                                _react2.default.createElement('div', { className: 'cloud A' }),
+                                                _react2.default.createElement('div', { className: 'cloud B' }),
+                                                _react2.default.createElement('div', { className: 'cloud C' }),
+                                                _react2.default.createElement('div', { className: 'cloud D' }),
+                                                _react2.default.createElement('div', { className: 'cloud E' })
+                                        )
+                                ),
+                                this.state.showHeader && _react2.default.createElement(
+                                        'h1',
+                                        { className: 'flex exMarg' },
+                                        'Gallery'
+                                ),
+                                _react2.default.createElement(
+                                        'div',
+                                        { className: 'container' },
+                                        _react2.default.createElement(_reactGridGallery2.default, { images: IMAGES,
+                                                lightboxWillClose: function lightboxWillClose(e) {
+                                                        footShow(true);showNav(true);_this2.setState({ showHeader: true });
+                                                },
+                                                lightboxWillOpen: function lightboxWillOpen(e) {
+                                                        footShow(false);showNav(false);;_this2.setState({ showHeader: false });
+                                                },
+                                                showNav: showNav,
+                                                footShow: footShow,
+                                                backdropClosesModal: true
+                                        }),
+                                        _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
+                                        _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' }),
+                                        _react2.default.createElement('h1', { className: 'clear', id: 'sunriseHeader' })
+                                )
+                        );
+                }
+        }]);
 
-  return Gall;
+        return Gall;
 }(_react2.default.Component);
 
 exports.default = Gall;
 
 
 var IMAGES = [{
-  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-  thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-  thumbnailWidth: 320,
-  thumbnailHeight: 174,
-  isSelected: true,
-  caption: "After Rain (Jeshu John - designerspics.com)"
+        src: "../public/images/coolShot.jpg",
+        thumbnail: "../public/images/coolShot.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 174,
+        tags: [{ value: "Cruisin" }],
+        caption: "Picture yourself Cruisin' on the Open Water."
 }, {
-  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-  thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-  thumbnailWidth: 320,
-  thumbnailHeight: 212,
-  tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
-  caption: "Boats (Jeshu John - designerspics.com)"
+        src: "../public/images/takeOff2.jpg",
+        thumbnail: "../public/images/takeOff2.jpg",
+        thumbnailWidth: 200,
+        thumbnailHeight: 174,
+        tags: [{ value: "Smooth" }],
+        caption: "With our state of the art equipment, take offs and landings are a breeze."
 }, {
-  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-  thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-  thumbnailWidth: 320,
-  thumbnailHeight: 212
+        src: '../public/images/dolphinJump.jpg',
+        thumbnail: '../public/images/dolphinJump.jpg',
+        thumbnailWidth: 270,
+        thumbnailHeight: 212,
+        tags: [{ value: "Dolphin" }],
+        caption: "It is not uncommon to see dolphin pods, seals, whales, and more."
 }, {
-  src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-  thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-  thumbnailWidth: 320,
-  thumbnailHeight: 174,
-  isSelected: true,
-  caption: "After Rain (Jeshu John - designerspics.com)"
+        src: '../public/images/longLine.jpg',
+        thumbnail: '../public/images/longLine.jpg',
+        thumbnailWidth: 220,
+        thumbnailHeight: 280,
+        tags: [{ value: "Elevate" }],
+        caption: "Ascending to your chosen altitude is smooth. Like a Hot Air Balloon ride. Trust us, it's smooth."
 }, {
-  src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-  thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-  thumbnailWidth: 320,
-  thumbnailHeight: 212,
-  tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
-  caption: "Boats (Jeshu John - designerspics.com)"
+        src: '../public/images/highFeet.jpg',
+        thumbnail: '../public/images/highFeet.jpg',
+        thumbnailWidth: 220,
+        thumbnailHeight: 212,
+        tags: [{ value: "Perspective" }],
+        caption: "Change your perspective. That little green speck is our boat."
 }, {
-  src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-  thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-  thumbnailWidth: 320,
-  thumbnailHeight: 212
+        src: '../public/images/tripleLilKev.jpg',
+        thumbnail: '../public/images/tripleLilKev.jpg',
+        thumbnailWidth: 320,
+        thumbnailHeight: 212,
+        tags: [{ value: "Triple" }],
+        caption: "Fly up to 2 or 3 at a time. Smiles all round."
+}, {
+        src: '../public/images/coupleDip.jpg',
+        thumbnail: '../public/images/coupleDip.jpg',
+        thumbnailWidth: 230,
+        thumbnailHeight: 212,
+        tags: [{ value: "Dip" }],
+        caption: "Take a dip. Just your toes- or up to your nose! Skip the dip if you want. Your call."
+}, {
+        src: '../public/images/takeOff.jpg',
+        thumbnail: '../public/images/takeOff.jpg',
+        thumbnailWidth: 200,
+        thumbnailHeight: 212,
+        tags: [{ value: "Safe" }],
+        caption: "We use the best equipment. Our staff is highly trained. 100% safety record."
+}, {
+        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 212
 }];
 
 /***/ }),
