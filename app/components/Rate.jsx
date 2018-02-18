@@ -44,11 +44,11 @@ export default class Rate extends Component {
                       <h5 className="card-title">Non-Flying Passenger <br/><span className='smTit'> $25 per person</span></h5>
                       <p className="card-text">Don't want to fly- but still want to catch all the fun? No problem. If you decide to upgrade
                       during the trip, great! Seats available on standby basis unless reserved by phone.</p>
-                      <a id='phoneText' className="btn btn-primary" href="tel:555-555-5555">
-                        Call to Book
+                        <a id='phoneText' className="btn btn-primary" href="tel:555-555-5555">
+                         Call to Book
                         <br/>
                          <p>555-555-5555</p>
-                      </a>
+                        </a>
                     </div>
                   </div>
                 </div>
