@@ -49,7 +49,7 @@ export default class Rate extends Component {
                   <div className="card">
                     <div className="card-body">
                       <h5 className="card-title">Photo or GoPro Package <br/><span className='smTit'> $30 per group</span></h5>
-                      <p className="card-text">With the photo options- we take your pictures from the boat. With the goPro option, we give
+                      <p className="card-text">With the photo option- we take your pictures from the boat. With the goPro option, we give
                       you the equipment to take up with you. In both cases, you get to keep an SD card with your photos or video.</p>
                     </div>
                   </div>
