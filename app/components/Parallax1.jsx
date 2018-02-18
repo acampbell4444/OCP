@@ -24,7 +24,7 @@ export default class Par1 extends Component {
           <h2 className='biggerText'>Experience the thrill of floating through the air with California's premier parasail operator. We specialize in providing the safest, easiest and most exciting watersports activity- PARASAILING! Breathtaking panoramic views of Oceanside await as you are gently lifted to your chosen altitude.</h2>
         </div>
 
-        <Parallax bgImage={'https://i.ytimg.com/vi/2HVPsdcgKRs/maxresdefault.jpg'} 
+        <Parallax bgImage={'/images/blurArial.jpg'} 
                   blur={{min: 10,max:-10}}
         
         >

@@ -68,12 +68,20 @@ export default class Gall extends React.Component {
 
 const IMAGES =
 [{
-        src: "../public/images/coolShot.jpg",
-        thumbnail: "../public/images/coolShot.jpg",
+        src: "../public/images/onDockCatalina.jpg",
+        thumbnail: "../public/images/onDockCatalina.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 174,
+        tags: [{value: "All Aboard!"}],
+        caption: "Come Joins Us For an Adventure."
+},
+{
+        src: "../public/images/cruisin2.JPG",
+        thumbnail: "../public/images/cruisin2.JPG",
         thumbnailWidth: 240,
         thumbnailHeight: 174,
         tags: [{value: "Cruisin"}],
-        caption: "Picture yourself Cruisin' on the Open Water."
+        caption: "Picture yourself Cruising on the Open Water."
 },
 {
         src: "../public/images/takeOff2.jpg",
@@ -111,7 +119,7 @@ const IMAGES =
         src: '../public/images/tripleLilKev.jpg',
         thumbnail: '../public/images/tripleLilKev.jpg',
         thumbnailWidth: 320,
-        thumbnailHeight: 212,
+        thumbnailHeight: 240,
         tags: [{value: "Triple"}],
         caption: "Fly up to 2 or 3 at a time. Smiles all round."
 },
@@ -132,9 +140,11 @@ const IMAGES =
         caption: "We use the best equipment. Our staff is highly trained. 100% safety record."
 },
 {
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
+        src: "../public/images/smiles.jpg",
+        thumbnail: "../public/images/smiles.jpg",
+        thumbnailWidth: 280,
+        thumbnailHeight: 242,
+        tags: [{value: "Smiles"}],
+        caption: "Try Not to have a Good Time. We dare you."
 }
 ]
