@@ -73,7 +73,7 @@ const IMAGES =
         thumbnailWidth: 240,
         thumbnailHeight: 174,
         tags: [{value: "All Aboard!"}],
-        caption: "Come Joins Us For an Adventure."
+        caption: "Come Join Us For an Adventure."
 },
 {
         src: "../public/images/cruisin2.JPG",
