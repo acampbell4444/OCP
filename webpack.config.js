@@ -43,7 +43,8 @@ module.exports = {
           limit: 10000,
           name: 'static/media/images/[name].[hash:8].[ext]'
         }
-      }
+      },
+      { test: /\.svg$/, loader: 'svg-loader?{png:{scale:2}}' }
     ]
   },
   plugins: devMode
