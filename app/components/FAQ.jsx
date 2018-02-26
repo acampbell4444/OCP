@@ -33,7 +33,7 @@ export default class FAQ extends Component {
     </div>
       <h1 className='flex exMarg'>Frequently Asked Questions</h1>)
         
-      <Accordion startPosition={null}
+      <Accordion 
                  transitionTime={200}
       >
 

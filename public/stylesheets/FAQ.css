@@ -21,6 +21,14 @@
     background-color: black;
 }
 
+.Collapsible__trigger.is-closed::after {
+	float: right; 
+    content: "v";
+    -moz-animation: bounce 5s infinite;
+    -webkit-animation: bounce 5s infinite;
+    animation: bounce 5s infinite;
+}
+
 .Collapsible__trigger.is-open {
 	background-color: black;
 }
