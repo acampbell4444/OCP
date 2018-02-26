@@ -1,0 +1,62 @@
+.Collapsible {
+  width: 100%;
+  overflow: scroll;
+}
+
+.Collapsible__trigger {
+	width: 100%;
+	min-width: 100%;
+	color: white;
+    background-color: #6b6161;
+    display: inline-block;
+    height: 120px;
+    padding: 20px;
+    font-size: 35px;
+    margin-top: 2%;
+    text-align: center;
+    overflow: scroll;
+}
+
+.Collapsible__trigger:hover {
+    background-color: black;
+}
+
+.Collapsible__trigger.is-open {
+	background-color: black;
+}
+
+.answer {
+	background-color: #ddcece;
+	height: 120px;
+	padding: 20px;
+	font-size: 35px;
+    margin-top: 1%;
+    text-align: center;
+    overflow: scroll;
+
+}
+
+.answer.twoline {
+  height: 160px;
+  overflow: scroll;
+}
+
+.answer.threeline {
+  height: 200px;
+  overflow: scroll;
+}
+
+.answer.fourline {
+  height: 300px;
+  overflow: scroll;
+}
+
+.answer.fiveline {
+  height: 390px;
+  overflow: scroll;
+}
+
+.answer.sixline {
+  height: 490px;
+  overflow: scroll;
+}

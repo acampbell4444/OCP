@@ -22,7 +22,7 @@ export default class Navigation extends Component {
                   <span>
                     <a href="https://goo.gl/maps/DmgW1W2qGgR2" 
                        className='blueText'
-                       target="_blank">1395 1/2 N. Harbor Drive</a>
+                       target="_blank">123 Example St.</a>
                   </span>
                 </p>
               </div>
